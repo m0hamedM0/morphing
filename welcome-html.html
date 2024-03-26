@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Welcome to Morphing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>
+      @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+
+      @font-face {
+        font-family: "MyCustomFont";
+        src: url("../Downloads/Verlag-Bold.otf") format("opentype");
+      }
+
+      .welcome-text {
+        font-family: "MyCustomFont", sans-serif; /* Fallback to sans-serif */
+      }
+
+      .welcome-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .welcome-text {
+        color: white;
+        margin-top: 20px; /* Adjust as needed */
+        font-size: 24px; /* Adjust as needed */
+      }
+
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: rgba(255, 0, 60, 0.05);
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
+
+      .social-icons {
+        list-style: none;
+        padding: 0;
+        margin: 1em;
+        text-align: center; /* Center the icons */
+      }
+
+      .social-icons li {
+        display: inline-block;
+        margin: 0.15em;
+        position: relative;
+        font-size: 1.2em; /* Adjust the size as needed */
+      }
+
+      .social-icons i {
+        color: gold; /* Change to gold */
+        position: absolute;
+        top: 21px;
+        left: 21px;
+        transition: all 265ms ease-out;
+      }
+
+      .social-icons a {
+        display: inline-block;
+      }
+
+      .social-icons a:before {
+        transform: scale(1);
+        content: " ";
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        display: block;
+        background: black; /* Change to black */
+        transition: all 265ms ease-out;
+      }
+
+      .social-icons a:hover:before {
+        transform: scale(0);
+        transition: all 265ms ease-in;
+      }
+
+      .social-icons a:hover i {
+        transform: scale(2.2);
+        color: black; /* Change to black on hover */
+        background: gold; /* Change to gold on hover */
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 265ms ease-in;
+      }
+
+      @keyframes pulsate {
+        0% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(
+            1.15
+          ); /* Adjust the scale to control the intensity of the pulsate */
+          opacity: 0.7;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+
+      .logo {
+        animation: pulsate 2s infinite ease-in-out;
+        cursor: pointer;
+        width: 100px;
+        height: 96px;
+      }
+
+      @media (max-width: 768px) {
+        /* Adjust this value based on your requirements */
+
+        .welcome-text {
+          font-size: 18px;
+        }
+      }
+
+      .additional-text {
+        color: white; /* Adjust color as needed */
+        margin-top: 10px;
+        text-align: justify; /* Justify the text */
+        max-width: 60%; /* Maximum width */
+        margin-left: auto; /* Centering the div */
+        margin-right: auto; /* Centering the div */
+        padding: 0 15px; /* Add some padding */
+        font-family: "Bad Script", cursive; /* Using Bad Script with cursive as a fallback */
+        font-size: 22px;
+      }
+
+      .bottom-right-text {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        color: white; /* Adjust color as needed */
+        font-size: 32px; /* Adjust font size as needed */
+      }
+
+      @font-face {
+        font-family: "Snell-Roundhand";
+        src: url("fonts/SnellRoundhand.ttf") format("truetype");
+      }
+
+      @font-face {
+        font-family: "MyCustomFontRegular";
+        src: url("fonts/Verlag-Book.otf") format("opentype");
+      }
+
+      .customreg-text {
+        font-family: "MyCustomFontRegular", sans-serif;
+      }
+
+      .customroundhand-text {
+        font-family: "Snell-Roundhand", sans-serif; /* Fallback to sans-serif */
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .additional-text {
+          font-size: 16px;
+          max-width: 90%;
+          margin-top: 10vh;
+        }
+        .bottom-right-text {
+          font-size: 14px; /* Larger font for larger screens */
+        }
+      }
+
+      /* Add more styles as needed */
+    </style>
+    <div class="welcome-screen">
+      <img
+        src="https://i.imgur.com/0He3WGF.png"
+        class="logo"
+        alt="Logo"
+        id="welcomeImage"
+        width="100"
+        height="96"
+      />
+      <div class="welcome-text customreg-text">
+        Welcome to Morphing Music World
+      </div>
+      <ul class="social-icons">
+        <li>
+          <a href="https://www.instagram.com/morphingmusic" target="_blank"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/morphingmusic/" target="_blank"
+            ><i class="fa fa-facebook"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://www.youtube.com/@morphingchamberorchestra"
+            target="_blank"
+            ><i class="fa fa-youtube"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA"
+            target="_blank"
+            ><i class="fa fa-spotify"></i
+          ></a>
+        </li>
+        <li>
+          <a
+            href="https://music.apple.com/us/artist/morphing-chamber-orchestra/434036476"
+            target="_blank"
+            ><i class="fa fa-apple"></i
+          ></a>
+        </li>
+        <div class="additional-text">
+          "Morphing" - the core of the ensemble's name stands for its philosophy
+          to be in the state of constant evolution, metamorphoses and
+          modifications, leading to groundbreaking new musical interpretations
+          while at the same time striving for excellence in performance.
+        </div>
+      </ul>
+      <div class="bottom-right-text customroundhand-text">Tomasz Wabnic</div>
+    </div>
+
+    <script>
+      document
+        .getElementById("welcomeImage")
+        .addEventListener("click", function () {
+          sessionStorage.setItem("welcomeShown", "true");
+          window.location.href = "index.html"; // Replace 'main.html' with the path to your main content page
+        });
+    </script>
+  </body>
+</html>

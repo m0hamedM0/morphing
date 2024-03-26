@@ -1,0 +1,2722 @@
+.font-roboto {
+  font-family: "Roboto", sans-serif;
+}
+
+/*.sticky-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+*/
+body {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  width: 100%;
+  /* Ensure the height is enough to allow for scrolling */
+  /* Remove the 100vh height if your content is longer than the viewport */
+}
+
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+  overflow-x: hidden;
+}
+
+
+
+@media (max-width: 768px) {
+  .social-icons-vertical a {
+    display: none;
+  }
+}
+
+.footer-logo {
+  width: 472px;
+  height: 28px;
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-icons a {
+  color: goldenrod;
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 236px;
+    height: 14px;
+  }
+}
+
+.footer-distributed {
+  background-color: #000;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+.dropdown-menu.show {
+  background-color: transparent;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Open Sans", cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: goldenrod;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: goldenrod;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: goldenrod;
+  text-decoration: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+@media (max-width: 880px) {
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+}
+
+/* Additional breakpoint for smaller screens */
+@media (max-width: 600px) {
+  .footer-distributed .footer-left {
+    font: bold 16px sans-serif;
+  }
+}
+
+/* Additional styles for smaller screens */
+@media (max-width: 768px) {
+  .footer-distributed .footer-center div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-bottom: 10px; /* Adds some space below the icon */
+  }
+
+  .footer-distributed .footer-center p {
+    margin: 0; /* Adjusts margin for the text */
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Kleinere Schriftgröße für den gesamten Text */
+  }
+
+  .navbar,
+  .footer {
+    flex-direction: column; /* Stapelt Navbar- und Footer-Elemente vertikal */
+  }
+}
+
+.font-roboto {
+  position: relative;
+  z-index: 2; /* Above the image */
+}
+
+.video-background-header {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  height: 108vh;
+}
+
+#myVideo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+  opacity: 30%;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: "MyCustomFontBold";
+  src: url("fonts/Verlag-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "MyCustomFontRegular";
+  src: url("fonts/Verlag-Book.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "CyGrotesk";
+  src: url("fonts/Grotesk-Grand.otf") format("opentype");
+}
+
+.customgrotesk-text {
+  font-family: "CyGrotesk", sans-serif; /* Fallback to sans-serif */
+}
+
+.custombold-text {
+  font-family: "MyCustomFontBold", sans-serif; /* Fallback to sans-serif */
+}
+
+.dropdown-menu {
+  font-family: "MyCustomFontRegular", sans-serif;
+}
+
+.custombold-textprojects {
+  font-family: "MyCustomFontBold", sans-serif;
+  padding-top: 35px;
+}
+
+p {
+  font-family: "MyCustomFontRegular", sans-serif;
+  font-size: 20px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between; /* Adds space between the elements */
+}
+
+.text-container {
+  flex: 1; /* This ensures that the .text-container takes up the same flex ratio as the image divs */
+  display: flex;
+  flex-direction: column; /* Stacks the two text divs on top of each other */
+  height: 600px; /* Same as side-image and image-wrapper */
+  /* Removed horizontal margins to ensure the width matches the images */
+}
+
+.side-image,
+.image-wrapper {
+  flex: 1; /* Each takes up equal width */
+  margin: 0 100px; /* Adds horizontal margin. Adjust as needed */
+}
+
+.side-image,
+.image-wrapper img {
+  width: auto;
+  height: 600px; /* Adjust height as needed */
+  border-radius: 15px; /* Rounded corners */
+  display: block; /* Removes bottom space under the image */
+}
+
+/* ... your other styles ... */
+
+.text-container {
+  flex: 1; /* Takes up the same space as the side-image and image-wrapper */
+  display: flex;
+  flex-direction: column; /* Stacks the two text divs on top of each other */
+  height: 600px; /* Same as side-image and image-wrapper */
+  margin: 0 100px; /* Horizontal margin */
+}
+
+.upper-text-wrapper,
+.lower-text-wrapper {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Semi-transparent white background */
+  padding: 10px; /* Padding for text */
+  display: flex;
+  align-items: center; /* Center text vertically */
+  justify-content: center; /* Center text horizontally */
+  border-radius: 15px; /* Rounded corners */
+}
+
+.upper-text-wrapper {
+  height: 25%; /* 1/4 of the .text-container height */
+  margin-bottom: 2px; /* Tiny space below the upper text div */
+  overflow-y: auto; /* Makes content scrollable vertically if it overflows */
+  font-size: 0.9em; /* Reduces the font size */
+  line-height: 1.4; /* Increases the line height for better readability */
+}
+
+.lower-text-wrapper {
+  height: 75%; /* 3/4 of the .text-container height */
+  overflow-y: auto; /* Makes content scrollable vertically if it overflows */
+  font-size: 0.9em; /* Reduces the font size */
+  line-height: 1.4; /* Increases the line height for better readability */
+}
+
+.upper-text-wrapper p,
+.lower-text-wrapper p {
+  margin: 0; /* Remove default paragraph margins */
+  /* Additional text styling as needed */
+}
+
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  scroll-snap-align: start;
+  min-height: 105vh; /* Adjust if necessary for your design */
+  margin-top: 0%;
+  width: 100%; /* Ensures the section spans the full width */
+  scroll-margin-top: 100px; /* Optional: Adjust to control when the snap triggers */
+  overflow: auto;
+  border: none;
+  /* Other styles... */
+}
+section:not(#home) {
+  position: relative;
+  min-height: 110vh;
+}
+
+#home {
+  height: 110vh; /* This will make the home section take up 100% of the viewport height */
+}
+
+section:not(#home)::before {
+  content: "";
+  background: url("https://i.imgur.com/wyjMqYg.jpeg") no-repeat center center
+    fixed;
+  background-size: cover;
+  opacity: 0.3; /* Adjust this value as needed */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.orchestra .col-md-3 {
+  padding-left: 50px; /* Adjust as needed */
+  padding-right: 50px; /* Adjust as needed */
+}
+
+.orchestra-heading {
+  font-size: 24px; /* Adjust font size as needed */
+  margin-bottom: 20px; /* Add more space at the bottom */
+  padding: 20px; /* Add padding to ensure text doesn't touch edges */
+}
+
+.orchestra-section {
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: flex-start; /* Aligns children at the start of the cross axis */
+  padding: 3rem; /* Adjust the padding as needed */
+  gap: 1rem; /* Adjust this as necessary */
+}
+
+.orchestra-left,
+.orchestra-right {
+  align-self: flex-start; /* Ensures both elements align at the start of the container */
+  margin-top: 100px;
+  padding-top: 100px;
+  flex: 1;
+}
+
+.orchestra-left {
+  flex-basis: 50%; /* Adjust width as needed */
+  max-width: 3000px; /* Adjust as necessary */
+  padding-left: 10vh;
+  margin-left: 60px;
+}
+
+.orchestra-right {
+  flex-basis: 50%; /* Adjust width as needed */
+  max-width: 900px; /* Adjust as necessary */
+  padding-right: 10vh;
+}
+
+.orchestra-right p {
+  font-family: "MyCustomFontRegular", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.orchestra-left p {
+  font-family: "MyCustomFontRegular", sans-serif;
+  font-size: 20px;
+  text-align: justify;
+}
+
+.orchestra-right h2 {
+  font-family: "MyCustomFontBold", sans-serif;
+  font-size: 20px;
+}
+
+.orchestra-row {
+  display: flex;
+  align-items: flex-start; /* Aligns items to the top */
+}
+
+@media screen and (max-width: 768px) {
+  .orchestra-section {
+    flex-direction: column; /* Stack the left and right sections vertically */
+    padding: 1rem; /* Adjust padding for mobile */
+    align-items: center; /* Center align the stacked items */
+  }
+
+  .orchestra-left,
+  .orchestra-right {
+    margin-top: 20px; /* Reduce margin for mobile */
+    padding-top: 0; /* Reset padding for mobile */
+    flex-basis: 100%; /* Full width for each section */
+    max-width: 100%; /* Full width for each section */
+    padding-left: 0; /* Reset left padding for mobile */
+    padding-right: 0; /* Reset right padding for mobile */
+    margin-left: 0; /* Reset left margin for mobile */
+  }
+
+  .orchestra-left p,
+  .orchestra-right p,
+  .orchestra-right h2 {
+    font-size: 18px; /* Slightly reduce font size for mobile */
+  }
+}
+
+.orchestra-left h2.mobile-quotes-heading {
+  display: none;
+}
+
+.read-more {
+  display: block; /* To apply margin */
+  margin-top: 1rem; /* Space above the read more link */
+}
+
+/*
+#orchestra {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 115vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; 
+}
+ */
+
+#orchestra::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Downloads/wearemorphing.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+#orchestra h1,
+#orchestra h2 {
+  text-align: left !important; /* Adjust the alignment as needed */
+  /* Additional styling for these elements */
+}
+
+#orchestra h2 {
+  color: #ffffff; /* Adjust the color as needed */
+  margin-top: 3rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+}
+
+.newsletter-signup {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+}
+
+.gold-button {
+  background-color: #ffd700; /* Gold color */
+  color: black; /* Changing text color to black for better visibility */
+  border: none; /* Optional: removes the border */
+}
+
+.container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.img-fluid {
+  opacity: 0.8;
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.newsletter-signup .col-md-6 {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+@media (max-width: 767px) {
+  .container {
+    min-height: auto;
+  }
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .newsletter-signup img {
+    max-height: 200px; /* Adjust image height on smaller screens */
+    width: 100%; /* Full width of the column */
+    object-fit: cover; /* Keep aspect ratio of the image */
+  }
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+.next {
+  right: 10px;
+}
+.prev {
+  left: 10px;
+}
+
+/* Default state of the links */
+
+/* Hover state of the links */
+
+.bg-darkbrown {
+  background-color: #101011; /* Replace with your desired color */
+}
+
+.custom-color {
+  color: #f5f5dc; /* Replace with your desired color code */
+}
+
+.custom-colorp {
+  color: #fffff5; /* Replace with your desired color code */
+}
+
+.custom-colorg {
+  color: goldenrod; /* Replace with your desired color code */
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+/*.sticky-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #D4AF37; 
+    z-index: 1000;
+    width: 100%;
+}
+*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-center-logo {
+  position: absolute;
+  left: 50%;
+
+  transform: translateX(-50%);
+  width: 600px;
+  height: 28px;
+}
+
+.navbar-center-logo img {
+  width: 600px; /* Equivalent to the inline width */
+  height: auto; /* Equivalent to the inline height */
+  margin-top: -2rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+    position: absolute;
+    right: 10px; /* or adjust as per requirement */
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: inline-block;
+  }
+
+  .navbar-center-logo {
+    position: relative;
+    left: initial;
+    transform: none;
+    margin: 0 auto; /* This will center the logo when the menu is collapsed */
+  }
+
+  .navbar-center-logo img {
+    width: 300px; /* Equivalent to the inline width */
+    height: auto; /* Equivalent to the inline height */
+    margin-top: 0;
+  }
+}
+
+nav ul li a {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+  margin-top: -8vh; /* Adjust the margin to align the content */
+  /* Other styling */
+}
+
+#home {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
+
+#description {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+#description::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../Downloads/whoweare.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.5; /* Adjust the opacity as needed */
+  z-index: -1;
+}
+
+#description h1,
+#description h2,
+#description p {
+  font-family: "Montserrat", sans-serif; /* Ensure Montserrat is applied */
+  /* Additional styling for these elements */
+}
+
+#videoCarousel {
+  width: 70%;
+  height: auto; /* Adjust height to be auto */
+  margin: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative; /* Ensure positioning context */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  position: absolute; /* Absolute positioning */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Adjust for center alignment */
+  z-index: 2; /* Ensure they are above the content */
+}
+
+.carousel-control-prev {
+  left: 10px; /* Adjust horizontal position */
+}
+
+.carousel-control-next {
+  right: 10px; /* Adjust horizontal position */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px; /* Icon size */
+  height: 50px;
+  background-size: contain;
+}
+
+.custom-carousel {
+  max-width: 170vh;
+  margin: auto;
+}
+
+.custom-carousel .carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  #videoCarousel {
+    width: 90%; /* Full width on smaller screens */
+    height: auto; /* Auto height for aspect ratio */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 40px; /* Smaller size on mobile */
+    height: 40px;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.youtube-link {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.youtube-link a {
+  color: #ffffff; /* White color */
+  text-decoration: none;
+  font-size: 20px; /* Adjust the font size */
+  font-family: "Open Sans", sans-serif; /* An elegant font, you can choose another */
+  display: inline-flex; /* Aligns the logo and text inline */
+  align-items: center; /* Centers items vertically */
+  gap: 10px; /* Space between logo and text */
+}
+
+.youtube-link img {
+  width: 30px; /* Adjust logo size */
+  height: auto;
+}
+
+.youtube-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Additional custom styles as needed */
+
+.flex-container {
+  display: flex; /* Aktiviert Flexbox */
+  justify-content: center; /* Zentriert das Kind-Element (das Karussell) horizontal */
+  align-items: center; /* Zentriert das Kind-Element vertikal */
+  height: 100vh; /* Setzt die Höhe des Containers auf die Höhe des Viewports */
+  width: 100%;
+  /* Optional: Setze die Breite, wenn du eine spezifische Breite für den Container wünschst */
+}
+
+#bottom-image {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  position: fixed; /* Keeps the image at a specific position */
+  bottom: 0; /* Aligns the image at the bottom */
+  left: 0; /* Aligns the image to the left */
+  width: 100%; /* Sets the width to span the entire screen */
+  height: auto; /* Adjusts the height automatically to maintain aspect ratio */
+  pointer-events: none; /* Allows clicks to pass through to elements underneath */
+  z-index: -1; /* Ensures the image stays in the background */
+}
+
+/* Show the paragraph element when the user hovers over the h2 element */
+
+/* Optional: Change the h2 style on hover for better user experience */
+
+.description {
+  position: absolute;
+  opacity: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  width: 80%; /* Adjust the width as needed */
+  text-align: center; /* Center align the description text */
+  margin-top: 30px; /* Increased top margin for more spacing above the description */
+}
+
+.active {
+  display: block;
+  /* Additional styles for the active state */
+}
+
+.blue-hover-effect {
+  transition: color 0.3s ease; /* Sorgt für einen sanften Übergang */
+}
+
+.blue-hover-effect:hover,
+.blue-hover-effect:focus {
+  color: goldenrod; /* Blaue Farbe beim Hover oder Fokus */
+}
+.blue-hover-effect:hover,
+.blue-hover-effect:focus {
+  color: goldenrod !important; /* Blaue Farbe beim Hover oder Fokus mit erhöhter Spezifität */
+}
+
+/*carousel*/
+
+/* Optional: Add responsiveness to hide text on smaller screens */
+/* Custom styles for Swiper slides */
+/* Custom styles for Swiper slides */
+
+/* Style for the active (centered) slide */
+
+/* Limit Swiper container size to ensure some space on the sides */
+
+/* Ensure the images cover their slide */
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navbar-left,
+.navbar-center,
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+/* Adjust spacing and other styles as needed */
+.navbar-left ul,
+.navbar-right ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-nav .nav-item {
+  margin-left: 4px; /* Adjust spacing between navbar items */
+}
+
+.navbar-nav .nav-item.lang-switch {
+  margin-left: -15px; /* Reduced margin */
+  margin-right: -15px; /* Reduced margin */
+}
+
+.nav-item.social-icon {
+  margin-left: 25px; /* Increase spacing to the left of the Instagram icon */
+}
+
+.social-icons-vertical {
+  position: fixed;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  margin-top: 2rem;
+  padding: 0;
+}
+
+.div-change-language {
+  display: flex;
+  margin: 0;
+}
+
+.social-icons-vertical .social-link {
+  display: block;
+  margin: 5px 0; /* Adjust margin as needed */
+  color: #fff; /* Or any color of your choice */
+  font-size: 24px; /* Adjust size as needed */
+}
+
+.social-icons-vertical .social-link:hover {
+  color: #ccc; /* Hover color */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
+  /* Remove the opacity property to keep text fully opaque */
+}
+
+.dropdown-item {
+  padding: 10px;
+  color: #fff; /* Or any other color, to ensure it's fully opaque */
+  /* Add more styling for your dropdown items here */
+}
+
+.navbar-center-logo {
+  margin: 0 auto; /* Center the logo */
+}
+
+/* Additional responsive adjustments as needed */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+  }
+  .navbar-center-logo {
+    order: -1; /* Move logo to the top on smaller screens */
+  }
+}
+
+.album-image {
+  position: relative; /* Add position relative here */
+  margin-right: 20px;
+  width: 150px;
+  height: 150px; /* Make this the same as the width for a square, or set to auto for aspect ratio */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.album-image img {
+  width: 100%;
+  height: 100%; /* Make sure the image covers the whole container */
+  object-fit: cover; /* This will cover the area, use 'contain' to fit it within */
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px; /* Adjust font size as needed */
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none; /* Ensures that hover effects work when the mouse is over the text */
+  display: none; /* Hide the text initially */
+}
+
+.album-image:hover .image {
+  opacity: 0.7; /* Darken the image on hover */
+  transform: scale(1.1); /* Increase the size of the image on hover */
+}
+
+.album-image:hover .overlay-text {
+  display: block; /* Show the text on hover */
+  opacity: 1; /* Make the text fully visible on hover */
+}
+
+.album-info {
+  max-width: 60ch; /* ch units represent the width of the '0' character */
+  margin: 0 auto; /* Center the text block if the container is wider */
+  align-items: center;
+  text-align: justify;
+}
+
+.discography-section {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the items */
+}
+
+.discography-entry {
+  display: flex;
+  justify-content: space-between; /* Ensures equal space between child elements */
+  align-items: center;
+  width: 80%;
+  max-width: 1100px;
+  margin-bottom: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.album-image img {
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  border-radius: 20px;
+}
+
+.album-info {
+  flex-grow: 1;
+  margin: 0 15px; /* Space from image and links */
+  padding: 0 20px; /* Optional: padding inside the text box for better reading */
+  text-align: center; /* Center text */
+}
+
+.album-links a {
+  display: inline-block; /* Allows margin */
+  margin: 0 10px; /* Space between links */
+  text-decoration: none; /* Optional style */
+  color: #fff; /* Link color */
+}
+
+/* Selector for the iTunes and Spotify links */
+.itunes-link:hover,
+.spotify-link:hover,
+.deezer-link:hover,
+.amazon-link:hover {
+  transform: scale(1.1); /* Adjust scaling factor as needed */
+  transition: transform 0.3s ease;
+}
+
+.separator {
+  width: 50%;
+  border-top: 1px solid #ccc; /* Adjust color as needed */
+  margin-top: 20px; /* Other half of the space needed between entries */
+  margin-bottom: 40px; /* Full space before the next entry starts */
+  margin-left: auto; /* Centers the separator */
+  margin-right: auto;
+}
+
+/* You may need to add a last-child selector to remove the margin-bottom from the last discography-entry if there is no separator after it */
+.discography-entry:last-child {
+  margin-bottom: 0; /* Removes bottom margin if it's the last child */
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .discography-entry {
+    flex-direction: column;
+    width: 90%; /* Full width on smaller screens */
+    margin-bottom: 30px; /* Less space between entries on small screens */
+  }
+
+  .album-info,
+  .album-links {
+    width: 100%; /* Full width on small screens */
+    text-align: center;
+    margin: 10px 0; /* Space between items when stacked */
+  }
+
+  .album-image img {
+    margin-bottom: 15px; /* Space between image and text on small screens */
+  }
+}
+
+/*carousel*/
+
+/* Default state of the navbar links */
+.navbar-brand img {
+  display: block; /* Ensures the image is not inline */
+  max-height: 50px; /* Adjust as needed */
+  width: auto; /* Adjust as needed */
+  margin-right: 15px; /* Space between logo and nav items */
+}
+
+.navbar-toggler {
+  border: none;
+  outline: none;
+}
+
+/* Styles for the collapsed menu */
+
+.navbar-nav .nav-link {
+  color: #d4af37; /* Gold color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover state of the navbar links */
+.navbar-nav .nav-link:hover {
+  transform: scale(1.1); /* Slightly larger on hover */
+  color: white !important; /* White color on hover, use !important to override */
+}
+
+/* Active state of the navbar links specifically for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .navbar-nav .nav-link:active {
+    color: white !important; /* White color on active (click), use !important to override */
+    margin-top: 1rem !important;
+  }
+}
+
+@font-face {
+  font-family: "Bergamasco";
+  src: url("../Desktop/bergamasco/Bergamasco Semibold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Bergamasco";
+  src: url("../Desktop/bergamasco/Bergamasco Light.ttf") format("truetype");
+  font-weight: Italic;
+  font-style: normal;
+}
+
+/* Repeat the pattern for Light, Light Italic, Regular, Regular Italic, Semibold, Semibold Italic, Thin, and Thin Italic */
+.bold-text {
+  font-family: "Bergamasco";
+  font-weight: Semibold;
+  font-size: 50px;
+}
+
+.italic-text {
+  font-family: "Bergamasco";
+  font-weight: Light;
+  font-size: 25px;
+}
+
+@media (max-width: 768px) {
+  .bold-text {
+    font-size: 32px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .bold-text {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 768px) {
+  .italic-text {
+    font-size: 28px;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .italic-text {
+    font-size: 24px;
+  }
+}
+
+/* Style for the blockquote */
+blockquote {
+  font-style: italic;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Style for the gold line */
+.gold-line {
+  border-top: 2px solid #d4af37; /* Gold color and thicker line */
+  width: 10%; /* Set to 10% of its container's width */
+  margin: 0 auto; /* Center the line */
+}
+
+/* Style for the paragraphs */
+
+/* Add more padding to the container if needed */
+.container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Styling for 'Read More' button */
+.btn.read-more {
+  background-color: #d4af37; /* Gold color */
+  border-color: #d4af37; /* Gold border */
+  color: white; /* White text */
+}
+
+.btn.read-more:hover {
+  background-color: #b3922f; /* Darker gold color on hover */
+  border-color: #b3922f; /* Darker gold border on hover */
+}
+
+.truncate {
+  overflow: hidden;
+  transition: max-height 1s ease-in-out;
+}
+
+/* Responsive font size for paragraphs */
+/* Existing styles for desktop */
+.truncate p {
+  font-size: 18px; /* Regular font size for desktop */
+}
+
+.btn.read-more {
+  font-size: 14px; /* Regular font size for desktop buttons */
+  padding: 8px 16px; /* Regular padding for desktop buttons */
+  font-family: "Roboto", sans-serif; /* Optional: Use a different font */
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust breakpoint as needed */
+  .truncate p {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+
+  .btn.read-more {
+    font-size: 12px; /* Smaller font size for mobile buttons */
+    padding: 6px 12px; /* Smaller padding for mobile buttons */
+  }
+}
+/* Styles for mobile devices */
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  /* Common breakpoint for mobile devices */
+  .container .row .btn.read-more {
+    margin-bottom: 40px; /* Increase space below the button on mobile */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Common breakpoint for mobile devices */
+  .container .row .btn.read-more {
+    margin-bottom: 40px; /* Increase space below the button on mobile */
+  }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 768px) {
+  /* Common breakpoint for mobile devices */
+  .container .row h2 {
+    font-size: 22px; /* Smaller font size for h2 on mobile */
+  }
+
+  .container .row p {
+    font-size: 17px; /* Smaller font size for p on mobile */
+  }
+}
+
+/* Initial state - invisible and slightly translated */
+
+/* Final state - fully visible and in original position */
+
+/* Stellt die Positionierung des Inhaltscontainers ein */
+.content {
+  position: relative;
+  text-align: center; /* Zentriert den Inhalt */
+}
+
+/* Stil für den Container, der die Buttons und den Titel umfasst */
+
+/* Stil für beide Musikdienst-Buttons */
+/* Spezifischer Stil für den Apple Music Button */
+
+/* Hover-Effekte für beide Buttons */
+
+/* Increase space between Spotify and Apple Music embeds */
+
+/* Centering Spotify Embed */
+.spotify-embed iframe {
+  display: block; /* Makes sure the iframe behaves like a block element */
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; /* Adjust width as needed */
+  height: 450px; /* Adjust height as needed */
+  margin-bottom: 2rem; /* Space below the Spotify embed */
+}
+
+/* Centering Apple Music Embed */
+.apple-music-embed a {
+  display: block; /* Makes sure the link behaves like a block element */
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px; /* Adjust width as needed */
+  height: 100px; /* Adjust height as needed */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .spotify-embed iframe {
+    width: 100%; /* Full width on mobile */
+    height: 500px; /* Adjust height as needed for mobile */
+  }
+
+  .apple-music-embed a {
+    width: 200px; /* Adjust width as needed for mobile */
+    height: 67px; /* Adjust height as needed for mobile */
+  }
+}
+
+/*
+.discography-section {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 2rem;
+  margin-top: 35rem; 
+  width: 100%; 
+}
+*/
+.music-embeds {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content inside music-embeds */
+  gap: 1rem; /* Spacing between Spotify and Apple Music embeds */
+}
+
+.apple-music-embed a {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 300px; /* Increased width */
+  height: 40px; /* Reduced height */
+  margin-bottom: 1rem;
+}
+
+/* Since the iframe and Apple Music link are now differently sized,
+ you might want to adjust the styles for the iframe as well for consistency */
+.spotify-embed iframe {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%; /* You can adjust this as needed */
+  height: 450px;
+  margin-bottom: 2rem;
+}
+
+.timeline-wrapper {
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent black */
+  border-radius: 15px; /* Rounded corners */
+  padding: 45px; /* Padding around the timeline */
+  width: 100%; /* Full width of the container */
+}
+
+.timeline-container {
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center timeline wrapper */
+  align-items: center; /* Center timeline vertically */
+  max-width: 50%; /* Adjust as needed */
+}
+
+@media (max-width: 768px) {
+  .discography-section {
+    flex-direction: column;
+  }
+
+  .music-embeds,
+  .timeline-container {
+    max-width: 100%;
+  }
+
+  .spotify-embed iframe,
+  .apple-music-embed a {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .timeline-item {
+    width: 100%; /* Full width on mobile */
+    padding: 1rem 2rem; /* Adjust padding as needed */
+  }
+
+  .timeline-item:nth-child(odd):before,
+  .timeline-item:nth-child(even):before {
+    position: absolute;
+    top: -30px;
+    left: 10px; /* Adjust this value to keep the element within the item */
+    margin-left: 0; /* Remove any negative margin */
+  }
+
+  .timeline::after {
+    /* Adjust the vertical line if necessary */
+    left: 30px; /* Align with the year bubbles */
+  }
+}
+
+.embed-heading {
+  text-align: center;
+  font-size: 1.2rem; /* Adjust size as needed */
+  color: #d4af37; /* Adjust color as needed */
+  margin-bottom: 1rem; /* Space between text and embed */
+}
+
+.embed-container {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ); /* Semi-transparent black background */
+  border-radius: 15px; /* Rounded corners */
+  padding: 1rem; /* Padding around the content */
+  margin-bottom: 2rem; /* Space between embed containers */
+}
+
+.calendar {
+  text-align: center;
+  margin-top: 0;
+}
+
+.calendar-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d4af37;
+}
+
+.calendar-box {
+  background-color: rgba(0, 0, 0, 0.8); /* 90% opacity white */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.month {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.month-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.prev-month,
+.next-month {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #d4af37;
+  margin: 0 10px;
+}
+
+.month-name {
+  font-size: 1.2rem; /* Smaller month text */
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 60px); /* Increase width of day */
+  gap: 10px;
+}
+
+.day {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.current-day {
+  background-color: #d4af37;
+  color: #fff;
+}
+
+.concert-day {
+  background-image: url("https://i.imgur.com/0He3WGF.png");
+  background-size: cover; /* This will cover the entire area of the day */
+  background-repeat: no-repeat;
+  color: #fff; /* Make the text visible, choose a color that contrasts with your image */
+  font-weight: bold;
+  display: flex; /* Use flexbox to center the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow to the text for better readability */
+}
+
+.concert-day:hover {
+  background-color: rgba(
+    255,
+    215,
+    0,
+    0.5
+  ); /* Lighter background on hover with some transparency */
+}
+
+@media (max-width: 768px) {
+  .days {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+.custombold-textmusicians {
+  font-family: "MyCustomFontBold", sans-serif;
+  padding-bottom: 200px;
+  font-size: 48px;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  position: relative;
+  left: 30%;
+  top: 40%;
+  transform: translate(-20%, -50%);
+  user-select: none; /* -- Prevent image highlighting -- */
+  white-space: nowrap;
+}
+
+#image-track > .image {
+  width: 600px;
+  height: 450px;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
+#image-track-section {
+  /* Make sure this container is positioned relatively or absolutely as needed */
+  overflow: hidden;
+  position: relative;
+}
+
+#image-track-section h2 {
+  color: #fff; /* Adjust the color as needed */
+  text-align: center;
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+  font-size: 2em; /* Adjust the size as needed */
+  /* Ensure the heading doesn't move with the image track */
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10; /* Make sure it's above the image track */
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  #image-track > .image {
+    width: 50vw; /* Use 50% of the viewport width for image sizing on mobile */
+    height: auto; /* Adjust height to maintain aspect ratio */
+    object-position: 50% center; /* Center the images since they're smaller */
+  }
+}
+
+/* Hide Swiper on desktop */
+
+/* Show Swiper and hide the original section on mobile */
+@media (max-width: 768px) {
+  #image-track-section {
+    display: none;
+  }
+}
+
+/* Add more styles as needed */
+/* Social Media Icons Styling */
+
+/* FontAwesome icon adjustments if needed */
+
+.nav-separator {
+  padding: 0 10px; /* Adjust spacing around the slash */
+  color: white; /* Match the color of your nav links */
+  display: flex;
+  align-items: center; /* Center align with the nav links vertically */
+}
+
+button {
+  border: none;
+}
+.btnMenu {
+  background: transparent;
+  border: none;
+}
+.nav-link.active {
+  text-decoration: underline;
+}
+
+.btnMenu:focus,
+.btnMenu:active {
+  background: transparent;
+  border: none;
+  outline: none !important;
+  box-shadow: none;
+}
+
+.card-n {
+  display: flex;
+  align-items: center;
+  width: 120vw;
+  max-width: 950px;
+  padding: 120px 80px 120px 80px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  /* Centering the card */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-n img {
+  max-width: 500px;
+  width: 45vw;
+  height: 500px;
+  object-fit: cover;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card-n h2 {
+  padding-top: 10px;
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-bottom: 60px;
+}
+
+.card-n h3 {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.card-n p {
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  opacity: 0.5;
+  padding-top: 4px;
+}
+
+.card-n button {
+  border: 1px solid #f8f8f8;
+  background: transparent;
+  color: #f8f8f8;
+  font-family: inherit;
+  padding: 18px 30px;
+  font-size: 18px;
+  border-radius: 40px;
+}
+
+@media (max-width: 600px) {
+  .card-n {
+    flex-direction: column;
+    width: 100%; /* Adjust to full width for better mobile view */
+    margin: 0 20px; /* Adjust margins for smaller screens */
+    padding: 30px; /* Adjust padding for smaller screens */
+    text-align: center;
+  }
+
+  .card-n img {
+    margin-top: 10px;
+    width: 80%;
+    height: auto;
+  }
+
+  .card-n h2 {
+    margin-right: 0;
+    font-size: 24px; /* Slightly reduce font size for mobile */
+  }
+
+  .card-n p {
+    max-width: none; /* Remove max-width constraint */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 440px) {
+  .card-n img {
+    height: auto;
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Ensure the Swiper container has a defined width and overflow hidden to prevent horizontal scrolling */
+.swiper-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Center content in the slide and give it a defined size */
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px; /* Your desired width */
+  height: 400px; /* Your desired height */
+}
+
+/* Style your image to fit within the slide */
+.swiper-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover; /* This will cover the area without stretching the image */
+}
+
+/* Style the scrollbar track */
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+  --swiper-scrollbar-size: 10px; /* Increase the height of the scrollbar */
+}
+
+.swiper-scrollbar {
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  position: relative;
+  touch-action: none;
+  background: black !important; /* Overrides other background styles */
+}
+
+.swiper-scrollbar-drag {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background: var(
+    --swiper-scrollbar-drag-bg-color,
+    rgba(255, 200, 0, 0.5)
+  ) !important;
+  border-radius: var(--swiper-scrollbar-border-radius, 10px);
+  left: 0;
+  top: 0;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: calc(var(--swiper-navigation-size) / 44 * 27);
+  height: var(--swiper-navigation-size);
+  margin-top: calc(0px - (var(--swiper-navigation-size) / 2));
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(255, 200, 0, var(255, 200, 0)) !important;
+}
+
+#projects .carousel-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 500px; /* Adjust as needed */
+}
+
+.slide-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slide-image {
+  width: 45%;
+  height: auto;
+  margin: 10px;
+}
+
+.slide-paragraph,
+.slide-text {
+  width: 45%;
+  margin: 10px;
+}
+
+.slide-video {
+  width: 45%;
+  height: 250px; /* Adjust as needed */
+  margin: 10px;
+}
+
+/*ab hier neu MM Stand 18.02*/
+#video-carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 20px; /* Add padding around the entire section */
+}
+
+.top-container {
+  display: flex;
+  justify-content: center; /* Adjusted for centering */
+  width: 80%; /* Maintain the width for less spread */
+  align-items: center;
+  margin: auto; /* Center the containers */
+  gap: 20px; /* Space between the flex items */
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row; /* Align children elements horizontally */
+  align-items: center; /* Align items vertically in the center */
+  justify-content: center; /* Center the items horizontally */
+  width: 100%; /* Use the full width for the container */
+  gap: 20px; /* Space between the flex items */
+}
+
+.bottom-container .text-content {
+  flex-grow: 2; /* Allows text content to grow more than the video */
+  flex-basis: 0; /* Starts from 0 width before growing */
+  padding-right: 20px; /* Adds some space to the right of the text content */
+}
+
+.bottom-container .video-responsive {
+  flex: 1; /* Allows video container to grow and fill available space */
+  max-width: 50%; /* Limits width to half of the bottom-container */
+  position: relative; /* Needed for the absolute positioning of the iframe */
+}
+
+.top-container {
+  margin-top: 70px;
+}
+
+.project-title {
+  color: gold;
+  opacity: 40%;
+}
+
+.top-container p {
+  text-align: justify;
+  width: 45%; /* Adjust the width as needed */
+  margin: 10px; /* Adjust or add margin as needed */
+  flex: 0 0 auto; /* Do not grow or shrink */
+}
+
+.bottom-container p {
+  text-align: justify;
+  width: 65%; /* Adjust the width as needed */
+  margin: 10px; /* Adjust or add margin as needed */
+  flex: 0 0 auto; /* Do not grow or shrink */
+  margin-left: 12.7vw;
+}
+
+.top-container-h2 {
+  width: 100%; /* Ensure it takes the full width of the container */
+  text-align: left; /* Align the text to the left */
+  margin-bottom: 10px; /* Optional: add some space below the h2 */
+}
+
+/*
+.top-container img {
+  width: 45%; 
+  margin: 10px; 
+  flex: 0 0 auto; 
+}
+*/
+.swiper-imagetop { /*new styling for top swiper*/
+  width: 95%; /* Adjust the width as needed */
+  margin: 10px; /* Adjust or add margin as needed */
+  flex: 0 0 auto; /* Do not grow or shrink */
+}
+
+.swiper-imagetop-johann {
+  width: 90%; /* Adjust the width as needed */
+  margin: 10px; /* Adjust or add margin as needed */
+  flex: 0 0 auto;
+}
+
+.swiper-imagetop-brazil {
+  width: 150%; /* Adjust the width as needed */
+  margin: 10px; /* Adjust or add margin as needed */
+  flex: 0 0 auto;
+}
+
+
+
+.bottom-container iframe {
+  width: 35%; /* Same width as the original video tag */
+  margin: 10px; /* Same margin as the original video tag */
+  flex: 0 0 auto; /* Do not grow or shrink, same as the original video tag */
+  margin-right: 10vw; /* Same margin-right as the original video tag */
+}
+
+.text-container p {
+  width: 45%; /* Adjust the width as needed */
+}
+
+@media (max-width: 992px) {
+  .top-container,
+  .bottom-container {
+    flex-direction: column;
+    align-items: center; /* Center align items for small screens */
+    width: 80%; /* Match the width of the top-container */
+    margin: auto; /* Center the container on the page */
+  }
+
+  .top-container img,
+  .top-container p,
+  .bottom-container p {
+    width: 100%; /* Full width for a stacked layout on small screens */
+    margin: 10px 0; /* Adjust margin for a stacked layout */
+  }
+
+  .bottom-container .text-content,
+  .bottom-container .video-responsive {
+    width: 100%; /* Adjust the width to be full within the bottom-container */
+    padding: 0; /* Reset any padding that might be causing width issues */
+  }
+
+  .bottom-container iframe {
+    width: 100%; /* Set width to 100% of its parent */
+    max-width: 560px; /* Max width of the iframe, adjust as needed */
+    height: auto; /* Height automatically adjusted to maintain aspect ratio */
+    position: relative; /* Relative position for proper alignment */
+    margin: auto; /* Center the iframe horizontally */
+    display: block; /* Ensure the iframe is treated as a block-level element */
+  }
+}
+
+.image-in-gallery {
+  height: auto;
+  min-width: 320px;
+}
+
+@media (max-width: 991px) {
+  /* Adjust this value based on where you want the mobile styling to start */
+  .navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar-left,
+  .navbar-center,
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar-center-logo {
+    order: -1; /* Move logo to the top */
+  }
+
+  .navbar-center-logo img {
+    width: 300px; /* Equivalent to the inline width */
+    height: auto; /* Equivalent to the inline height */
+    margin-top: 0;
+  }
+
+  .navbar-toggler {
+    display: block; /* Show the toggle button */
+    margin-top: 10px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: inline-block;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .nav-item {
+    width: 100%; /* Make nav items full width */
+    text-align: center; /* Center the text */
+  }
+
+  .dropdown-menu {
+    position: static; /* Disable absolute positioning */
+    float: none; /* Remove float */
+    width: auto; /* Set width to auto */
+  }
+
+  .navbar-toggler.collapsed .navbar-collapse {
+    display: none;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .navbar-toggler:not(.collapsed) .navbar-collapse {
+    display: flex;
+  }
+
+  .nav-separator {
+    display: none; /* Hide separators on mobile */
+  }
+
+  .nav-item.social-icon {
+    display: none; /* This hides the social links */
+  }
+
+  .nav-item.lang-switch {
+    display: none; /* This hides the social links */
+  }
+
+  .navbar-center {
+    width: 236px;
+    height: 14px;
+  }
+}
+
+/* Adjustments for very small screens */
+@media (max-width: 575px) {
+  .navbar-nav .nav-item {
+    padding: 5px 0; /* Reduce padding for nav items */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-right .navbar-nav {
+    flex-direction: column; /* Stack the items vertically */
+    width: 100%; /* Full width */
+    margin-top: 1rem;
+  }
+  #navbarContent {
+    background-color: black;
+  }
+
+  .navbar-right .nav-item {
+    width: 100%; /* Full width for each nav item */
+    text-align: center; /* Center the text */
+  }
+
+  .navbar-right {
+    width: 100%; /* Full width for dropdown menus */
+  }
+
+  .dropdown-menu-mobile-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-item {
+    width: auto;
+  }
+
+  /* Ensure the dropdown menus are visible when navbar is toggled in mobile view */
+  .navbar-toggler.collapsed + .collapse .dropdown-menu {
+    display: none;
+  }
+
+  .navbar-toggler:not(.collapsed) + .collapse .dropdown-menu {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Adjust for mobile screens */
+  .fixed-toggler {
+    position: fixed;
+    top: 0; /* Adjust the value as needed */
+    right: 10px; /* Adjust the value as needed */
+    z-index: 1020; /* To ensure it's above other elements */
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar-toggler-icon {
+    transform: scale(0.8); /* Adjust the scale value as needed */
+  }
+}
+
+.biography-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; /* Startet das Element am Anfang des Containers */
+  margin: auto;
+  max-width: 90%;
+  padding: 20px;
+}
+
+.biography-card {
+  display: flex;
+  flex-direction: column; /* Oder row, wenn das Bild links sein soll */
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  flex: 1; /* Ermöglicht, dass dieser Bereich flexibel wächst */
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 360px;
+  padding: 50px 30px 50px 20px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 24px;
+  margin-right: 20px;
+  flex: 0 0 auto;
+  box-shadow: -20px 0 0 20px rgba(0, 0, 0, 0.4),
+    20px 0 0 20px rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  margin-left: 10vw; /* Push the card to the right */
+  margin-right: -8.8vw;
+}
+
+.biography-text {
+  flex-grow: 1;
+  padding-left: 0px;
+  max-width: calc(100% - 300px);
+  margin-left: 25vw;
+  text-align: justify;
+  position: relative;
+  z-index: 2;
+}
+
+#more-text {
+  display: none;
+  transition: all 0.3s ease;
+}
+
+.card img {
+  max-width: 360px;
+  width: 35vw;
+  height: 400px;
+  object-fit: cover;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-radius: inherit;
+  box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
+}
+
+.card h2 {
+  padding-top: 20px;
+  font-size: 26px;
+  font-weight: 400;
+  margin-top: 0;
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  opacity: 0.75;
+}
+
+.card p {
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 30px;
+  opacity: 0.5;
+  padding-top: 2px;
+}
+
+.card button {
+  border: 1px solid #f8f8f8;
+  background: transparent;
+  color: #f8f8f8;
+  font-family: inherit;
+  padding: 16px 26px;
+  font-size: 16px;
+  border-radius: 40px;
+}
+
+@media (width <= 600px) {
+  .card {
+    margin: 0 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 60px;
+    width: 80%;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .card h2 {
+    margin-right: 0;
+    font-size: 26px;
+  }
+
+  .card img {
+    margin: -100px 0 30px 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 250px;
+  }
+
+  .card p {
+    max-width: 360px;
+  }
+}
+
+@media (width <= 440px) {
+  .card img {
+    height: 45vw;
+    width: 45vw;
+    border-radius: 50%;
+    margin: -140px 0 30px 0;
+  }
+}
+
+.read-more1 {
+  color: #ffffff;
+  background-color: #000000;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+.read-more1:hover {
+  background-color: #555555;
+  color: #ffff00;
+}
+
+@media (max-width: 768px) {
+  .read-more {
+    font-size: 12px;
+    padding: 6px 12px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .biography-container {
+    margin-top: 100px;
+    flex-direction: column; /* Stack the card above the text */
+    align-items: center; /* Center align the items */
+  }
+
+  .card {
+    max-width: 100%; /* Allow card to take full width */
+    margin-left: 0; /* Reset margin */
+    margin-right: 0; /* Reset margin */
+    padding: 20px; /* Adjust padding as needed */
+    margin-bottom: 100px;
+  }
+
+  .biography-text {
+    max-width: 100%; /* Allow text to take full width */
+    padding-left: 0; /* Reset padding */
+    margin-left: 0; /* Reset margin */
+  }
+
+  .card img {
+    width: 80%; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust h2 font size if needed */
+  .card h2 {
+    font-size: 22px;
+  }
+
+  /* Adjust paragraph styles if needed */
+  .card p {
+    font-size: 14px;
+  }
+}
+
+/* Additional adjustments for very small screens */
+@media (max-width: 440px) {
+  .card img {
+    width: 100%; /* Full width for very small screens */
+    border-radius: 0; /* Optional: remove border radius for smaller screens */
+  }
+
+  .read-more1 {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+.donation-info {
+  margin-top: 20px; /* Add space above the div */
+  padding: 10px;
+  border-radius: 5px; /* Optional rounded corners */
+}
+
+.donation-info p {
+  color: #fff; /* Dark text color */
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+.slide-description {
+  background-color: black;
+  color: white;
+  text-align: justify;
+  width: 600px; /* same as the image width */
+  padding: 10px; /* adjust as needed */
+}
+
+.slide-description a {
+  color: white;
+  text-decoration: underline;
+}
+
+.slide-description p {
+  margin: 0 0 10px 0; /* adjust bottom margin for spacing */
+}
+
+#open_preferences_center {
+  color: white;
+  background-color: transparent;
+  font-size: 18px; /* Default font size for larger screens */
+  z-index: 1000;
+}
+
+.download-description {
+  color: #fff; /* Or any color you want for the text */
+  margin-top: 0.5rem; /* Adjust to position the sentence */
+  margin-bottom: 0.5rem; /* Adjust to position the sentence */
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+.pdf-download-link {
+  color: gold; /* Or use a specific color code like #FFD700 */
+  text-decoration: none; /* Optional: removes the underline */
+}
+
+.pdf-download-link:hover {
+  color: white;
+  text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+#freeprivacypolicy-com---nb {
+  position: fixed; /* oder `absolute`, falls `fixed` nicht gewünscht ist */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Stelle sicher, dass es über anderen Inhalten angezeigt wird */
+  /* Füge hier weitere Stile hinzu, um das Aussehen anzupassen */
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowim {
+  display: flex;
+  justify-content: center; /* Center images horizontally */
+  flex-wrap: wrap; /* Allow wrapping of images */
+  margin-bottom: 20px; /* Spacing between image rows */
+  width: 100%; /* Ensure rowim takes full width */
+}
+
+.rowim img {
+  width: 200px; /* Adjust as needed for your preferred size */
+  height: 150px; /* Adjust to get the rectangle shape */
+  object-fit: cover; /* This will ensure the images cover the area without stretching */
+  margin: 5px; /* Uniform spacing around images */
+  border-radius: 4px; /* A small border radius for slight rounding of corners */
+}
+
+@media screen and (max-width: 768px) {
+  .rowim img {
+    width: calc(50% - 20px); /* Adjust width for 2 images per row on mobile */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+}
+
+
+
+.image-container {
+  position: relative; /* Make the position of the close button relative to this container */
+  display: flex; /* Keep images inline and allow for the relative position */
+  justify-content: center; /* Center images horizontally */  
+}
+
+.close-button {
+  position: fixed;
+  top: 10vh; /* Position from the top of the container */
+  right: 15vw; /* Position from the right of the container */
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  z-index: 10001; /* Ensure the button is above the image */
+  display: none; /* Hide button initially */
+}
+.enlarged-image {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 100vw !important; /* Adjusted to take up full width */
+  height: 100vh !important; /* Adjusted to take up full height */
+  object-fit: contain !important;
+  z-index: 1001 !important; /* Increased */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
+  background: black !important;
+}
+
+@media (max-width: 600px) {
+  .close-button {
+    top: 8vh; /* Adjust position for smaller screens */
+    right: 5vw;
+    font-size: 25px; /* Adjust size for better visibility */
+  }
+}
+
+
+.video-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.rowvid {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 30px; /* Spacing between video rows */
+  flex-wrap: wrap; /* Wrap items to the next line if needed */
+}
+
+.rowvid iframe {
+  width: 420px; /* Adjust as needed for your preferred size */
+  height: 230px; /* Adjust to maintain a 16:9 aspect ratio */
+  margin: 10px; /* Spacing around videos */
+  border-radius: 4px; /* A small border radius for slight rounding of corners */
+  border: none; /* Removes the default iframe border */
+}
+
+@media screen and (max-width: 768px) {
+  .rowvid iframe {
+    width: calc(50% - 20px); /* Adjust width for 2 videos per row on mobile */
+    height: auto; /* Adjust height to maintain aspect ratio */
+  }
+}
+
+/* For mobile screens */
+@media screen and (max-width: 768px) {
+  #bottom-section {
+    display: none;
+  }
+}
+
+.featured-artists-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjusts the space between the title and the list */
+}
+
+.artist-list {
+  list-style-type: none; /* Removes the default bullet points */
+  padding: 0; /* Removes the default padding */
+}
+
+.artist-list li {
+  display: block; /* Stack list items vertically */
+  margin: 5px 0; /* Give some space between list items */
+  text-align: left; /* Align text to the left within list items */
+  margin-left: 240px;
+}
+
+.artist-list a {
+  color: goldenrod;
+}
+
+@media (max-width: 768px) {
+  .artist-list {
+    list-style-type: none; /* Removes the default bullet points */
+    padding: 0; /* Removes the default padding */
+    margin-left: 0; /* Aligns with the other text */
+  }
+
+  .artist-list li {
+    display: block; /* Stack list items vertically */
+    margin: 5px 0; /* Give some space between list items */
+    text-align: left; /* Align text to the left within list items */
+  }
+}
+
+.share-buttons {
+  text-align: center; /* Center the buttons */
+  margin-top: 15px; /* Add some space above the buttons */
+}
+
+/* Optional: If you're using Bootstrap, these classes are predefined. If not, define your button styles here. */
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  margin: 5px; /* Spacing between buttons */
+  display: inline-block; /* Align buttons in a row */
+  border: 1px solid goldenrod; /* Remove border for aesthetics */
+  border-radius: 4px; /* Optional: for rounded corners */
+}
+
+.btn-primary {
+  background-color: #000000; /* Facebook blue */
+}
+
+.btn-primary:hover {
+  color: #fff;
+  background-color: goldenrod;
+  border-color: #000;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: goldenrod;
+  border-color: #000;
+}
+
+.btn-info {
+  background-color: #000000; /* Twitter blue */
+}
+
+.news-section {
+  position: relative;
+  overflow: hidden;
+  padding: 40px 0;
+  text-align: center; /* Center align everything within news-section */
+}
+
+.news-section .card-body {
+  padding: 2rem;
+}
+
+.news-container {
+  height: 600px; /* Set a fixed height or use max-height */
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.news-item {
+  margin-bottom: 80px; /* Increase the spacing between news items */
+  text-align: center; /* Center align news items */
+}
+
+.news-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-left: auto; /* Centers the image */
+  margin-right: auto; /* Centers the image */
+}
+
+.news-title {
+  font-size: 1.5rem;
+  margin-top: 2rem; /* Adds space at the top of the title */
+  margin-bottom: 1rem; /* Adds space below the title */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .news-section {
+    padding: 20px 10px; /* Reduce padding on smaller screens */
+  }
+
+  .news-section .card-body {
+    padding: 1rem; /* Reduce padding inside the card */
+  }
+
+  .news-container {
+    height: auto; /* Remove fixed height to allow content to expand */
+    padding-bottom: 1rem; /* Adds some padding at the bottom */
+  }
+
+  .news-item:not(:last-child) {
+    margin-bottom: 30px; /* Reduce the spacing between news items */
+  }
+
+  .news-title {
+    font-size: 1.2rem; /* Adjust the title font size for readability */
+    margin-top: 1rem; /* Adjust top margin */
+    margin-bottom: 0.5rem; /* Adjust bottom margin */
+  }
+
+  .news-container {
+    padding-top: 3rem; /* Adjust space for the title */
+  }
+
+  .news-image {
+    height: 200px; /* Adjust image height */
+  }
+}
+
+@media (max-width: 767px) {
+  .freeprivacypolicy-com---nb .cc-nb-main-container {
+    padding: 0rem !important;
+  }
+}
+
+#team {
+  text-align: center; /* Centers the content of the section */
+}
+
+.team-image {
+  max-width: 600px; /* Max width of the image */
+  max-height: 400px; /* Max height of the image */
+  width: 90%; /* Makes the image responsive */
+  height: auto; /* Maintains the aspect ratio */
+  margin: 20px; /* Adds margin around the image */
+  display: block; /* Makes image a block element */
+  margin-left: auto; /* Margin auto for left and right centers the image */
+  margin-right: auto;
+}
+
+.current-language {
+  text-decoration: underline;
+  /* You can add other styles like font-weight or color if needed */
+}
+
+.fixed-music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    rgb(0, 0, 0),
+    rgb(141, 107, 21)
+  ); /* Changed to gradient */
+  color: white;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  z-index: 1000;
+}
+
+.fixed-music-player .player-controls {
+  display: flex;
+  align-items: center;
+}
+
+.fixed-music-player button {
+  background: none;
+  border: none;
+  color: white;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.fixed-music-player button:focus {
+  outline: none;
+}
+
+.fixed-music-player .track-info {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Hiding the default browser audio player controls */
+#musicPlayer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .fixed-music-player {
+    flex-direction: column;
+    padding: 5px;
+  }
+
+  .fixed-music-player .player-controls {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+  .fixed-music-player .track-info {
+    order: -1; /* moves track info above controls on small screens */
+    margin-bottom: 0px;
+    text-align: center;
+  }
+}

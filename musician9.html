@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchestra Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src='https://unpkg.com/fullcalendar@5/main.min.js'></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+
+    <script  src="script.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<!--Navbar-->
+<body class="font-roboto custom-colorp bg-darkbrown text-black">
+
+    <style>@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+    </style>
+    
+    
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);">
+      <div class="navbar-container">
+          <!-- Left side: Logo and language switcher -->
+          <div class="navbar-left">
+    
+              <ul id="languageSwitcher" class="navbar-nav">
+                  <li class="nav-item lang-switch"><a href="#" onclick="changeLanguage('en', event)" class="nav-link active customreg-text">En</a></li>
+                  <li class="nav-separator" style="margin-right: 5px; margin-left: 5px;">/</li>
+                  <li class="nav-item lang-switch"><a href="indexgerman.html" class="nav-link customreg-text">De</a></li>
+                  
+    
+    
+                  <li class="nav-item social-icon"><a href="https://www.instagram.com/morphingmusic" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a></li>
+                  <li class="nav-item social-icon"><a href="https://www.facebook.com/morphingmusic/" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a></li>
+                  <li class="nav-item social-icon"><a href="https://www.youtube.com/@morphingchamberorchestra" target="_blank" class="nav-link"><i class="fa fa-youtube"></i></a></li>
+                  <li class="nav-item social-icon"><a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-spotify"></i></a></li>
+                  <li class="nav-item social-icon"><a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-apple"></i></a></li>
+              </ul>
+          </div>
+    
+          <!-- Center: Main Logo -->
+          <div class="navbar-center">
+              <a href="#home" class="navbar-center-logo">
+                  <img   src="https://i.imgur.com/HvkRXDW.png" alt="Morphing Music Institute">
+              </a>
+          </div>
+    
+    
+          <!-- Right side: Navigation and social media links -->
+          <div class="navbar-right">
+              <ul class="navbar-nav">
+                <div class="collapse navbar-collapse" id="navbarContent">
+    
+                <li class="nav-item dropdown">
+                  <a href="#" class="customreg-text nav-link dropdown-toggle hover:text-white" id="orchestraDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Our Orchestra
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="orchestraDropdown">
+                      <a class="dropdown-item customreg-text" href="#orchestra">Our Orchestra</a>
+                      <a class="dropdown-item custom-dropdown-item" href="#biography">Biography</a>
+                      <a class="dropdown-item custom-dropdown-item" href="#team">Our Team</a>
+                      
+                      <!-- Add more dropdown items here if needed -->
+                  </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="customreg-text nav-link dropdown-toggle hover:text-white" id="concertsaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Concerts
+                </a>
+                <div class="dropdown-menu" aria-labelledby="concertsDropdown">
+                    <a class="dropdown-item customreg-text" href="#concertsandtickets">Projects</a>
+                    <a class="dropdown-item customreg-text" href="#video-carousel">Projects</a>
+                    <a class="dropdown-item customreg-text" href="#concertsandtickets">Calendar</a>
+                    <!-- Add more dropdown items here if needed -->
+                </div>
+            </li>              
+            
+            
+            
+            <li class="nav-item dropdown">
+              <a href="#media" class="customreg-text nav-link dropdown-toggle hover:text-white" id="mediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Media
+              </a>
+              <div class="dropdown-menu" aria-labelledby="mediaaDropdown">
+                  <a class="dropdown-item customreg-text" href="#discography">Discography</a>
+                  <a class="dropdown-item customreg-text" href="#news">News</a>
+                  <a class="dropdown-item customreg-text" href="#images.html">Images</a>
+                  <a class="dropdown-item customreg-text" href="#videosyt">Videos</a>
+                  <!-- Add more dropdown items here if needed -->
+              </div>
+          </li>
+    
+    
+    
+          <li class="nav-item dropdown">
+            <a href="#" class="customreg-text nav-link dropdown-toggle hover:text-white" id="supportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Support Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="supportDropdown">
+                <a class="dropdown-item customreg-text" href="#support">Support Us</a>
+                <a class="dropdown-item customreg-text" href="#socialmedia">Social Media</a>
+                <a class="dropdown-item customreg-text" href="contact.html">Contact Us</a>
+                <a class="dropdown-item customreg-text" href="#support">Donate</a>
+                <a class="dropdown-item customreg-text" href="#newsletter">Newsletter</a>
+                <!-- Add more dropdown items here if needed -->
+            </div>
+        </li>              <!-- Add your social media links here -->
+              </ul>
+          </div>
+      </div>
+      </div>
+      <button class="navbar-toggler fixed-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    
+    
+    </nav>
+
+
+
+
+    
+
+
+
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musiker Seite</title>
+    <link rel="stylesheet" href="musicianstyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bild">
+            <img src="https://i.imgur.com/nI8uMtu.jpg" alt="Bild des Musikers">
+        </div>
+        <div class="text">
+            <h1>Name of Musician</h1>
+            <p>
+                Der Musiker Julian Vega, bekannt für seinen einzigartigen Stil, der Jazz und elektronische Musik vereint,
+                hat sich seit seinem Debütalbum „Echoes of Night“ einen Namen gemacht. Dieses Album erhielt mehrere Auszeichnungen,
+                 darunter den „Best New Artist“ bei den Global Music Awards. Vega, ein Virtuose an Klavier und Synthesizer, 
+                 hat auf zahlreichen internationalen Festivals gespielt und gilt als Pionier in der Fusion von traditionellen und modernen Musikrichtungen.
+                  Seine jüngste Veröffentlichung „Sonic Waves“ wurde von Kritikern gefeiert und brachte ihm eine Nominierung für den „Innovative Sound Award“ ein.   Der Musiker Julian Vega, bekannt für seinen einzigartigen Stil, der Jazz und elektronische Musik vereint,
+                hat sich seit seinem Debütalbum „Echoes of Night“ einen Namen gemacht. Dieses Album erhielt mehrere Auszeichnungen,
+                 darunter den „Best New Artist“ bei den Global Music Awards. Vega, ein Virtuose an Klavier und Synthesizer, 
+                 hat auf zahlreichen internationalen Festivals gespielt und gilt als Pionier in der Fusion von traditionellen und modernen Musikrichtungen.
+                  Seine jüngste Veröffentlichung „Sonic Waves“ wurde von Kritikern gefeiert und brachte ihm eine Nominierung für den „Innovative Sound Award“ ein.          </p>
+        </div>
+    </div>
+</body>
+</html>
+
