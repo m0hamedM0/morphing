@@ -1842,6 +1842,7 @@ button {
   align-items: center;
   margin: auto; /* Center the containers */
   gap: 20px; /* Space between the flex items */
+  margin-top: 70px;
 }
 
 .bottom-container {
@@ -1863,10 +1864,6 @@ button {
   flex: 1; /* Allows video container to grow and fill available space */
   max-width: 50%; /* Limits width to half of the bottom-container */
   position: relative; /* Needed for the absolute positioning of the iframe */
-}
-
-.top-container {
-  margin-top: 70px;
 }
 
 .project-title {
