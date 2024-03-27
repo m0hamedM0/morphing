@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  background-color: #0c0b0b;
+  color: white;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  flex: 1 0 21%;
+  margin: 5px;
+}
+
+.column img {
+  opacity: 0.8; 
+  cursor: pointer;
+  width: 100%;
+  display: block;
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+.container {
+  position: relative;
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.expandedImg {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: "MyCustomFontBold";
+  src: url("fonts/Verlag-Bold.otf") format("opentype");
+}
+
+.custombold-text {
+  font-family: "MyCustomFontBold", sans-serif; /* Fallback to sans-serif */
+  color: goldenrod;
+}
+
+@media screen and (max-width: 768px) {
+  .column {
+    flex: 1 0 100%; /* Full width for the column */
+    padding: 5px; /* Adds padding around each column */
+  }
+
+  .column img {
+    width: 100%; /* Full width within the column */
+    padding: 15px; /* Adds padding around the image */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .non-clickable {
+    pointer-events: none; /* Disables click events */
+  }
+}
+
+
+</style>
+</head>
+<body>
+
+
+
+    
+<div style="text-align:center">
+  <h2 class="custombold-text">Morphings Image Gallery</h2>
+</div>
+
+<!-- The four columns -->
+<div class="row">
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+  
+    <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/725h8ls.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+  </div>
+</div>
+
+
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg">
+  <div id="imgtext"></div>
+</div>
+
+<script>
+function disableClickOnMobile() {
+  if (window.innerWidth <= 500) {
+    var images = document.querySelectorAll('.column img');
+    images.forEach(function(img) {
+      img.classList.add('non-clickable');
+    });
+  }
+}
+
+window.onload = disableClickOnMobile;
+window.onresize = disableClickOnMobile; // Optional: Adjust on window resize
+
+</script>
+
+</body>
+</html>
