@@ -1866,9 +1866,10 @@ button {
   position: relative; /* Needed for the absolute positioning of the iframe */
 }
 
-.project-title {
-  color: gold;
-  opacity: 40%;
+.highlight {
+  color: goldenrod;
+  font-family: "MyCustomFontBold";
+  font-size: 1.5em;
 }
 
 .top-container p {
