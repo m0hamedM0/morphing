@@ -215,7 +215,7 @@
                   <a class="dropdown-item customreg-text" href="#images"
                     >Images</a
                   >
-                  <a class="dropdown-item customreg-text" href="#video-gallery"
+                  <a class="dropdown-item customreg-text" href="#videos"
                     >Videos</a
                   >
                   <a class="dropdown-item customreg-text" href="#discography"
@@ -662,6 +662,13 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
+
+      <ol class="carousel-indicators">
+        <li data-target="#video-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#video-carousel" data-slide-to="1"></li>
+        <li data-target="#video-carousel" data-slide-to="2"></li>
+        <!-- Add more list items here for additional slides -->
+      </ol>
     </section>
 
     <section id="images" class="image-gallery">
@@ -706,12 +713,16 @@
               <i class="fas fa-times close-button"></i>
           </div>
       </div>
+
+      <div>
+        <button class="gallery-button">See Full Gallery</button>
+      </div>
   </section>
   
   
     
 
-    <section class="video-gallery">
+    <section id="videos" class="video-gallery">
       <h2 class="custombold-text" style="margin-bottom: 30px">Videos</h2>
       <div class="rowvid">
         <!-- First row of videos -->
@@ -1240,7 +1251,7 @@
     <!-- OUR TEAM  -->
     <section id="team">
       <h2 class="custombold-text">Our Team</h2>
-      <div class="swiper-container">
+      <div class="swiper-container team-swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <img
@@ -1254,15 +1265,16 @@
             </div>
           </div>
 
+
           <div class="swiper-slide">
             <img
-                    src="https://i.imgur.com/sF4Mkp9.jpg"
-                    alt="Bild von Yuuki Wong"
-                    style="width: 600px; height: 400px"
+              src="https://i.imgur.com/sF4Mkp9.jpg"
+              alt="Bild von Yuuki Wong"
+              style="width: 600px; height: 400px"
             />
             <div class="slide-description">
               <p>Yuuki Wong</p>
-              <a href="Yuuki.html">Find out more</a>
+              <p><a href="Yuuki.html">Find out more</a></p>
             </div>
           </div>
 
@@ -1350,7 +1362,7 @@
             </div>
           </div>
 
-          <div class="swiper-scrollbar"></div>
+          <div class="team-swiper-scrollbar"></div>
         </div>
       </div>
     </section>
@@ -1752,6 +1764,36 @@
         },
         // Additional configuration as needed
       });
+
+      var teamSwiper = new Swiper(".team-swiper-container", {
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  navigation: {
+    nextEl: ".team-swiper-button-next",
+    prevEl: ".team-swiper-button-prev",
+  },
+  scrollbar: {
+    el: ".team-swiper-scrollbar",
+    hide: false,
+    draggable: true,
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    960: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
     </script>
 
 

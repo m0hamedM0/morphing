@@ -1832,6 +1832,7 @@ button {
   overflow-x: hidden;
   width: 100%;
   padding: 20px; /* Add padding around the entire section */
+  height: 180vh;
 }
 
 .top-container {
@@ -2113,6 +2114,8 @@ button {
   }
 }
 
+
+
 .biography-container {
   display: flex;
   align-items: flex-start;
@@ -2209,7 +2212,9 @@ button {
   border-radius: 40px;
 }
 
-@media (width <= 600px) {
+
+
+@media (max-width: 768px) {
   .card {
     margin: 0 40px;
     padding-left: 50px;
@@ -2225,24 +2230,21 @@ button {
     font-size: 26px;
   }
 
-  .card img {
-    margin: -100px 0 30px 0;
-    width: 100%;
-    max-width: 1000px;
-    height: 250px;
-  }
 
   .card p {
     max-width: 360px;
   }
-}
 
-@media (width <= 440px) {
   .card img {
     height: 45vw;
     width: 45vw;
     border-radius: 50%;
     margin: -140px 0 30px 0;
+    padding-top: 130px;
+  }
+
+  #biography{
+    padding-top: 10vh;
   }
 }
 
@@ -2334,9 +2336,8 @@ button {
 .slide-description {
   background-color: black;
   color: white;
-  text-align: justify;
+  text-align: justify !important;
   width: 600px; /* same as the image width */
-  padding: 10px; /* adjust as needed */
 }
 
 .slide-description a {
@@ -2344,9 +2345,7 @@ button {
   text-decoration: underline;
 }
 
-.slide-description p {
-  margin: 0 0 10px 0; /* adjust bottom margin for spacing */
-}
+
 
 #open_preferences_center {
   color: white;
@@ -2419,9 +2418,18 @@ button {
   justify-content: center; /* Center images horizontally */  
 }
 
+.gallery-button{
+  background-color: #000000;
+  color: white;
+  border: solid 2px goldenrod;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
 .close-button {
   position: fixed;
-  top: 10vh; /* Position from the top of the container */
+  top: 12vh; /* Position from the top of the container */
   right: 15vw; /* Position from the right of the container */
   font-size: 30px;
   color: white;
@@ -2434,12 +2442,11 @@ button {
   top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
-  width: 100vw !important; /* Adjusted to take up full width */
-  height: 100vh !important; /* Adjusted to take up full height */
+  width: 80vw !important; /* Adjusted to take up full width */
+  height: 80vh !important; /* Adjusted to take up full height */
   object-fit: contain !important;
   z-index: 1001 !important; /* Increased */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) !important;
-  background: black !important;
 }
 
 @media (max-width: 600px) {

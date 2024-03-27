@@ -1,129 +1,3 @@
-/*const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        console.log(entry)
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
-    });
-});
-
-const hiddenElements = document.querySelectorAll('.hidden');
-hiddenElements.forEach((el) => observer.observe(el));
-
-
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    var docHeight = $(document).height();
-
-    if (scroll + windowHeight > docHeight - 50) { // Adjust 50 to the threshold you prefer
-        $("#bottom-image").css('opacity', '0.75');
-    } else {
-        $("#bottom-image").css('opacity', '0');
-    }
-});
-
-
-
-
-const items = document.querySelectorAll('.item');
-
-    items.forEach(item => {
-        const header = item.querySelector('h2');
-        const description = item.querySelector('.description');
-
-        header.addEventListener('mouseover', () => {
-            description.classList.add('active');
-        });
-
-        header.addEventListener('mouseout', () => {
-            if (!item.classList.contains('clicked')) {
-                description.classList.remove('active');
-            }
-        });
-
-        header.addEventListener('click', () => {
-            if (item.classList.contains('clicked')) {
-                description.classList.remove('active');
-                item.classList.remove('clicked');
-            } else {
-                // Remove 'clicked' class from all other items
-                items.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('clicked');
-                        otherItem.querySelector('.description').classList.remove('active');
-                    }
-                });
-
-                description.classList.add('active');
-                item.classList.add('clicked');
-            }
-        });
-    });
-
-
-    window.addEventListener('load', () => {
-        const slide = document.querySelector('.carousel-slide');
-        const images = slide.querySelectorAll('.carousel-image');
-        const prev = document.querySelector('.prev');
-        const next = document.querySelector('.next');
-        
-        let counter = 1; // Start with the first image (index 0) being the 'previous' one so that the second image can be the 'active' one.
-      
-        // Function to update the active image
-        function updateActiveImage() {
-          images.forEach((img, index) => {
-            img.classList.remove('active');
-            if (index === counter) {
-              img.classList.add('active');
-            }
-          });
-        }
-      
-        // Initial update
-        updateActiveImage();
-      
-        const imageWidth = images[0].clientWidth;
-        const imageMarginRight = parseInt(window.getComputedStyle(images[0]).marginRight);
-        const size = imageWidth + imageMarginRight;
-      
-        next.addEventListener('click', () => {
-          if (counter < images.length - 2) { // Adjust the number based on how many images you want to show
-            counter++;
-            slide.style.transform = 'translateX(' + (-size * (counter - 1)) + 'px)';
-            updateActiveImage();
-          }
-        });
-      
-        prev.addEventListener('click', () => {
-          if (counter > 1) {
-            counter--;
-            slide.style.transform = 'translateX(' + (-size * (counter - 1)) + 'px)';
-            updateActiveImage();
-          }
-        });
-      
-    });
-  
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'ArrowRight') {
-        if (counter < document.querySelectorAll('.carousel-image').length - 3) {
-          counter++;
-          slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        }
-      }
-      if (e.key === 'ArrowLeft') {
-        if (counter > 0) {
-          counter--;
-          slide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        }
-      }
-    });
-*/
-//testtesttest
-
 document.addEventListener("DOMContentLoaded", function () {
     // Function to truncate text
     function truncateText(element, maxLength) {
@@ -303,73 +177,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
   
-  /*images swiper
-  document.addEventListener('DOMContentLoaded', function() {
-      const track = document.getElementById("image-track");
-  
-      const handleOnDown = e => {
-          track.dataset.mouseDownAt = e.clientX;
-          // Other code if needed
-      };
-  
-      const handleOnUp = () => {
-          track.dataset.mouseDownAt = "0";  
-          track.dataset.prevPercentage = track.dataset.percentage;
-          // Other code if needed
-      };
-  
-      const handleOnMove = e => {
-          if (track.dataset.mouseDownAt === "0") return;
-          
-          const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX;
-          const maxDelta = window.innerWidth / 2;
-          const percentage = (mouseDelta / maxDelta) * -100;
-          const nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage;
-          const nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
-  
-          track.dataset.percentage = nextPercentage;
-  
-          track.animate({
-              transform: `translate(${nextPercentage}%, -50%)`
-          }, { duration: 1200, fill: "forwards" });
-  
-          for (const image of track.getElementsByClassName("image")) {
-              image.animate({
-                  objectPosition: `${100 + nextPercentage}% center`
-              }, { duration: 1200, fill: "forwards" });
-          }
-      };
-  
-      // Move these inside the DOMContentLoaded listener
-      window.onmousedown = e => handleOnDown(e);
-      window.ontouchstart = e => handleOnDown(e.touches[0]);
-      window.onmouseup = e => handleOnUp(e);
-      window.ontouchend = e => handleOnUp(e.changedTouches[0]); // Use changedTouches for touchend
-      window.onmousemove = e => handleOnMove(e);
-      window.ontouchmove = e => handleOnMove(e.touches[0]);
-  });
-  */
-  
-  /* scrollbar images musicians
-  document.addEventListener('DOMContentLoaded', (event) => {
-      const imageTrack = document.getElementById('image-track');
-      const violinistImage = document.getElementById('violinist-image');
-    
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          // Check if violinist image is intersecting with the image track
-          if (entry.isIntersecting) {
-            violinistImage.style.opacity = '0'; // Fade out
-          } else {
-            violinistImage.style.opacity = '1'; // Fade in
-          }
-        });
-      }, { threshold: [0.3] }); // Adjust the threshold value as needed
-    
-      // Observe the image track
-      observer.observe(imageTrack);
-    });
-  */
+
   
   window.addEventListener("scroll", () => {
     const videos = document.querySelectorAll(".video-background");
@@ -510,13 +318,27 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll(".image-in-gallery");
 
+  // Function to close enlarged image
+  function closeEnlargedImg() {
+    const enlarged = document.querySelector('.enlarged-image-container');
+    if (enlarged) {
+      enlarged.classList.remove("enlarged-image-container");
+      enlarged.querySelector('.image-in-gallery').classList.remove("enlarged-image");
+      enlarged.querySelector('.close-button').style.display = 'none';
+      document.body.style.overflow = 'auto'; // Enable scrolling
+      document.body.classList.remove("image-enlarged"); // Remove the flag indicating an image is enlarged
+    }
+  }
+
   images.forEach(img => {
-    img.addEventListener("click", function() {
+    img.addEventListener("click", function(event) {
+      event.stopPropagation(); // Prevent this click from being caught by the window click listener
       const container = this.parentElement;
       container.classList.add("enlarged-image-container");
       this.classList.add("enlarged-image");
       container.querySelector('.close-button').style.display = 'block';
       document.body.style.overflow = 'hidden'; // Disable scrolling
+      document.body.classList.add("image-enlarged"); // Add a flag indicating an image is enlarged
     });
   });
 
@@ -524,14 +346,18 @@ document.addEventListener("DOMContentLoaded", function() {
   closeButtons.forEach(button => {
     button.addEventListener("click", function(event) {
       event.stopPropagation(); // Prevent the click from closing the image immediately
-      const container = this.parentElement;
-      container.classList.remove("enlarged-image-container");
-      container.querySelector('.image-in-gallery').classList.remove("enlarged-image");
-      this.style.display = 'none';
-      document.body.style.overflow = 'auto'; // Enable scrolling
+      closeEnlargedImg();
     });
   });
+
+  // Close image if clicking outside of it
+  window.addEventListener("click", function(event) {
+    if (document.body.classList.contains("image-enlarged") && !event.target.classList.contains("image-in-gallery")) {
+      closeEnlargedImg();
+    }
+  });
 });
+
 
 
 
