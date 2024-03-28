@@ -11,7 +11,6 @@ body {
   margin: 0;
   font-family: Arial;
   background-color: #0c0b0b;
-  color: white;
 }
 
 .row {
@@ -80,31 +79,26 @@ body {
   .column {
     flex: 1 0 100%; /* Full width for the column */
     padding: 5px; /* Adds padding around each column */
+    
   }
 
   .column img {
     width: 100%; /* Full width within the column */
-    padding: 15px; /* Adds padding around the image */
+    padding: 5px; /* Adds padding around the image */
     box-sizing: border-box; /* Includes padding in the width calculation */
   }
-}
 
-@media screen and (max-width: 768px) {
   .non-clickable {
     pointer-events: none; /* Disables click events */
   }
 }
 
-
 </style>
 </head>
 <body>
 
-
-
-    
 <div style="text-align:center">
-  <h2 class="custombold-text">Morphings Image Gallery</h2>
+  <h2 class="custombold-text">Morphing Image Gallery</h2>
 </div>
 
 <!-- The four columns -->
@@ -145,6 +139,14 @@ body {
 </div>
 
 <script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+
 function disableClickOnMobile() {
   if (window.innerWidth <= 500) {
     var images = document.querySelectorAll('.column img');

@@ -2725,3 +2725,139 @@ button {
     text-align: center;
   }
 }
+
+
+
+
+
+.people-container {
+  display: flex;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  width: 100%; /* Ensures it takes the full width of the parent */
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+}
+
+.person {
+  flex: 0 0 auto; /* Existing flex settings */
+  margin-right: 20px; /* Existing margin */
+  display: flex; /* New - Use flexbox for layout inside each .person */
+  flex-direction: column; /* New - Stack items vertically */
+  align-items: flex-start; /* New - Align items to the start (left) */
+}
+.people-container::-webkit-scrollbar {
+  display: none;
+}
+
+.person img {
+  width: 600px; /* Existing width */
+  height: 400px; /* Existing height */
+  border-radius: 1%; /* Existing border-radius */
+  padding-left: 10px; /* Existing padding */
+  padding-right: 10px;
+}
+
+.person1 { margin-bottom: 50px; }
+.person2 { margin-bottom: 20px; }
+.person3 { margin-bottom: 0px; }
+
+.name, .role {
+  align-self: flex-start; /* New - Align text to the start (left) */
+  margin-left: 10px; /* New - Add some left margin for alignment with the image */
+  font-weight: bold; /* Existing font-weight for .name */
+  margin-top: 10px; /* Existing margin-top for .name */
+  color: grey; /* Existing color for .role */
+  margin-top: 5px; /* Existing margin-top for .role */
+}
+
+.name{
+  color: goldenrod;
+  font-size: 22px;
+}
+
+.people-container.active {
+  cursor: grabbing;
+}
+
+.people-container {
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
+  user-select: none; /* Standard syntax */
+}
+
+.people-container img {
+  pointer-events: none; /* Prevents dragging images */
+}
+
+/* For Webkit (Chrome, Safari, Edge) */
+.people-container::-webkit-scrollbar {
+    width: 8px; /* Reducing the width */
+}
+
+
+.people-container::-webkit-scrollbar-thumb {
+    background: gold; /* Setting the thumb to gold */
+    border-radius: 4px;
+}
+
+/* For Firefox */
+.people-container {
+    scrollbar-width: thin; /* Make scrollbar less wide */
+    scrollbar-color: gold black; /* Thumb and track color */
+}
+
+.info-box {
+  background-color: black; /* Black background for the box */
+  width: 600px; /* Match the width of the image */
+  border-radius: 1%;
+  margin-bottom: 30px; /* Add bottom margin to push the scrollbar down */
+  /* Keep other existing styles */
+}
+
+
+/* For other browsers, there's limited support for scrollbar styling */
+
+
+/* Existing styles... */
+
+@media (max-width: 768px) {
+  .person {
+    flex-basis: 100%; /* Adjust to take full width */
+    margin-bottom: 30px; /* Maintain the bottom margin */
+    align-items: center; /* Center-align items if desired */
+  }
+
+  .person img {
+    width: 100%; /* Make images take full width of their container */
+    max-width: 600px; /* Optionally, limit the maximum width */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  .name, .role {
+    margin-left: 5px; /* Adjust left margin for alignment */
+    text-align: left; /* Align text to the left */
+  }
+
+  .people-container {
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling */
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    padding: 1vw; /* Adjust padding for mobile */
+  }
+
+  .people-container::-webkit-scrollbar {
+    display: block; /* Make scrollbar visible */
+    width: 8px; /* Maintain scrollbar width */
+  }
+
+  .people-container::-webkit-scrollbar-thumb {
+    background: gold; /* Maintain thumb color */
+    border-radius: 4px;
+  }
+
+  .person img, .info-box {
+    width: 100%; /* Make the image and info-box take full width on smaller screens */
+    max-width: 600px; /* Optional: limit the max width */
+  }
+}
+
+/* Further responsive adjustments if needed... */

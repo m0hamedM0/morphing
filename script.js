@@ -366,3 +366,88 @@ document.addEventListener("DOMContentLoaded", function() {
       touch: false
     });
   });
+
+
+
+
+
+
+
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const container = document.querySelector('.people-container');
+    const images = container.querySelectorAll('img'); // Select all images inside the container
+
+    // Disable default drag behavior for images
+    images.forEach(img => {
+        img.addEventListener('dragstart', (e) => {
+            e.preventDefault();
+        });
+    });
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        container.classList.add('active');
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('mouseleave', () => {
+        isDown = false;
+        container.classList.remove('active');
+    });
+
+    container.addEventListener('mouseup', () => {
+        isDown = false;
+        container.classList.remove('active');
+    });
+
+    container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 3;
+        container.scrollLeft = scrollLeft - walk;
+    });
+
+    // Adjusted: Disable horizontal scrolling with the mouse wheel
+    container.addEventListener('wheel', (e) => {
+        if (e.deltaX !== 0) {
+            e.preventDefault();
+            container.scrollLeft += e.deltaX;
+        }
+    }, { passive: false });
+
+    // Touch events for mobile
+    container.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].pageX - container.offsetLeft;
+        scrollLeft = container.scrollLeft;
+    });
+
+    container.addEventListener('touchmove', (e) => {
+        if (!e.touches.length) return;
+        e.preventDefault();
+        const x = e.touches[0].pageX - container.offsetLeft;
+        const walk = (x - startX);
+        container.scrollLeft = scrollLeft - walk;
+    });
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.people-container');
+
+  // Disable scrolling functionality on mobile
+  function disableScroll(e) {
+      e.preventDefault();
+  }
+
+  if (window.innerWidth <= 768) {
+      container.addEventListener('touchmove', disableScroll, { passive: false });
+  }
+});
