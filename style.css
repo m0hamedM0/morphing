@@ -2779,6 +2779,11 @@ button {
   font-size: 22px;
 }
 
+.info-box a {
+  color: white; /* White text color for links */
+  text-decoration: none; /* Underline links */
+}
+
 .people-container.active {
   cursor: grabbing;
 }
@@ -2801,14 +2806,14 @@ button {
 
 
 .people-container::-webkit-scrollbar-thumb {
-    background: gold; /* Setting the thumb to gold */
+    background: goldenrod; /* Setting the thumb to gold */
     border-radius: 4px;
 }
 
 /* For Firefox */
 .people-container {
     scrollbar-width: thin; /* Make scrollbar less wide */
-    scrollbar-color: gold black; /* Thumb and track color */
+    scrollbar-color: goldenrod black; /* Thumb and track color */
 }
 
 .info-box {
@@ -2855,7 +2860,7 @@ button {
   }
 
   .people-container::-webkit-scrollbar-thumb {
-    background: gold; /* Maintain thumb color */
+    background: goldenrod; /* Maintain thumb color */
     border-radius: 4px;
   }
 
