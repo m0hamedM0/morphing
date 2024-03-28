@@ -315,48 +315,50 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-document.addEventListener("DOMContentLoaded", function() {
-  const images = document.querySelectorAll(".image-in-gallery");
-
-  // Function to close enlarged image
-  function closeEnlargedImg() {
-    const enlarged = document.querySelector('.enlarged-image-container');
-    if (enlarged) {
-      enlarged.classList.remove("enlarged-image-container");
-      enlarged.querySelector('.image-in-gallery').classList.remove("enlarged-image");
-      enlarged.querySelector('.close-button').style.display = 'none';
-      document.body.style.overflow = 'auto'; // Enable scrolling
-      document.body.classList.remove("image-enlarged"); // Remove the flag indicating an image is enlarged
+  document.addEventListener("DOMContentLoaded", function() {
+    // Check if the screen width is greater than 768 pixels
+    if (window.innerWidth > 768) {
+      const images = document.querySelectorAll(".image-in-gallery");
+  
+      function closeEnlargedImg() {
+        const enlarged = document.querySelector('.enlarged-image-container');
+        if (enlarged) {
+          enlarged.classList.remove("enlarged-image-container");
+          enlarged.querySelector('.image-in-gallery').classList.remove("enlarged-image");
+          enlarged.querySelector('.close-button').style.display = 'none';
+          document.body.style.overflow = 'auto';
+          document.body.classList.remove("image-enlarged");
+        }
+      }
+  
+      images.forEach(img => {
+        img.addEventListener("click", function(event) {
+          event.stopPropagation();
+          const container = this.parentElement;
+          container.classList.add("enlarged-image-container");
+          this.classList.add("enlarged-image");
+          container.querySelector('.close-button').style.display = 'block';
+          document.body.style.overflow = 'hidden';
+          document.body.classList.add("image-enlarged");
+        });
+      });
+  
+      const closeButtons = document.querySelectorAll('.close-button');
+      closeButtons.forEach(button => {
+        button.addEventListener("click", function(event) {
+          event.stopPropagation();
+          closeEnlargedImg();
+        });
+      });
+  
+      window.addEventListener("click", function(event) {
+        if (document.body.classList.contains("image-enlarged") && !event.target.classList.contains("image-in-gallery")) {
+          closeEnlargedImg();
+        }
+      });
     }
-  }
-
-  images.forEach(img => {
-    img.addEventListener("click", function(event) {
-      event.stopPropagation(); // Prevent this click from being caught by the window click listener
-      const container = this.parentElement;
-      container.classList.add("enlarged-image-container");
-      this.classList.add("enlarged-image");
-      container.querySelector('.close-button').style.display = 'block';
-      document.body.style.overflow = 'hidden'; // Disable scrolling
-      document.body.classList.add("image-enlarged"); // Add a flag indicating an image is enlarged
-    });
   });
-
-  const closeButtons = document.querySelectorAll('.close-button');
-  closeButtons.forEach(button => {
-    button.addEventListener("click", function(event) {
-      event.stopPropagation(); // Prevent the click from closing the image immediately
-      closeEnlargedImg();
-    });
-  });
-
-  // Close image if clicking outside of it
-  window.addEventListener("click", function(event) {
-    if (document.body.classList.contains("image-enlarged") && !event.target.classList.contains("image-in-gallery")) {
-      closeEnlargedImg();
-    }
-  });
-});
+  
 
 
 

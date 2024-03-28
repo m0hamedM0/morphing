@@ -1492,105 +1492,90 @@
 
 
 
+
+
+
+
+
+
     <section id="musicians">
       <h2 class="custombold-text">Our Musicians</h2>
-      <div class="swiper-container">
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/giLMGR1.jpg"
-              alt="Bild von Tomasz Wabnic"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Tomasz Wabnic</p>
-              <a href="Tomasz_Musician.html">Find out more</a>
+      <div class="people-container">
+        <!-- Person 1 -->
+        <div class="person">
+            <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+            <div class="info-box">
+            <a href="Tomasz_Musician.html">
+              <p class="name">Tomasz Wabnic</p>
+            </a>
+            <p class="role">- Artistic Director</p>
             </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/sF4Mkp9.jpg"
-              alt="Bild von Yuuki Wong"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Yuuki Wong</p>
-              <a href="Yuuki.html">Find out more</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/5mFPCu3.png"
-              alt="Bild von Alison Lie"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Alison Lie</p>
-              <a href="alice.html">Find out more</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/2DI6S2A.png"
-              alt="Bild von Nikita Kuts"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Nikita Kuts</p>
-              <a href="Nikita_Kuts.html">Find out more</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/smBLAom.png"
-              alt="Bild von Josefina"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Josefina</p>
-              <a href="Josefina.html">Find out more</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/2kBqHId.png"
-              alt="Bild von Zhangir"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Zhangir</p>
-              <a href="Zhangir.html">Find out more</a>
-            </div>
-          </div>
-
-          <div class="swiper-slide">
-            <img
-              src="https://i.imgur.com/3jXSDnr.png"
-              alt="Bild von Anna"
-              style="width: 600px; height: 400px"
-            />
-            <div class="slide-description">
-              <p>Anna</p>
-              <a href="Anna.html">Find out more</a>
-            </div>
-          </div>
-
-          <!-- Add more slides as needed -->
         </div>
-        <!-- If you need pagination -->
+        <!-- Person 2 -->
+        <div class="person">
+            <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+            <div class="info-box">
+            <a href="Yuuki.html">
+              <p class="name">Yuuki Wong</p>
+            </a>
+            <p class="role">- Lead Violinist</p>
+            </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="person">
+            <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+            <div class="info-box">
+            <a href="alice.html">
+              <p class="name">Alison Lie</p>
+            </a>
+            <p class="role">- Project Assistant</p>
+            </div>
+        </div>
+        <!-- More persons as needed... -->
+        <div class="person">
+          <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+          <div class="info-box">
+          <a href="Nikita_Kuts.html">
+            <p class="name">Nikita Kuts</p>
+          </a>
+          <p class="role">- Artistic Director</p>
+          </div>
+      </div>
+      <!-- Person 2 -->
+      <div class="person">
+          <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+          <div class="info-box">
+          <a href="Josefina.html">
+            <p class="name">Josefina</p>
+          </a>
+          <p class="role">- Lead Violinist</p>
+          </div>
+      </div>
+      <!-- Person 3 -->
+      <div class="person">
+          <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+          <div class="info-box">
+          <a href="Zhangir.html">
+            <p class="name">Zhangir</p>
+          </a>
+          <p class="role">- Project Assistant</p>
+          </div>
+      </div>
 
-        <!-- If you need navigation buttons -->
-
-        <!-- If you need scrollbar -->
-        <div class="swiper-scrollbar"></div>
+      <div class="person">
+        <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+        <div class="info-box">
+        <a href="Anna.html">
+          <p class="name">Anna</p>
+        </a>
+        <p class="role">- Project Assistant</p>
+        </div>
+    </div>
       </div>
     </section>
+
+
+
 
     <section id="support" class="">
       <h2 class="custombold-text custom-color">Support Us</h2>
@@ -1724,19 +1709,26 @@
     <script>
       var songs = [
         "https://audio.jukehost.co.uk/utBtC6wJMz2K4qrQ1bIqffG5ZuCg90ZG",
-        "https://mozdzer.com/wp-content/uploads/2014/11/Tactics.mp3",
-        "https://mozdzer.com/wp-content/uploads/2014/11/Spider-Web.mp3",
+        "https://audio.jukehost.co.uk/GcZ8vEY5YrPQdHSKqDtXTGteiZXfJHUW",
+        "https://audio.jukehost.co.uk/UrmOVAHGZbD8FSbwN4dcF7ANgvOCW1a4",
       ];
-      var songTitles = ["Fratres", "Tactics", "Spider Web"];
-      var artistNames = ["Johnny", "Tommy", "Bobby"];
+      var songTitles = ["Fratres", "Invierno Porteño", "F. Cilea - Ecco"];
+      var artistNames = ["Arvo Pärt", "Astor Piazzolla", "Aleksandra Kurzak"];
       var songIndex = 0;
 
       function loadSong(index) {
-        document.getElementById("musicPlayer").src = songs[index];
-        document.getElementById("songTitle").innerText = songTitles[index];
-        document.getElementById("artistName").innerText = artistNames[index];
-        // document.getElementById('musicPlayer').play();
-      }
+  var player = document.getElementById("musicPlayer");
+  var wasPlaying = !player.paused; // Check if the player was playing before loading the new song
+
+  player.src = songs[index];
+  document.getElementById("songTitle").innerText = songTitles[index];
+  document.getElementById("artistName").innerText = artistNames[index];
+
+  if (wasPlaying) {
+    player.play(); // Play the new song if the previous song was playing
+  }
+}
+
 
       function prevSong() {
         songIndex = (songIndex - 1 + songs.length) % songs.length; // Loop back to the last song
@@ -1749,20 +1741,24 @@
       }
 
       function togglePlayPause() {
-        const player = document.getElementById("musicPlayer");
-        const playPauseButton = document.getElementById("playPauseButton");
-        const icon = playPauseButton.querySelector("i"); // Get the icon element inside the button
+  const player = document.getElementById("musicPlayer");
+  const playPauseButton = document.getElementById("playPauseButton");
+  const icon = playPauseButton.querySelector("i"); // Get the icon element inside the button
 
-        if (player.paused) {
-          player.play();
-          icon.classList.remove("fa-play");
-          icon.classList.add("fa-pause");
-        } else {
-          player.pause();
-          icon.classList.remove("fa-pause");
-          icon.classList.add("fa-play");
-        }
-      }
+  if (player.paused) {
+    player.play().then(() => {
+      icon.classList.remove("fa-play");
+      icon.classList.add("fa-pause");
+    }).catch(error => {
+      console.error("Error attempting to play the audio: ", error);
+    });
+  } else {
+    player.pause();
+    icon.classList.remove("fa-pause");
+    icon.classList.add("fa-play");
+  }
+}
+
 
       // Initialize the player with the first track
       window.onload = function () {

@@ -2387,6 +2387,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden; /* Hide overflow */
+  padding-bottom: 20px;
 }
 
 .rowim {
