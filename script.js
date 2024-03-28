@@ -451,3 +451,29 @@ document.addEventListener('DOMContentLoaded', function() {
       container.addEventListener('touchmove', disableScroll, { passive: false });
   }
 });
+
+
+
+
+
+function adjustCarouselHeight() {
+  var carousel = document.getElementById('video-carousel');
+  var activeProject = carousel.querySelector('.carousel-item.active');
+
+  if (activeProject.classList.contains('project1')) {
+    carousel.style.height = '200vh';
+  } else if (activeProject.classList.contains('project2')) {
+    carousel.style.height = '180vh';
+  } else if (activeProject.classList.contains('project3')) {
+    carousel.style.height = '100vh';
+  } 
+  else {
+    carousel.style.height = '300vh';
+  }
+}
+
+// Run this function on carousel slide change event
+$('#video-carousel').on('slide.bs.carousel', adjustCarouselHeight);
+
+// Also run this function when the page loads
+window.onload = adjustCarouselHeight;

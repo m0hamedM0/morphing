@@ -780,6 +780,9 @@ header {
   overflow: hidden;
 }
 
+
+
+
 @media (max-width: 768px) {
   #videoCarousel {
     width: 90%; /* Full width on smaller screens */
@@ -1832,8 +1835,8 @@ button {
   overflow-x: hidden;
   width: 100%;
   padding: 20px; /* Add padding around the entire section */
-  height: 180vh;
 }
+
 
 .top-container {
   display: flex;
@@ -1931,7 +1934,7 @@ button {
   width: 45%; /* Adjust the width as needed */
 }
 
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   .top-container,
   .bottom-container {
     flex-direction: column;
@@ -1961,6 +1964,7 @@ button {
     margin: auto; /* Center the iframe horizontally */
     display: block; /* Ensure the iframe is treated as a block-level element */
   }
+  
 }
 
 .image-in-gallery {
@@ -2532,6 +2536,7 @@ button {
 .share-buttons {
   text-align: center; /* Center the buttons */
   margin-top: 15px; /* Add some space above the buttons */
+  padding-bottom: 50px;
 }
 
 /* Optional: If you're using Bootstrap, these classes are predefined. If not, define your button styles here. */
