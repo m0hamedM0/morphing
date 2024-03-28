@@ -2429,6 +2429,10 @@ button {
   cursor: pointer;
 }
 
+.gallery-button:hover {
+  color: white;
+}
+
 .close-button {
   position: fixed;
   top: 12vh; /* Position from the top of the container */
