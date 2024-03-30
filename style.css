@@ -1109,7 +1109,14 @@ header {
   }
 
   .album-image img {
+    justify-content: center;
     margin-bottom: 15px; /* Space between image and text on small screens */
+  }
+
+  .small-image-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
   }
 }
 
