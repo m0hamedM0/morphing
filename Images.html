@@ -93,6 +93,27 @@ body {
   }
 }
 
+.container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5); /* Optional: Fügt einen leicht transparenten Hintergrund hinzu */
+  z-index: 1000; /* Stellt sicher, dass der Container über anderen Elementen liegt */
+}
+
+#expandedImg {
+  max-width: 90%; /* Begrenzt die Breite des Bildes auf 90% des Container */
+  max-height: 80vh; /* Begrenzt die Höhe des Bildes auf 80% der Bildschirmhöhe */
+  object-fit: contain; /* Stellt sicher, dass das Bildverhältnis erhalten bleibt */
+  margin-top: 8vh; /* Fügt einen oberen Rand zum Bild hinzu, um es nach unten zu verschieben */
+
+}
+
 </style>
 </head>
 <body>
@@ -158,6 +179,15 @@ function disableClickOnMobile() {
 
 window.onload = disableClickOnMobile;
 window.onresize = disableClickOnMobile; // Optional: Adjust on window resize
+
+// Bestehenden JavaScript-Code ergänzen
+document.querySelector('.container').addEventListener('click', function(event) {
+  // Überprüfen, ob das geklickte Element der Container selbst ist
+  if (event.target === this) {
+    // Ausblenden des Containers
+    this.style.display = 'none';
+  }
+});
 
 </script>
 
