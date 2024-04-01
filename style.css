@@ -2,16 +2,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-/*.sticky-navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-*/
+
 body {
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
   width: 100%;
+  background-color: #000 !important;
   /* Ensure the height is enough to allow for scrolling */
   /* Remove the 100vh height if your content is longer than the viewport */
 }
@@ -21,11 +17,33 @@ html {
   overflow-x: hidden;
 }
 
+/* Existing styles... */
+
+/* Media query for devices with max-width of 991px */
+@media (max-width: 991px) {
+  .video-background-header video {
+      width: 100%; /* Ensure video stretches to full container width */
+      height: auto; /* Maintain aspect ratio */
+      object-fit: cover; /* Cover the area without stretching the video */
+      position: relative; /* Position relative to its normal position */
+      left: 50%; /* Move it to the right by 50% of its own width */
+      top: 50%; /* Move it down by 50% of its own height */
+      transform: translate(-50%, -50%); /* Shift it back by its own half width and height to center */
+  }
+}
+
+/* Continue with the rest of your CSS */
 
 
 @media (max-width: 768px) {
   .social-icons-vertical a {
     display: none;
+  }
+}
+
+@media (max-width: 991px) {
+  .social-icons-vertical {
+    display: none !important;
   }
 }
 
@@ -981,6 +999,46 @@ header {
   }
   .navbar-center-logo {
     order: -1; /* Move logo to the top on smaller screens */
+  }
+}
+
+
+
+/* Existing styles... */
+
+@media (max-width: 1380px) {
+  .navbar-container {
+      /* Adjust the container if needed, e.g., flex-direction: column; */
+  }
+
+
+
+  .navbar-center-logo img {
+      width: 400px !important; /* Adjust the logo size for tablet/small desktop screens */
+      height: auto;
+      margin-top: -2vh;
+
+  }
+
+  .navbar-nav .nav-item, 
+  .nav-item.social-icon, 
+  .div-change-language {
+      /* Adjust margins and paddings to better fit the screen size */
+      margin-left: 2px; /* Example: smaller left margin */
+      margin-right: 2px; /* Example: smaller right margin */
+  }
+
+
+  /* Any additional styling adjustments for tablet/small desktop screens */
+}
+
+@media (max-width: 1050px) {
+
+  .navbar-center-logo img {
+      width: 350px !important; /* Adjust the logo size for tablet/small desktop screens */
+      height: auto;
+      margin-top: -1.5vh;
+
   }
 }
 
@@ -2107,7 +2165,7 @@ button {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 991px) {
   /* Adjust for mobile screens */
   .fixed-toggler {
     position: fixed;
