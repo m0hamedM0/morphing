@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strauss PDF</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding-top: 20px;
+            background-color: #000000;
+        }
+        .container {
+            background-color: #FFFFF4;
+            border-radius: 20px;
+            padding: 20px;
+        }
+        .btn-secondary {
+            color: black;
+        }
+
+        .btn-primary {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="btn btn-secondary">Zurück zur Webseite</a>
+
+<div class="container">
+    <h1>MORPHING x JOHANN STRAUSS The 200th anniversary in 2025</h1>
+    <p>Hier finden Sie Details (Folders) zum Projekt "Strauss". :)</p>
+
+    <!-- Beschreibung oder weitere Informationen zum PDF -->
+    <p>Dieses Dokument enthält detaillierte Informationen über Julia Sturzlbaum</p>
+
+    <!-- PDF anzeigen -->
+    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
+        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download-Link -->
+    <a href="https://drive.google.com/file/d/1KhKt7_LwzObYFB6Z9uhoXXq-nQduCVXf/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
+
+    <p>Dieses Dokument enthält detaillierte Informationen über Timna Brauer</p>
+
+    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
+        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download-Link -->
+    <a href="https://drive.google.com/file/d/1wOkok3IAsNfnvXtPZu37HKNo7XMjFfmJ/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
+
+    <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
+
+    <!-- PDF anzeigen -->
+    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
+        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download-Link -->
+    <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
+
+    <p>Dieses Dokument enthält detaillierte Informationen über Anna Voshege</p>
+
+    <!-- PDF anzeigen -->
+    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
+        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download-Link -->
+    <a href="https://drive.google.com/file/d/1MssSwTBglH6yP-GeDUUuibjKl1E7h55C/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
+
+    <p>Dieses Dokument enthält detaillierte Informationen über Anna Voshege</p>
+
+    <!-- PDF anzeigen -->
+    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
+        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download-Link -->
+    <a href="Strauss.html" download="Strauss.pdf" class="btn btn-primary">PDF herunterladen</a>
+
+    <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
+
+    <!-- PDF anzeigen -->
+    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
+        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    </div>
+
+    <!-- Download-Link -->
+    <a href="https://drive.google.com/file/d/1wOkok3IAsNfnvXtPZu37HKNo7XMjFfmJ/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
+
+    <!-- Zurück zur Webseite -->
+    <a href="index.html" class="btn btn-secondary">Zurück zur Webseite</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
