@@ -11,6 +11,22 @@
 
 <style>
 
+    html, body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #000; /* Oder jede andere Hintergrundfarbe, die Sie möchten */
+    }
+
+    /* Zentrieren Sie den Inhalt innerhalb des body-Elements */
+    body > * {
+        width: 100%; /* oder die maximale Breite, die Sie für Ihr PDF/das Bild möchten */
+        max-width: 100%; /* Stellt sicher, dass es nicht größer als der Bildschirm ist */
+        /* Weitere Stildefinitionen nach Bedarf */
+    }
+
     body{
         background-color: black;
     }
@@ -64,6 +80,8 @@
     .mobile-images {
       display: none;
     }
+
+
     @media (max-width: 768px) {
         .desktop-image {
             display: none !important; /* Hide desktop image on mobile */
