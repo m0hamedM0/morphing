@@ -22,19 +22,22 @@
 
     .return-btn {
       display: inline-block;
-      background-color: #f2f2f2;
-      color: #0c0b0b;
+      background: url('https://i.imgur.com/0He3WGF.png') no-repeat center center; /* Füge den Pfad zu deinem Logo hinzu */
+      background-size: cover; /* Stellt sicher, dass das Logo den Button-Bereich abdeckt */
+      color: white; /* Farbe des Pfeils */
       text-decoration: none;
-      font-size: 24px;
-      padding: 10px 15px;
-      border-radius: 50%; /* Circular shape */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-      transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+      font-size: 24px; /* Größe des Pfeils */
+      padding: 10px 15px; /* Abmessungen des Buttons */
+      border-radius: 50%; /* Kreisförmige Form */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
+      transition: all 0.3s ease; /* Übergangseffekt */
     }
+
 
     .return-btn:hover {
       background-color: #ddd; /* Slightly darker shade on hover */
-      transform: translateY(-2px); /* Small lift effect on hover */
+      color: black;
+      transform: translateY(-2px) scale(1.05); /* Small lift effect on hover */
     }
 
     .row {
@@ -100,6 +103,17 @@
     }
 
     @media screen and (max-width: 768px) {
+
+      .return-btn-container {
+        top: 10px;
+        left: 10px;
+      }
+
+      .return-btn {
+        font-size: 20px;
+        padding: 8px 12px; /* Smaller button for mobile devices */
+      }
+
       .column {
         flex: 100%;
         max-width: 100%;
@@ -125,8 +139,9 @@
 <body>
 
 <div class="return-btn-container">
-  <a href="index.html" class="return-btn">&#x2190;</a> <!-- Unicode left arrow -->
+  <a href="index.html" class="return-btn">&#x2190;</a> <!-- Unicode-Pfeil -->
 </div>
+
 
 <div style="text-align:center">
   <h2 class="custombold-text">Morphing Image Gallery</h2>
@@ -138,7 +153,7 @@
     <img src="https://i.imgur.com/AtT9WIo.png" alt="Orchestra in Japan" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/hbIIiVF.jpg" alt="Morphing Logo" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/cCywbJx.jpg" alt="Morphing Night Life" onclick="myFunction(this);">
   </div>
   <div class="column">
     <img src="https://i.imgur.com/afkdbvb.jpg" alt="New Year" onclick="myFunction(this);">
@@ -169,6 +184,18 @@
   </div>
   <div class="column">
     <img src="https://i.imgur.com/54FBlav.jpg" alt="Tomasz Wabnic" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/1Cbu4Ry.jpg" alt="Concert for Ukraine" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/cQAL9XP.png" alt="Concert for Ukraine" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/FjFQKlO.jpg" alt="Morphing x Johann Strauss" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/OYlQhpT.jpg" alt="La Scala, Milano" onclick="myFunction(this);">
   </div>
   <!-- Repeat for each image you want to include, adjusting src and alt attributes accordingly -->
 </div>
