@@ -1,157 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-body {
-  margin: 0;
-  font-family: Arial;
-  background-color: #0c0b0b;
-}
+    body {
+      margin: 0;
+      font-family: Arial;
+      background-color: #0c0b0b;
+    }
 
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    .return-btn-container {
+      position: absolute;
+      top: 20px;
+      left: 20px; /* Adjusted to position the button on the left */
+      z-index: 10; /* Ensure it's above other elements */
+    }
 
-.column {
-  flex: 1 0 21%;
-  margin: 5px;
-}
+    .return-btn {
+      display: inline-block;
+      background-color: #f2f2f2;
+      color: #0c0b0b;
+      text-decoration: none;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%; /* Circular shape */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+      transition: background-color 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+    }
 
-.column img {
-  opacity: 0.8; 
-  cursor: pointer;
-  width: 100%;
-  display: block;
-}
+    .return-btn:hover {
+      background-color: #ddd; /* Slightly darker shade on hover */
+      transform: translateY(-2px); /* Small lift effect on hover */
+    }
 
-.column img:hover {
-  opacity: 1;
-}
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
 
-.container {
-  position: relative;
-  display: none;
-  text-align: center;
-  width: 100%;
-}
+    .column {
+      flex: 25%; /* Adjusted for better responsiveness */
+      max-width: 25%; /* Ensure column does not exceed 25% width */
+      padding: 5px; /* Adds padding around each column */
+    }
 
-.expandedImg {
-  max-width: 90%;
-  margin: 0 auto;
-}
+    .column img {
+      opacity: 0.8;
+      cursor: pointer;
+      width: 100%; /* Adjusted to fill column width */
+      height: auto; /* Adjusted for aspect ratio */
+      display: block;
+      object-fit: cover; /* Ensures images cover the area without losing their aspect ratio */
+      aspect-ratio: 1 / 1; /* Ensures all images have the same aspect ratio */
+    }
 
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: white;
-  font-size: 35px;
-  cursor: pointer;
-}
+    .column img:hover {
+      opacity: 1;
+    }
 
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  font-size: 20px;
-}
+    .container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1000;
+    }
 
-@font-face {
-  font-family: "MyCustomFontBold";
-  src: url("fonts/Verlag-Bold.otf") format("opentype");
-}
+    .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: white;
+      font-size: 35px;
+      cursor: pointer;
+    }
 
-.custombold-text {
-  font-family: "MyCustomFontBold", sans-serif; /* Fallback to sans-serif */
-  color: goldenrod;
-}
+    #imgtext {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 20px;
+    }
 
-@media screen and (max-width: 768px) {
-  .column {
-    flex: 1 0 100%; /* Full width for the column */
-    padding: 5px; /* Adds padding around each column */
-    
-  }
+    .custombold-text {
+      font-family: Arial, sans-serif; /* Fallback to Arial if custom font is not available */
+      color: goldenrod;
+    }
 
-  .column img {
-    width: 100%; /* Full width within the column */
-    padding: 5px; /* Adds padding around the image */
-    box-sizing: border-box; /* Includes padding in the width calculation */
-  }
+    @media screen and (max-width: 768px) {
+      .column {
+        flex: 100%;
+        max-width: 100%;
+      }
 
-  .non-clickable {
-    pointer-events: none; /* Disables click events */
-  }
-}
+      .column img {
+        aspect-ratio: auto; /* Adjusts aspect ratio for smaller screens */
+      }
+    }
 
-.container {
-  position: fixed !important;
-  top: 0 !important;
-  left: 0 !important;
-  width: 100% !important;
-  height: 100% !important;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0,0,0,0.5); /* Optional: Fügt einen leicht transparenten Hintergrund hinzu */
-  z-index: 1000; /* Stellt sicher, dass der Container über anderen Elementen liegt */
-}
+    .non-clickable {
+      pointer-events: none; /* Ensures that clicks do not register */
+    }
 
-#expandedImg {
-  max-width: 90%; /* Begrenzt die Breite des Bildes auf 90% des Container */
-  max-height: 80vh; /* Begrenzt die Höhe des Bildes auf 80% der Bildschirmhöhe */
-  object-fit: contain; /* Stellt sicher, dass das Bildverhältnis erhalten bleibt */
-  margin-top: 8vh; /* Fügt einen oberen Rand zum Bild hinzu, um es nach unten zu verschieben */
-
-}
-
-</style>
+    #expandedImg {
+      max-width: 90%;
+      max-height: 80vh;
+      object-fit: contain;
+      margin-top: 8vh;
+    }
+  </style>
 </head>
 <body>
+
+<div class="return-btn-container">
+  <a href="index.html" class="return-btn">&#x2190;</a> <!-- Unicode left arrow -->
+</div>
 
 <div style="text-align:center">
   <h2 class="custombold-text">Morphing Image Gallery</h2>
 </div>
 
-<!-- The four columns -->
 <div class="row">
+  <!-- Reinserted images with corrected aspect ratio -->
   <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/AtT9WIo.png" alt="Orchestra in Japan" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/hbIIiVF.jpg" alt="Morphing Logo" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
-  </div>
-  
-    <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Nature" style="width:100%" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/afkdbvb.jpg" alt="New Year" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Snow" style="width:100%" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/xb2wllP.jpg" alt="Orchestra" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Mountains" style="width:100%" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/qWU5Nl5.jpg" alt="Stand With Ukraine" onclick="myFunction(this);">
   </div>
   <div class="column">
-    <img src="https://i.imgur.com/725h8ls.jpg" alt="Lights" style="width:100%" onclick="myFunction(this);">
+    <img src="https://i.imgur.com/HI1XEyR.jpg" alt="Morphing" onclick="myFunction(this);">
   </div>
+  <div class="column">
+    <img src="https://i.imgur.com/VzxHfxr.png" alt="Davos" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/JS4LlTq.jpg" alt="Church Performance" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/zIlBs9v.png" alt="Aparte Logo" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/fesIQhk.jpg" alt="Davos" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/jf5Xzv6.jpg" alt="Yuuki Wong" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="https://i.imgur.com/54FBlav.jpg" alt="Tomasz Wabnic" onclick="myFunction(this);">
+  </div>
+  <!-- Repeat for each image you want to include, adjusting src and alt attributes accordingly -->
 </div>
-
-
 
 <div class="container">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
@@ -160,36 +180,36 @@ body {
 </div>
 
 <script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
-}
-
-function disableClickOnMobile() {
-  if (window.innerWidth <= 500) {
-    var images = document.querySelectorAll('.column img');
-    images.forEach(function(img) {
-      img.classList.add('non-clickable');
-    });
+  function myFunction(imgs) {
+    var expandImg = document.getElementById("expandedImg");
+    var imgText = document.getElementById("imgtext");
+    expandImg.src = imgs.src;
+    imgText.innerHTML = imgs.alt;
+    expandImg.parentElement.style.display = "flex";
   }
-}
 
-window.onload = disableClickOnMobile;
-window.onresize = disableClickOnMobile; // Optional: Adjust on window resize
-
-// Bestehenden JavaScript-Code ergänzen
-document.querySelector('.container').addEventListener('click', function(event) {
-  // Überprüfen, ob das geklickte Element der Container selbst ist
-  if (event.target === this) {
-    // Ausblenden des Containers
-    this.style.display = 'none';
+  function disableClickOnMobile() {
+    if (window.innerWidth <= 768) {
+      var images = document.querySelectorAll('.column img');
+      images.forEach(function(img) {
+        img.classList.add('non-clickable');
+      });
+    } else {
+      var images = document.querySelectorAll('.column img');
+      images.forEach(function(img) {
+        img.classList.remove('non-clickable');
+      });
+    }
   }
-});
 
+  window.onload = disableClickOnMobile;
+  window.onresize = disableClickOnMobile;
+
+  document.querySelector('.container').addEventListener('click', function(event) {
+    if (event.target === this) {
+      this.style.display = 'none';
+    }
+  });
 </script>
-
 </body>
 </html>
