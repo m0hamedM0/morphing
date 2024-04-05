@@ -1,152 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Orchestra Website</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-    />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Morphing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
     <script src="https://unpkg.com/fullcalendar@5/main.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css" />
-    <!-- Swiper CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> <!-- Swiper CSS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
   </head>
+
+  <!-- Video im Hintergrund -->
+  <header class="text-center p-12 text-black video-background-header">
+    <video autoplay muted playsinline loop id="myVideo">
+      <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4"/>
+      Your browser does not support HTML5 video.
+    </video>
+    <section id="home" class="home"></section>
+  </header>
+
   <body class="font-roboto custom-colorp bg-darkbrown text-black">
     <style>
       @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
     </style>
 
+    <!-- "nav" Anfang -->
     <nav
       class="navbar sticky-top navbar-expand-lg navbar-dark"
-      style="
-        background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 1) 0%,
-          rgba(0, 0, 0, 0) 100%
-        );
-      "
-    >
+      style="background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);">
+
       <div class="navbar-container">
-        <div class="navbar-left">
+        <div class="navbar-left"> <!-- Sprachumschalter und soziale Links -->
           <ul id="languageSwitcher" class="navbar-nav">
             <div class="row div-change-language">
               <li class="nav-item lang-switch">
-                <a
-                  href="index.html"
-                  class="nav-link customreg-text current-language"
-                  >En</a
-                >
+                <a href="index.html" class="nav-link customreg-text current-language">En</a>
               </li>
-              <li
-                class="nav-separator"
-                style="margin-right: 5px; margin-left: 5px"
-              >
-                /
+              <li class="nav-separator"
+                style="margin-right: 5px; margin-left: 5px;">/</li>
               </li>
               <li class="nav-item lang-switch">
-                <a href="indexgerman.html" class="nav-link customreg-text"
-                  >De</a
-                >
+                <a href="indexgerman.html" class="nav-link customreg-text">De</a>
               </li>
             </div>
             <div class="row social-icons-vertical">
-              <a
-                href="https://www.instagram.com/morphingmusic"
-                target="_blank"
-                class="nav-link"
-                ><i class="fa fa-instagram"></i
-              ></a>
-              <a
-                href="https://www.facebook.com/morphingmusic/"
-                target="_blank"
-                class="nav-link"
-                ><i class="fa fa-facebook"></i
-              ></a>
-              <a
-                href="https://www.youtube.com/@morphingchamberorchestra"
-                target="_blank"
-                class="nav-link"
-                ><i class="fa fa-youtube"></i
-              ></a>
-              <a
-                href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA"
-                target="_blank"
-                class="nav-link"
-                ><i class="fa fa-spotify"></i
-              ></a>
-              <a
-                href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA"
-                target="_blank"
-                class="nav-link"
-                ><i class="fa fa-apple"></i
-              ></a>
+              <a href="https://www.instagram.com/morphingmusic" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.facebook.com/morphingmusic/" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.youtube.com/@morphingchamberorchestra" target="_blank" class="nav-link"><i class="fa fa-youtube"></i></a>
+              <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-spotify"></i></a>
+              <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-apple"></i></a>
             </div>
           </ul>
         </div>
+
         <div class="navbar-center">
           <a href="#home" class="navbar-center-logo">
-            <img
-              src="https://i.imgur.com/HvkRXDW.png"
-              alt="Morphing Music Institute"
-            />
+            <img src="https://i.imgur.com/HvkRXDW.png" alt="Logo - Morphing Chamber Orchestra Vienna"/>
           </a>
         </div>
         <div class="navbar-right">
           <ul class="navbar-nav">
             <div class="collapse navbar-collapse" id="navbarContent">
+
+              <!-- "Our Orchestra" Dropdown -->
               <div class="nav-item dropdown">
                 <button
                   class="btnMenu customreg-text nav-link dropdown-toggle"
@@ -154,25 +89,18 @@
                   type="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="true"
-                >
+                  aria-expanded="true">
                   Our Orchestra
                 </button>
                 <div class="dropdown-menu" aria-labelledby="orchestraDropdown">
-                  <a class="dropdown-item customreg-text" href="#orchestra"
-                    >Our Orchestra</a
-                  >
-                  <a class="dropdown-item customreg-text" href="#biography"
-                    >Tomasz Wabnic</a
-                  >
-                  <a class="dropdown-item customreg-text" href="#team"
-                    >Our Team</a
-                  >
-                  <a class="dropdown-item customreg-text" href="#musicians"
-                    >Our Musicians</a
-                  >
+                  <a class="dropdown-item customreg-text" href="#orchestra">Our Orchestra</a>
+                  <a class="dropdown-item customreg-text" href="#biography">Tomasz Wabnic</a>
+                  <a class="dropdown-item customreg-text" href="#team">Our Team</a>
+                  <a class="dropdown-item customreg-text" href="#musicians">Our Musicians</a>
                 </div>
               </div>
+
+              <!-- "Concerts" Dropdown -->
               <div class="nav-item dropdown">
                 <button
                   class="btnMenu customreg-text nav-link dropdown-toggle"
@@ -180,26 +108,17 @@
                   type="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="true"
-                >
+                  aria-expanded="true">
                   Concerts
                 </button>
                 <div class="dropdown-menu" aria-labelledby="concertsDropdown">
-                  <a
-                    class="dropdown-item customreg-text"
-                    href="#concertsandtickets"
-                    >Concerts</a
-                  >
-                  <a class="dropdown-item customreg-text" href="#video-carousel"
-                    >Projects</a
-                  >
-                  <a
-                    class="dropdown-item customreg-text"
-                    href="#concertsandtickets"
-                    >Calendar</a
-                  >
+                  <a class="dropdown-item customreg-text" href="#concertsandtickets">Concerts</a>
+                  <a class="dropdown-item customreg-text" href="#video-carousel">Projects</a>
+                  <a class="dropdown-item customreg-text" href="#concertsandtickets">Calendar</a>
                 </div>
               </div>
+
+              <!-- "Media" Dropdown -->
               <div class="nav-item dropdown">
                 <button
                   class="btnMenu customreg-text nav-link dropdown-toggle"
@@ -207,24 +126,17 @@
                   type="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="true"
-                >
+                  aria-expanded="true">
                   Media
                 </button>
                 <div class="dropdown-menu" aria-labelledby="mediaDropdown">
-                  <a class="dropdown-item customreg-text" href="#images"
-                    >Images</a
-                  >
-                  <a class="dropdown-item customreg-text" href="#videos"
-                    >Videos</a
-                  >
-                  <a class="dropdown-item customreg-text" href="#discography"
-                    >Discography</a
-                  >
-
-                  <!-- Add more dropdown items here if needed -->
+                  <a class="dropdown-item customreg-text" href="#images">Images</a>
+                  <a class="dropdown-item customreg-text" href="#videos">Videos</a>
+                  <a class="dropdown-item customreg-text" href="#discography">Discography</a>
                 </div>
               </div>
+
+              <!-- "Support Us" Dropdown -->
               <div class="nav-item dropdown">
                 <button
                   class="btnMenu customreg-text nav-link dropdown-toggle"
@@ -232,28 +144,21 @@
                   type="button"
                   data-toggle="dropdown"
                   aria-haspopup="true"
-                  aria-expanded="true"
-                >
+                  aria-expanded="true">
                   Support Us
                 </button>
                 <div class="dropdown-menu" aria-labelledby="supportDropdown">
-                  <a class="dropdown-item customreg-text" href="#support"
-                    >Support Us</a
-                  >
                   <a class="dropdown-item customreg-text" href="#news">News</a>
-                  <a class="dropdown-item customreg-text" href="#contact-footer"
-                    >Contact Us</a
-                  >
-
-                  <!-- Add more dropdown items here if needed -->
+                  <a class="dropdown-item customreg-text" href="#contact-footer">Contact Us</a>
                 </div>
               </div>
-              <!-- Add your social media links here -->
+              <!-- We could add our social media links here -->
             </div>
           </ul>
         </div>
       </div>
 
+      <!-- „Hamburger“-Menüknopf !!! -->
       <button
         class="navbar-toggler fixed-toggler"
         type="button"
@@ -261,61 +166,55 @@
         data-target="#navbarContent"
         aria-controls="navbarContent"
         aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
     </nav>
-
-    <header class="text-center p-12 text-black video-background-header">
-      <video autoplay muted playsinline loop id="myVideo">
-        <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4" />
-        Your browser does not support HTML5 video.
-      </video>
-      <section id="home" class="home"></section>
-    </header>
-
-    
+    <!-- "nav" Ende -->
 
 
+
+
+    <!-- Hier fängt der erste Abschnitt (Section) an - "Projects"  -->
     <section id="video-carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
       <h2 class="custombold-textprojects">Projects</h2>
 
       <div class="carousel-inner">
-        <!-- Slide 1 -->
+
+        <!-- Project 1 !!! -->
         <div class="carousel-item project1 active">
+
+          <!-- Ab hier der obere Container (Bild + oberer Text) -->
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
-                  <!-- Slide 1 -->
+                  <!-- Slide 1 ? -->
                   <div class="swiper-slide">
                     <a href="Strauss1.html">
                       <img src="https://i.imgur.com/FjFQKlO.jpg" alt="Morphing x Johann Strauss Photo" class="swiper-imagetop-johann">
                     </a>
                   </div>
-                  <!-- Slide 2 -->
-
                   <!-- Add more slides as needed -->
               </div>
-              <!-- Add Pagination -->
-          </div>
-            <p>
-              <span class="highlight">MORPHING x JOHANN STRAUSS <br>
-                The 200th anniversary in 2025</span><br><br>
-              Mit Sitz in Wien, dem Herzen der ehemaligen Donaumonarchie, ist das kosmopolitische VIENNA MORPHING ORCHESTRA* mit den Werken der Strauss Dynastie mehr als vertraut.
-              200 Jahre Jubiläum von Johann Strauss Sohn ist Anlass zu einem wunderbaren musikalischen Fest!
-              Vom Galopp zu den Polkas bis zu den berühmtesten Walzer darf nichts fehlen.
-              Schon Brahms war von Strauss entzückt: „Er ist der Einzige, den ich beneide – er trieft von Musik, ihm fällt immer etwas ein.“
-              Nach dem fulminanten Erfolg der Zusammenarbeit mit Sängerin Timna Brauer im November 2023 im Wiener Konzerthaus,
-              tritt sie nun auch bei der Strauss Gala als Gastsolistin auf.
-              Das MORPHING ORCHESTRA zeichnet sich seit seiner Gründung durch Kooperationen mit Musikern fernab der Klassik aus.
-              And Johann actually swings too!
-              Unkonventionell und humorvoll schwingt sich Timna Brauer durch den Klang Palast des Walzerkönigs.
-              Virtuos jongliert sie zwischen Klassik, Jazz und Fantasie, Strauss und Mozart einmal anders.
-            </p>
-            <!-- Your existing top container content -->
+              <!-- Add Pagination ? -->
           </div>
 
+            <p>
+              <span class="highlight">MORPHING x JOHANN STRAUSS <br> The 200th anniversary in 2025</span><br><br>
+              Based in Vienna, the heart of the former Danube Monarchy, the cosmopolitan VIENNA MORPHING ORCHESTRA* is more
+              than familiar with the works of the Strauss dynasty. The 200th anniversary of Johann Strauss's son is the occasion
+              for a wonderful musical celebration! From gallops to polkas to the most famous waltzes, nothing is missing.
+              Brahms was already enchanted by Strauss: "He is the only one I envy - he is dripping with music, he always comes up
+              with something." Following the brilliant success of the collaboration with singer Timna Brauer in November 2023 at the
+              Vienna Konzerthaus she will now also appear as a guest soloist at the Strauss Gala. Since its foundation, the MORPHING ORCHESTRA
+              has been characterized by collaborations with musicians far removed from classical music. And Johann actually swings too!
+              Timna Brauer swings unconventionally and humorously through the sound palace of the Waltz King.
+              She juggles virtuosically between classical music, jazz and fantasy, Strauss and Mozart in a different way.
+            </p>
+            <!-- Our existing top container content ? -->
+          </div>
+
+          <!-- Ab hier der untere Container (Video + unterer Text + Artists) -->
           <div class="bottom-container">
             <div class="text-content">
               <p>
@@ -356,7 +255,7 @@
                 Timna Brauer / Tim Allhoff <br>
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li>
@@ -364,11 +263,12 @@
                 </li>
                 <li>Timna Brauer, Vocals</li>
                 <li>Niklas Liepe, Violin</li>
-                <li>Julia Sturzlbaum, Sopran</li>
+                <li>Julia Sturzlbaum, Soprano</li>
+                <li>Anna Voshege, Soprano</li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content -->
             <iframe
               width="600"
               height="500"
@@ -376,47 +276,47 @@
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen>
+            </iframe>
           </div>
           <div class="share-buttons">
+
             <!-- Facebook Share Button -->
-            <a
-              href="https://www.facebook.com/sharer/sharer.php?u=https://m0hamedm0.github.io/morphing/index.html#video-carousel"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://m0hamedm0.github.io/morphing/index.html#video-carousel"
               target="_blank"
               class="btn btn-primary"
-              >Share on Facebook</a
-            >
+              >Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-              href="https://twitter.com/intent/tweet?url=https://m0hamedm0.github.io/morphing/index.html#video-carousel&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=https://m0hamedm0.github.io/morphing/index.html#video-carousel&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
               target="_blank"
               class="btn btn-info"
-              >Share on Twitter</a
-            >
+              >Share on Twitter</a>
           </div>
         </div>
 
 
 
-        <!-- Slide 2 (repeat the structure for Slide 2) -->
+        <!-- Project 2 !!! -->
         <div class="carousel-item project2">
+
+          <!-- Ab hier der obere Container (Bild + oberer Text) -->
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
                   <!-- Slide 1 -->
                   <div class="swiper-slide">
-                      <img src="https://i.imgur.com/MEcCNCN.jpg" alt="Bild: Morphing celebrates its success on tour in Brazil" class="swiper-imagetop-brazil">
+                      <img src="https://i.imgur.com/MEcCNCN.jpg" alt="Image: Morphing celebrates its success on tour in Brazil" class="swiper-imagetop-brazil">
                   </div>
-                  <!-- Slide 2 -->
+                  <!-- Slide 2 ? -->
                 <div class="swiper-slide">
-                  <img src="https://i.imgur.com/YiIFwZv.jpg" alt="Bild: Tomasz Wabnic" class="swiper-imagetop-brazil">
+                  <img src="https://i.imgur.com/YiIFwZv.jpg" alt="Image: Tomasz Wabnic plays viola" class="swiper-imagetop-brazil">
                 </div>
                   <!-- Add more slides as needed -->
               </div>
-              <!-- Add Pagination -->
+              <!-- Add Pagination ? -->
           </div>
+
             <p>
               <span class="highlight">MORPHING CELEBRATES ITS SUCCESS ON TOUR IN BRAZIL</span><br><br>
               The Morphing Chamber Orchestra has landed back in Europe after a successful 4-city Brazilian tour
@@ -427,31 +327,29 @@
               Mr. Wabnic looks forward to bringing Chopin back to his homeland and reciprocating the same friendship and
               hospitality to Mr. Siviero in Europe!
             </p>
-            <!-- Your existing top container content -->
+            <!-- Your existing top container content ? -->
           </div>
 
+          <!-- Ab hier der untere Container (Video + unterer Text + Artists) -->
           <div class="bottom-container">
             <div class="text-content">
               <p>
-
+                <!-- Leer -->
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li>
                   <a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a>
                 </li>
                 <li>
-
-                </li>
-                <li>
-                  <a href="Yuuki.html">Yuuki Wong, musician</a>
+                  <a href="Yuuki.html">Yuuki Wong, concertmaster</a>
                 </li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content || No video for this project ! -->
             <iframe
               width="560"
               height="415"
@@ -459,43 +357,43 @@
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen>
+            </iframe>
           </div>
+
           <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <a
-              href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
               target="_blank"
               class="btn btn-primary"
-              >Share on Facebook</a
-            >
+              >Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-              href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
               target="_blank"
               class="btn btn-info"
-              >Share on Twitter</a
-            >
+              >Share on Twitter</a>
           </div>
         </div>
 
-        <!-- Slide 3 (repeat the structure for Slide 3) -->
+
+
+        <!-- Project 3 !!! -->
         <div class="carousel-item project3">
+
+          <!-- Ab hier der obere Container (Bild + oberer Text) -->
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
                   <!-- Slide 1 -->
                   <div class="swiper-slide">
-                      <img src="https://i.imgur.com/mAaAsNL.jpg" alt="Image Description 1" class="swiper-imagetop">
+                      <img src="https://i.imgur.com/mAaAsNL.jpg" alt="Image: CLASSIQUE IN BLUE" class="swiper-imagetop">
                   </div>
-                  <!-- Slide 2 -->
-
                   <!-- Add more slides as needed -->
               </div>
-              <!-- Add Pagination -->
+              <!-- Add Pagination ? -->
           </div>
+
             <p>
               <span class="highlight">CLASSIQUE "IN BLUE"</span><br><br>
               14th November 2023, 20:00
@@ -506,28 +404,29 @@
               Tomasz Wabnic, artistic director & viola <br>
               Yuuki Wong, violin <br>
             </p>
-            <!-- Your existing top container content -->
+            <!-- Your existing top container content ? -->
           </div>
 
+          <!-- Ab hier der untere Container (Video + unterer Text + Artists) -->
           <div class="bottom-container">
             <div class="text-content">
               <p>
-
+                <!-- Leer -->
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li>
                   <a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a>
                 </li>
-                <li><a href="Yuuki.html">Yuuki Wong, composer</a></li>
-                <li>Makoto Ozone, artist</li>
-                <li>Franco Avitabile, musician</li>
+                <li><a href="Yuuki.html">Yuuki Wong, concertmaster</a></li>
+                <li>Makoto Ozone, pianos</li>
+                <li>Franco Avitabile, pianos</li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content || No video for this project ! -->
             <iframe
               width="560"
               height="415"
@@ -535,102 +434,98 @@
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+              allowfullscreen>
+            </iframe>
           </div>
+
           <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <a
-              href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
               target="_blank"
               class="btn btn-primary"
-              >Share on Facebook</a
-            >
+              >Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-              href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
               target="_blank"
               class="btn btn-info"
-              >Share on Twitter</a
-            >
+              >Share on Twitter</a>
           </div>
         </div>
 
 
 
 
-
-
-
-
-
-
+        <!-- Project 4 !!! -->
         <div class="carousel-item project4">
+
+          <!-- Ab hier der obere Container (Bild + oberer Text) -->
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                  <img src="https://i.imgur.com/hsF2CHV.png" alt="Bild - MYSTICAL MORPHING WITH ANDREAS SCHOLL" class="swiper-imagetop">
+                  <img src="https://i.imgur.com/hsF2CHV.png" alt="Image: MYSTICAL MORPHING WITH ANDREAS SCHOLL" class="swiper-imagetop">
                 </div>
-                <!-- Slide 2 -->
                 <!-- Add more slides as needed -->
-                <!-- Add more slides as needed -->
-
               </div>
-              <!-- Add Pagination -->
+              <!-- Add Pagination ? -->
             </div>
 
             <p>
               <span class="highlight">MYSTICAL MORPHING with Andreas Scholl <br> Bach / Pärt</span><br><br>
-              Der international gefeierte Countertenor Andreas Scholl und das gefragte Wiener Ensemble Morphing Chamber Orchestra
-              präsentieren kommenden Herbst ein Programm für unsere Zeit: <br> <br> das Konzert mystical morphing am 4. Oktober 2023 vereint den
-              barocken Meister J.S.Bach mit der zeitgenössischen Ikone Arvo Pärt und lässt das Publikum in die Musik der Stille eintauchen.
-              Ein Moment der Ruhe in herausfordernden Zeiten. Das aktuelle Album Stabat Mater, das die im Programm gespielten Werke von Arvo Pärt
-              in dieser Besetzung zum Inhalt hat, wurde in gleich 4 Kategorien für den ECHO Klassik Preis und den Edison Classic Award nominiert.
-              Das MCO, Solist Andreas Scholl, die Aufnahme selbst und künstlerischer Leiter Tomasz Wabnic in seiner Rolle als primusinter pares,
-              als Dirigent aus dem Ensemble heraus, wurden mit Nominierungen geehrt. <br> <br>
-              Ein Abend mit einem Sänger von Weltformat: Auftritte bei den Salzburger Festspielen, an der New Yorker MET und bei dem Londoner
-              Klassikspektakel Last Night of the Proms haben Andreas Scholl als Countertenor ein Alleinstellungsmerkmal gegeben. Seine bemerkenswerte
-              Stimme ist auf einer Vielzahl an Aufnahmen dokumentiert- besondere Beachtung fand Antonio Vivaldis Cum Dederit, das im James Bond Film
-              Spectre erklingt. Mit Österreich verbindet Andreas Scholl unter anderem eine Professur für Barockgesang am Salzburger Mozarteum.
-              Mystical Morphing feiert den barocken Meister Johann Sebastian Bach. Der deutsche Komponist ist sowohl für seine virtuosen
-              Tastenwerke und harmonischen Kunstwerke als auch für seine tief empfundene Spiritualität bekannt. Seine Musik harmoniert und kontrastiert
-              gleichermaßen in diesem Programm mit der des zeitgenössischen Meisters Pärt, der das Streben nach Spiritualität mit ihm teilt. Neben ausgewählten
-              Arien und Kantaten von J.S.Bach („Ach bleibe doch, mein liebstes Leben“, „Aus tiefer Not schrei ich zu dir“, Schlummert ein ihr matten Augen“),
-              stilgerecht und emotional vorgetragen von Countertenor Andreas Scholl, gibt es auch ein neues Arrangement der Orgelsonate Nr.4 von Tomasz Wabnic zu
-              entdecken- und nicht zuletzt die majestätische Air zu genießen. Das MCO präsentiert Bach in kammermusikalischer Eintracht, teils in kleineren, teils in größeren Besetzungen.
+              The internationally celebrated countertenor Andreas Scholl and the sought-after Viennese ensemble Morphing Chamber Orchestra
+              next autumn will present a program for our time: <br> <br> the concert mystical morphing on October 4th, 2023 brings together the
+              baroque master J.S.Bach with the contemporary icon Arvo Pärt and immerses the audience in the music of silence.
+              A moment of calm in challenging times. The current album Stabat Mater, which contains the works by Arvo Pärt played in the program
+              in this line-up, was nominated in four categories for the ECHO Klassik Prize and the Edison Classic Award.
+              The MCO, soloist Andreas Scholl, the recording itself and artistic director Tomasz Wabnic in his role as primusinter pares,
+              as a conductor from the ensemble, were honored with nominations. <br> <br>
+              An evening with a world-class singer: appearances at the Salzburg Festival, at the New York MET and at the London Festival
+              The classical spectacle Last Night of the Proms gave Andreas Scholl a unique selling point as a countertenor. Its remarkable
+              Voice is documented on a variety of recordings - Antonio Vivaldi's Cum Dederit, which appeared in the James Bond film, received particular attention
+              Specter sounds. Andreas Scholl's association with Austria includes, among other things, a professorship for baroque singing at the Salzburg Mozarteum.
+              Mystical Morphing celebrates the baroque master Johann Sebastian Bach. The German composer is known for both his virtuosity
+              He is known for his keyboard works and harmonious works of art as well as for his deeply felt spirituality. His music harmonizes and contrasts
+              equally in this program with that of the contemporary master Pärt, who shares the pursuit of spirituality with him. In addition to selected
+              Arias and cantatas by J.S.Bach (“Oh stay, my dearest life”, “Out of deep distress I cry out to you”, slumber your dull eyes”),
+              Stylistically and emotionally performed by countertenor Andreas Scholl, there is also a new arrangement of the Organ Sonata No. 4 by Tomasz Wabnic
+              discover - and last but not least, enjoy the majestic air. The MCO presents Bach in chamber music harmony, sometimes in smaller, sometimes larger ensembles.
             </p>
-            <!-- Your existing top container content -->
+            <!-- Your existing top container content ? -->
           </div>
 
+          <!-- Ab hier der untere Container (Video + unterer Text + Artists) -->
           <div class="bottom-container">
             <div class="text-content">
               <p>
-                Das MCO und Tomasz Wabnic haben zur Musik von Arvo Pärt eine langjährige Beziehung aufgebaut, die durch eine direkte Zusammenarbeit mit dem Meister selbst bereichert wurde. Auf dem Programm findet sich unter anderem das Vater Unser, das in Österreich uraufgeführt wurde. Das Programm im Detail:  <br> <br>
+                The MCO and Tomasz Wabnic have built up a long-standing relationship with the music of Arvo Pärt,
+                which has been enriched by a direct collaboration with the master himself. The programme
+                includes the Our Father, which was premiered in Austria. <br>
 
-                1. PÄRT - Es sang von langen Jahren
-                2. BACH - Orgelsonate Nr. 4 BWV 582: II. Andante (arr. Tomasz Wabnic Streichtrio)
-                3. BACH - Ach bleibe doch, mein liebstes Leben BWV 11
-                4. PÄRT - Summa
-                5. PÄRT - My Heart’s in the Highlands
+                The programme in detail:  <br> <br>
+
+                1. PÄRT - Es sang von langen Jahren <br>
+                2. BACH - Orgelsonate Nr. 4 BWV 582: II. Andante (arr. Tomasz Wabnic Streichtrio) <br>
+                3. BACH - Ach bleibe doch, mein liebstes Leben BWV 11 <br>
+                4. PÄRT - Summa <br>
+                5. PÄRT - My Heart’s in the Highlands <br>
                 6. BACH - Air  <br> <br>
 
 
-                7. PÄRT - Vater Unser
-                8. BACH - Aus tiefer Not schrei ich zu Dir BWV 687 (arr. Tomasz Wabnic Streichquintett)
-                9. BACH - Schlummert ein Ihr Matten Augen BWV 82
-                10. PÄRT - Fratres
+                7. PÄRT - Vater Unser <br>
+                8. BACH - Aus tiefer Not schrei ich zu Dir BWV 687 (arr. Tomasz Wabnic Streichquintett) <br>
+                9. BACH - Schlummert ein Ihr Matten Augen BWV 82 <br>
+                10. PÄRT - Fratres <br>
                 11. PÄRT - Wallfahrtslied  <br> <br>
 
 
-                4th October 2023, 8pm
-                Minoritenkirche Vienna
-                Minoritenplatz 2A, 1010 Vienna
+                4th October 2023, 8pm <br>
+                Minoritenkirche Vienna <br>
+                Minoritenplatz 2A, 1010 Vienna <br>
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li>
@@ -638,13 +533,10 @@
                 </li>
                 <li>Arvo Pärt, composer</a></li>
                 <li>Andreas Scholl, singer</a></li>
-                <li>
-
-                </li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content -->
             <iframe
                     width="560"
                     height="415"
@@ -652,62 +544,57 @@
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-            ></iframe>
+                    allowfullscreen>
+            </iframe>
           </div>
+
           <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <a
-                    href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
                     target="_blank"
-                    class="btn btn-primary"
-            >Share on Facebook</a
-            >
+                    class="btn btn-primary">
+              Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-                    href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
                     target="_blank"
-                    class="btn btn-info"
-            >Share on Twitter</a
-            >
+                    class="btn btn-info">
+              Share on Twitter</a>
           </div>
         </div>
 
 
 
-
+        <!-- Project 5 !!! -->
         <div class="carousel-item project5">
+
+          <!-- Ab hier der obere Container (Bild + oberer Text) -->
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                  <img src="https://i.imgur.com/QHBkoBR.jpg" alt="Bild - MORPHING FOR HUMANITY FOR THE MIDDLE EAST" class="swiper-imagetop">
+                  <img src="https://i.imgur.com/QHBkoBR.jpg" alt="Image - MORPHING FOR HUMANITY FOR THE MIDDLE EAST" class="swiper-imagetop">
                 </div>
-                <!-- Slide 2 -->
-
                 <!-- Add more slides as needed -->
-
               </div>
-              <!-- Add Pagination -->
+              <!-- Add Pagination ? -->
             </div>
+
             <p>
               <span class="highlight">MORPHING FOR HUMANITY FOR THE MIDDLE EAST</span><br><br>
-              Musik ist die einzige universelle Sprache, die imstande ist, Gegensätze zu überwinden!
-              »Für uns Musikerinnen und Musiker ist es nicht nur ein Privileg, sondern auch eine Verantwortung, nicht müde zu werden, die Botschaft des Friedens, der Solidarität und des Brückenbauens zu verbreiten«, so der künstlerische Leiter des Morphing Chamber Orchestra, Tomasz Wabnic.
-              Das Orchester möchte mit dem Charity-Konzert für mehr Menschlichkeit seine Solidarität mit den von Terror und Krieg betroffenen Opfern in Israel und Palästina bekunden.
-              Morphing for Humanity, Veränderung hin zu mehr Menschlichkeit ist Aufruf und Programmtitel zugleich.
-              Die Solistenbesetzung wurde auf Wunsch von Timna Brauer durch den palästinensischen Musiker Marwan Abado ergänzt.
-              Alle Erlöse gehen nach Abdeckung der Kosten an das Rote Kreuz für die Soforthilfe vor Ort.
-              Wir freuen uns auf Ihren geschätzten Besuch! <br> <br>
-              Besonderen Dank an unsere Partner:
-              David Lansky
-              Lansky, Ganzger, Goeth + Partner <br><br>
+              Music is the only universal language that is able to overcome opposites!
+              “For us musicians, it is not only a privilege, but also a responsibility not to tire of spreading the message of peace, solidarity and building bridges,” says the artistic director of the Morphing Chamber Orchestra, Tomasz Wabnic.
+              With the charity concert for more humanity, the orchestra would like to express its solidarity with the victims of terror and war in Israel and Palestine.
+              Morphing for Humanity, change towards more humanity, is both a call and a program title.
+              At Timna Brauer's request, the line-up of soloists was supplemented by the Palestinian musician Marwan Abado.
+              After costs have been covered, all proceeds go to the Red Cross for emergency aid on site.
+              We look forward to your valued visit! <br> <br>
+              Special thanks to our partners: <br>
+              David Lansky, Ganzger, Goeth + Partner <br><br>
 
-              16th November 2023 / 7.30pm
-              Wiener Konzerthaus Mozart-Saal Vienna
-
+              16th November 2023 / 7.30pm <br>
+              Wiener Konzerthaus Mozart-Saal Vienna <br>
 
               Timna Brauer, Gesang
               Marwan Abado, Ud, Gesang
@@ -716,13 +603,14 @@
               Morphing Chamber Orchestra
               Tomasz Wabnic, Viola, Künstlerische Leitung
             </p>
-            <!-- Your existing top container content -->
+            <!-- Your existing top container content ? -->
           </div>
 
+          <!-- Ab hier der untere Container (Video + unterer Text + Artists) -->
           <div class="bottom-container">
             <div class="text-content">
               <p>
-                PROGRAMM <br> <br>
+                PROGRAM <br> <br>
 
                 Wolfgang Amadeus Mozart
                 Divertimento B-Dur K 125b (2. Satz: Allegro di molto) (1772) <br><br>
@@ -771,18 +659,18 @@
                 Bearbeitung: Maria Salamon<br><br>
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
-                <li>Timna Brauer, Gesang</li>
-                <li>Marwan Abado, Oud & Gesang</li>
-                <li>Makoto Ozone, Klavier</li>
-                <li>Ory Schneor, Flöte</li>
+                <li>Timna Brauer, Singer</li>
+                <li>Marwan Abado, Oud & Singer</li>
+                <li>Makoto Ozone, pianos</li>
+                <li>Ory Schneor, pianos</li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content -->
             <iframe
                     width="560"
                     height="415"
@@ -790,44 +678,41 @@
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-            ></iframe>
+                    allowfullscreen>
+            </iframe>
           </div>
           <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <a
-                    href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
                     target="_blank"
-                    class="btn btn-primary"
-            >Share on Facebook</a
-            >
+                    class="btn btn-primary">
+              Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-                    href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
                     target="_blank"
-                    class="btn btn-info"
-            >Share on Twitter</a
-            >
+                    class="btn btn-info">
+              Share on Twitter</a>
           </div>
         </div>
 
 
+        <!-- Project 6 !!! -->
         <div class="carousel-item project6">
+
+
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                  <img src="https://i.imgur.com/fesIQhk.jpg" alt="Bild - Davos" class="swiper-imagetop">
+                  <img src="https://i.imgur.com/fesIQhk.jpg" alt="Image: Morphing in Davos" class="swiper-imagetop">
                 </div>
-                <!-- Slide 2 -->
-
                 <!-- Add more slides as needed -->
-
               </div>
-              <!-- Add Pagination -->
+              <!-- Add Pagination ? -->
             </div>
+
             <p>
               <span class="highlight">Opening Concert at World Economic Forum, Davos</span><br><br>
               The Annual Meeting's opening concert, entitled "I Sea You", is a powerful cultural statement
@@ -840,29 +725,29 @@
               musical collaborator Gil Dor. The concert includes a specially created immersive backdrop featuring footage of the Red
               Sea corals, filmed by environmentalist and deep-sea diver Nouf Alosaimi, as well as imagery provided by Coral Morphologic.
             </p>
-            <!-- Your existing top container content -->
+            <!-- Your existing top container content ? -->
           </div>
 
           <div class="bottom-container">
             <div class="text-content">
               <p>
-
+                <!-- Leer -->
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
-                <li><a href="Yuuki.html">Yuuki Wong, violin</a></li>
+                <li><a href="Yuuki.html">Yuuki Wong, concertmaster</a></li>
                 <li><a href="alice.html">Alison Lie, violin</a></li>
                 <li><a href="Nikita_Kuts.html">Nikita Kuts, violin</a></li>
                 <li><a href="Josefina.html">Josefina, violin</a></li>
                 <li>Joseph Tawadros , Oud</li>
-                <li>Tim Allhof, Klavier</li>
+                <li>Tim Allhof, pianos</li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content -->
             <iframe
                     width="560"
                     height="415"
@@ -870,71 +755,68 @@
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-            ></iframe>
+                    allowfullscreen>
+            </iframe>
           </div>
+
           <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <a
-                    href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
                     target="_blank"
-                    class="btn btn-primary"
-            >Share on Facebook</a
-            >
+                    class="btn btn-primary">
+              Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-                    href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
                     target="_blank"
-                    class="btn btn-info"
-            >Share on Twitter</a
-            >
+                    class="btn btn-info">
+              Share on Twitter</a>
           </div>
         </div>
 
 
+        <!-- Project 7 !!! -->
         <div class="carousel-item project7">
+
           <div class="top-container">
             <div class="swiper-container image-swiper">
               <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                  <img src="https://i.imgur.com/CnI5673.png" alt="Bild - Japan" class="swiper-imagetop">
+                  <img src="https://i.imgur.com/CnI5673.png" alt="Image: Morphing in Japan" class="swiper-imagetop">
                 </div>
-                <!-- Slide 2 -->
-
                 <!-- Add more slides as needed -->
-
               </div>
-              <!-- Add Pagination -->
+              <!-- Add Pagination ? -->
             </div>
+
             <p>
               <span class="highlight">MORPHING CHAMBER ORCHESTRA at Tokyo Opera City</span><br><br>
               Seven concerts at Tokyo Opera City with art. dir. Tomasz Wabnitz in December 2022
             </p>
-            <!-- Your existing top container content -->
+            <!-- Your existing top container content ? -->
           </div>
 
           <div class="bottom-container">
             <div class="text-content">
               <p>
-
+                <!-- Leer -->
               </p>
 
-              <!-- Place the Featured Artists list here -->
+              <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
-                <li><a href="Yuuki.html">Yuuki Wong, violin</a></li>
+                <li><a href="Yuuki.html">Yuuki Wong, concertmaster</a></li>
                 <li><a href="alice.html">Alison Lie, violin</a></li>
                 <li><a href="Nikita_Kuts.html">Nikita Kuts, violin</a></li>
                 <li><a href="Josefina.html">Josefina, violin</a></li>
                 <li><a href="Zhangir.html.html">Zhangir, violin</a></li>
-                <li>Tim Allhof, Klavier</li>
+                <li>Tim Allhof, pianos</li>
               </ul>
             </div>
 
-            <!-- Your video content -->
+            <!-- Project video content || No video for this project yet -->
             <iframe
                     width="560"
                     height="415"
@@ -942,55 +824,34 @@
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-            ></iframe>
+                    allowfullscreen>
+            </iframe>
           </div>
+
           <div class="share-buttons">
             <!-- Facebook Share Button -->
-            <a
-                    href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+            <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
                     target="_blank"
                     class="btn btn-primary"
-            >Share on Facebook</a
-            >
+            >Share on Facebook</a>
 
             <!-- Twitter Share Button -->
-            <a
-                    href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+            <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
                     target="_blank"
                     class="btn btn-info"
-            >Share on Twitter</a
-            >
+            >Share on Twitter</a>
           </div>
         </div>
 
       </div>
 
 
-
-
-
-
-
-
-
-
-      <!-- Carousel controls -->
-      <a
-        class="carousel-control-prev"
-        href="#video-carousel"
-        role="button"
-        data-slide="prev"
-      >
+      <!-- Carousel controls for Projects (Es ist noch die "Projects" Section!) -->
+      <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a
-        class="carousel-control-next"
-        href="#video-carousel"
-        role="button"
-        data-slide="next"
-      >
+      <a class="carousel-control-next" href="#video-carousel" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -1007,55 +868,66 @@
         <!-- Add more list items here for additional slides -->
       </ol>
     </section>
+    <!-- Ende der "Projects" Section -->
 
+
+    <!-- Anfang der "Images" Section -->
     <section id="images" class="image-gallery">
       <h2 class="custombold-text" style="margin-bottom: 20px">Images</h2>
+
+      <!-- Die ersten zwei Bilder -->
       <div class="rowim">
           <div class="image-container">
-              <img src="https://i.imgur.com/HnS0y3t.jpeg" alt="Image description 1" class="image-in-gallery" />
+              <img src="https://i.imgur.com/HnS0y3t.jpeg" alt="Image: Orchester in church (black/white)" class="image-in-gallery"/>
               <i class="fas fa-times close-button"></i>
           </div>
           <div class="image-container">
-              <img src="https://i.imgur.com/T1WZWbE.jpeg" alt="Image description 2" class="image-in-gallery" />
-              <i class="fas fa-times close-button"></i>
-          </div>
-      </div>
-      <div class="rowim">
-          <div class="image-container">
-              <img src="https://i.imgur.com/Qtcrabw.jpeg" alt="Image description 3" class="image-in-gallery" />
-              <i class="fas fa-times close-button"></i>
-          </div>
-          <div class="image-container">
-              <img src="https://i.imgur.com/H0fHiiQ.jpeg" alt="Image description 4" class="image-in-gallery" />
-              <i class="fas fa-times close-button"></i>
-          </div>
-      </div>
-      <div class="rowim">
-          <div class="image-container">
-              <img src="https://i.imgur.com/xJnazpI.jpeg" alt="Image description 5" class="image-in-gallery" />
-              <i class="fas fa-times close-button"></i>
-          </div>
-          <div class="image-container">
-              <img src="https://i.imgur.com/Bv70GGY.jpeg" alt="Image description 6" class="image-in-gallery" />
-              <i class="fas fa-times close-button"></i>
-          </div>
-      </div>
-      <div class="rowim">
-          <div class="image-container">
-              <img src="https://i.imgur.com/jf5Xzv6.jpeg" alt="Image description 7" class="image-in-gallery" />
-              <i class="fas fa-times close-button"></i>
-          </div>
-          <div class="image-container">
-              <img src="https://i.imgur.com/eRDJi8r.jpeg" alt="Image description 8" class="image-in-gallery" />
+              <img src="https://i.imgur.com/T1WZWbE.jpeg" alt="Image: Yuuki Wong & Tomasz Wabnic performing in church (black/white)" class="image-in-gallery"/>
               <i class="fas fa-times close-button"></i>
           </div>
       </div>
 
+      <!-- Die nächsten zwei Bilder -->
+      <div class="rowim">
+          <div class="image-container">
+              <img src="https://i.imgur.com/Qtcrabw.jpeg" alt="Image: Yuuki Wong & Tomasz Wabnic performing in church (black/white)" class="image-in-gallery"/>
+              <i class="fas fa-times close-button"></i>
+          </div>
+          <div class="image-container">
+              <img src="https://i.imgur.com/H0fHiiQ.jpeg" alt="Image: Yuuki Wong & Tomasz Wabnic performing in church (black/white)" class="image-in-gallery"/>
+              <i class="fas fa-times close-button"></i>
+          </div>
+      </div>
+
+
+      <div class="rowim">
+          <div class="image-container">
+              <img src="https://i.imgur.com/xJnazpI.jpeg" alt="Image: Yuuki Wong & Tomasz Wabnic performing in church (black/white)" class="image-in-gallery"/>
+              <i class="fas fa-times close-button"></i>
+          </div>
+          <div class="image-container">
+              <img src="https://i.imgur.com/Bv70GGY.jpeg" alt="Image: Yuuki Wong & Tomasz Wabnic performing in church (black/white)" class="image-in-gallery"/>
+              <i class="fas fa-times close-button"></i>
+          </div>
+      </div>
+
+      <div class="rowim">
+          <div class="image-container">
+              <img src="https://i.imgur.com/jf5Xzv6.jpeg" alt="Image: 5 musicians performing" class="image-in-gallery"/>
+              <i class="fas fa-times close-button"></i>
+          </div>
+          <div class="image-container">
+              <img src="https://i.imgur.com/eRDJi8r.jpeg" alt="Image: Morphing performing in church" class="image-in-gallery"/>
+              <i class="fas fa-times close-button"></i>
+          </div>
+      </div>
+      <!-- Ende der Bilder -->
+
       <div>
-        <a href="Images.html" class="gallery-button">See Full Gallery</a>
+        <a href="Images.html" class="gallery-button">See Full Gallery 🤍</a>
       </div>
   </section>
-  
+    <!-- Ende der "Images" Section -->
   
     
 
