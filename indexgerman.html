@@ -1,279 +1,989 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orchestra Website</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <script src='https://unpkg.com/fullcalendar@5/main.min.js'></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Morphing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <script src="https://unpkg.com/fullcalendar@5/main.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="style.css">
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-<script  src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> <!-- Swiper CSS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </head>
-<!--Navbar-->
+
 <body class="font-roboto custom-colorp bg-darkbrown text-black">
-<style>@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+<style>
+    @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 </style>
 
 
 
 
-<nav class="navbar sticky-top navbar-expand-lg navbar-dark" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);">
-  <div class="navbar-container">
-      <!-- Left side: Logo and language switcher -->
-      <div class="navbar-left">
-
-          <ul id="languageSwitcher" class="navbar-nav">
-            <li class="nav-item lang-switch">
-              <a href="index.html" class="nav-link customreg-text">En</a>
-          </li>
-          <!-- Separator -->
-          <li class="nav-separator" style="margin-right: 5px; margin-left: 5px;">/</li>
-          <!-- German Link -->
-          <li class="nav-item lang-switch">
-              <a href="indexgerman.html" class="nav-link customreg-text current-language">De</a>
-          </li>
-              <div class="social-icons-vertical">
-
-              <a href="https://www.instagram.com/morphingmusic" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a></li>
-              <a href="https://www.facebook.com/morphingmusic/" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a></li>
-              <a href="https://www.youtube.com/@morphingchamberorchestra" target="_blank" class="nav-link"><i class="fa fa-youtube"></i></a></li>
-              <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-spotify"></i></a></li>
-              <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-apple"></i></a></li>
-          </ul>
-      </div>
-
-      <!-- Center: Main Logo -->
-      <div class="navbar-center">
-      
-          <a href="#home" class="navbar-center-logo">
-              <img   src="https://i.imgur.com/HvkRXDW.png"  alt="Morphing Music Institute">
-          </a>
-      </div>
-
-
-      <!-- Right side: Navigation and social media links -->
-      <div class="navbar-right">
-          <ul class="navbar-nav">
-            <div class="collapse navbar-collapse" id="navbarContent">
-
-            <li class="nav-item dropdown">
-              <a href="#" class="customreg-text nav-link dropdown-toggle hover:text-white" id="orchestraDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Our Orchestra
-              </a>
-              <div class="dropdown-menu" aria-labelledby="orchestraDropdown">
-                  <a class="dropdown-item customreg-text" href="#orchestra">Our Orchestra</a>
-                  <a class="dropdown-item customreg-text" href="#biography">Tomasz Wabnic</a>
-                  <a class="dropdown-item customreg-text" href="#team">Our Team</a>
-                  <a class="dropdown-item customreg-text" href="#musicians">Our Musicians</a>
-
-                  
-                  <!-- Add more dropdown items here if needed -->
-              </div>
-          </li>
-          <li class="nav-item dropdown">
-            <a href="#" class="customreg-text nav-link dropdown-toggle hover:text-white" id="concertsaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Concerts
-            </a>
-            <div class="dropdown-menu" aria-labelledby="concertsDropdown">
-                <a class="dropdown-item customreg-text" href="#concertsandtickets">Concerts</a>
-                <a class="dropdown-item customreg-text" href="#video-carousel">Projects</a>
-                <a class="dropdown-item customreg-text" href="#concertsandtickets">Calendar</a>
-                <!-- Add more dropdown items here if needed -->
-            </div>
-        </li>              
-        
-        
-        
-        <li class="nav-item dropdown">
-          <a href="#media" class="customreg-text nav-link dropdown-toggle hover:text-white" id="mediaDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Media
-          </a>
-          <div class="dropdown-menu" aria-labelledby="mediaaDropdown">
-              <a class="dropdown-item customreg-text" href="#images">Images</a>
-              <a class="dropdown-item customreg-text" href="#video-gallery">Videos</a>
-              <a class="dropdown-item customreg-text" href="#discography">Discography</a>
-              <!-- Add more dropdown items here if needed -->
-          </div>
-      </li>
-
-
-
-      <li class="nav-item dropdown">
-        <a href="#" class="customreg-text nav-link dropdown-toggle hover:text-white" id="supportDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Support Us
-        </a>
-        <div class="dropdown-menu" aria-labelledby="supportDropdown">
-            <a class="dropdown-item customreg-text" href="#support">Support Us</a>
-            <a class="dropdown-item customreg-text" href="#news">News</a>
-            <a class="dropdown-item customreg-text" href="#contact-footer">Contact Us</a>
-            <!-- Add more dropdown items here if needed -->
+<nav
+        class="navbar sticky-top navbar-expand-lg navbar-dark"
+        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);">
+    <div class="navbar-container">
+        <div class="navbar-left"> <!-- Sprachumschalter und soziale Links -->
+            <ul id="languageSwitcher" class="navbar-nav">
+                <div class="row div-change-language">
+                    <li class="nav-item lang-switch">
+                        <a href="index.html" class="nav-link customreg-text ">En</a>
+                    </li>
+                    <li class="nav-separator"
+                        style="margin-right: 5px; margin-left: 5px;">/</li>
+                    </li>
+                    <li class="nav-item lang-switch">
+                        <a href="indexgerman.html" class="nav-link customreg-text current-language">De</a>
+                    </li>
+                </div>
+                <div class="row social-icons-vertical">
+                    <a href="https://www.instagram.com/morphingmusic" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/morphingmusic/" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a>
+                    <a href="https://www.youtube.com/@morphingchamberorchestra" target="_blank" class="nav-link"><i class="fa fa-youtube"></i></a>
+                    <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-spotify"></i></a>
+                    <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-apple"></i></a>
+                </div>
+            </ul>
         </div>
-    </li>              <!-- Add your social media links here -->
-          </ul>
-      </div>
-  </div>
-  </div>
-  <button class="navbar-toggler fixed-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-</button>
 
-  
 
+
+        <div class="navbar-center">
+            <a href="#home" class="navbar-center-logo">
+                <img
+                        src="https://i.imgur.com/HvkRXDW.png"
+                        alt="Morphing Music Institute"
+                />
+            </a>
+        </div>
+        <div class="navbar-right">
+            <ul class="navbar-nav">
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <div class="nav-item dropdown">
+                        <button
+                                class="btnMenu customreg-text nav-link dropdown-toggle"
+                                id="orchestraDropdown"
+                                type="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="true"
+                        >
+                            Our Orchestra
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="orchestraDropdown">
+                            <a class="dropdown-item customreg-text" href="#orchestra"
+                            >Our Orchestra</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#biography"
+                            >Tomasz Wabnic</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#team"
+                            >Our Team</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#musicians"
+                            >Our Musicians</a
+                            >
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <button
+                                class="btnMenu customreg-text nav-link dropdown-toggle"
+                                id="concertsDropdown"
+                                type="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="true"
+                        >
+                            Concerts
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="concertsDropdown">
+                            <a
+                                    class="dropdown-item customreg-text"
+                                    href="#concertsandtickets"
+                            >Concerts</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#video-carousel"
+                            >Projects</a
+                            >
+                            <a
+                                    class="dropdown-item customreg-text"
+                                    href="#concertsandtickets"
+                            >Calendar</a
+                            >
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <button
+                                class="btnMenu customreg-text nav-link dropdown-toggle"
+                                id="mediaDropdown"
+                                type="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="true"
+                        >
+                            Media
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="mediaDropdown">
+                            <a class="dropdown-item customreg-text" href="#images"
+                            >Images</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#videos"
+                            >Videos</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#discography"
+                            >Discography</a
+                            >
+
+                            <!-- Add more dropdown items here if needed -->
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <button
+                                class="btnMenu customreg-text nav-link dropdown-toggle"
+                                id="supportDropdown"
+                                type="button"
+                                data-toggle="dropdown"
+                                aria-haspopup="true"
+                                aria-expanded="true"
+                        >
+                            Support Us
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="supportDropdown">
+                            <a class="dropdown-item customreg-text" href="#support"
+                            >Support Us</a
+                            >
+                            <a class="dropdown-item customreg-text" href="#news">News</a>
+                            <a class="dropdown-item customreg-text" href="#contact-footer"
+                            >Contact Us</a
+                            >
+
+                            <!-- Add more dropdown items here if needed -->
+                        </div>
+                    </div>
+                    <!-- Add your social media links here -->
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <button
+            class="navbar-toggler fixed-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarContent"
+            aria-controls="navbarContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
 </nav>
 
-
-
-
-
-
-    
 <header class="text-center p-12 text-black video-background-header">
-  <video autoplay muted loop id="myVideo">
-      <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4">
-      Your browser does not support HTML5 video.
-  </video>
-  <section id="home" class="home">
-
-  </section>
+    <video autoplay muted playsinline loop id="myVideo">
+        <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4" />
+        Your browser does not support HTML5 video.
+    </video>
+    <section id="home" class="home"></section>
 </header>
 
 
 
 
+<section id="video-carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
+    <h2 class="custombold-textprojects">Projects</h2>
 
-<section id="video-carousel" class="carousel slide" data-ride="carousel">
-  <h2 class="custombold-textprojects">Projects</h2>
+    <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item project1 active">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <a href="Strauss1.html">
+                                <img src="https://i.imgur.com/FjFQKlO.jpg" alt="Morphing x Johann Strauss Photo" class="swiper-imagetop-johann">
+                            </a>
+                        </div>
+                        <!-- Slide 2 -->
 
-  <div class="carousel-inner">
-    <!-- Slide 1 -->
-    <div class="carousel-item active">
-        <div class="top-container">
-            <img src="https://i.imgur.com/xOOe1Zi.jpeg" alt="Your Image Description" id="image1">
-            <p>Welcome to "Harmonic Fusion: A Symphonic Journey", an innovative project aimed at pushing the boundaries of classical music while celebrating its timeless beauty. In this collaborative endeavor, we bring together talented musicians from diverse backgrounds to create a harmonious fusion of cultures, genres, and artistic expressions through orchestral music.</p>
-            <!-- Your existing top container content -->
-        </div>
-    
-        <div class="bottom-container">
-            <div class="text-content">
-            <p>Step into the world of "Harmonic Fusion," where classical traditions meet contemporary innovation in a mesmerizing symphonic journey. In our latest video, we invite you to witness the unveiling of a musical tapestry woven from diverse cultural threads, showcasing the collaborative spirit and boundless creativity of our orchestra.</p>
-            
-            <!-- Place the Featured Artists list here -->
-            <p class="featured-artists-title">Featured Artists:</p>
-            <ul class="artist-list">
-                <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
-                <li><a href="musician2.html">Timna Brauer, Jazz singer</a></li>
-            </ul>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <p>
+              <span class="highlight">MORPHING x JOHANN STRAUSS <br>
+                The 200th anniversary in 2025</span><br><br>
+                    Mit Sitz in Wien, dem Herzen der ehemaligen Donaumonarchie, ist das kosmopolitische VIENNA MORPHING ORCHESTRA* mit den Werken der Strauss Dynastie mehr als vertraut.
+                    200 Jahre Jubiläum von Johann Strauss Sohn ist Anlass zu einem wunderbaren musikalischen Fest!
+                    Vom Galopp zu den Polkas bis zu den berühmtesten Walzer darf nichts fehlen.
+                    Schon Brahms war von Strauss entzückt: „Er ist der Einzige, den ich beneide – er trieft von Musik, ihm fällt immer etwas ein.“
+                    Nach dem fulminanten Erfolg der Zusammenarbeit mit Sängerin Timna Brauer im November 2023 im Wiener Konzerthaus,
+                    tritt sie nun auch bei der Strauss Gala als Gastsolistin auf.
+                    Das MORPHING ORCHESTRA zeichnet sich seit seiner Gründung durch Kooperationen mit Musikern fernab der Klassik aus.
+                    And Johann actually swings too!
+                    Unkonventionell und humorvoll schwingt sich Timna Brauer durch den Klang Palast des Walzerkönigs.
+                    Virtuos jongliert sie zwischen Klassik, Jazz und Fantasie, Strauss und Mozart einmal anders.
+                </p>
+                <!-- Your existing top container content -->
             </div>
-    
-            <!-- Your video content -->
-            <iframe width="560" height="415" src="https://www.youtube.com/embed/QV20W-L4voI?si=-JgQ8QQOnu0eBxSG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
-            </div>
-            <div class="share-buttons">
-              <!-- Facebook Share Button -->
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://m0hamedm0.github.io/morphing/index.html#video-carousel" target="_blank" class="btn btn-primary">Share on Facebook</a>
-              
-              <!-- Twitter Share Button -->
-              <a href="https://twitter.com/intent/tweet?url=https://m0hamedm0.github.io/morphing/index.html#video-carousel&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney" target="_blank" class="btn btn-info">Share on Twitter</a>
-          </div>
-          
-        </div>
-    
 
-    <!-- Slide 2 (repeat the structure for Slide 2) -->
-    <div class="carousel-item">
-        <div class="top-container">
-            <img src="https://i.imgur.com/XXVrdLm.png" alt="Your Image Description" id="image2">
-            <p>Welcome to "Harmonic Fusion: A Symphonic Journey", an innovative project aimed at pushing the boundaries of classical music while celebrating its timeless beauty. In this collaborative endeavor, we bring together talented musicians from diverse backgrounds to create a harmonious fusion of cultures, genres, and artistic expressions through orchestral music.</p>
-            <!-- Your existing top container content -->
-        </div>
-    
-        <div class="bottom-container">
-            <div class="text-content">
-            <p>Step into the world of "Harmonic Fusion," where classical traditions meet contemporary innovation in a mesmerizing symphonic journey. In our latest video, we invite you to witness the unveiling of a musical tapestry woven from diverse cultural threads, showcasing the collaborative spirit and boundless creativity of our orchestra.</p>
-            
-            <!-- Place the Featured Artists list here -->
-            <p class="featured-artists-title">Featured Artists:</p>
-            <ul class="artist-list">
-                <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
-                <li><a href="musician2.html">Nikitia Pavliuc, senior developer</a></li>
-                <li><a href="Yuuki.html">samuel brunner, senior developer</a></li>
-            </ul>
-            </div>
-    
-            <!-- Your video content -->
-            <iframe width="560" height="415" src="https://www.youtube.com/embed/vFrFbpx86Ew?si=ph86N45WVDiyAMoX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+                        PROGRAM: <br>
+                        1. Wolfgang Amadeus Mozart (1756 - 1791)
+                        Overture "Le Nozze di Figaro", K.V. 492 (4'40) <br>
+                        2. Johann Strauss || (1825 - 1899)
+                        Emperor Waltz, op. 437 (12'00) <br>
+                        3. Johann Strauss || (1825-1899)
+                        Brüderlein und Schwesterlein, from "Die Fledermaus" Timna Brauer / Tim Allhoff <br>
+                        4. Johann Strauss | (1804 - 1849)
+                        Sighing Galop, op. 9 (2'30) <br>
+                        5. Tim Allhoff solo piano + MCO <br>
+                        6. Johann Strauss || (1825 - 1899)
+                        Bandit's Galop, op.378 (3'00) <br>
+                        7. W.A. Mozart (1756-1791)
+                        Oh zittre nicht, mein lieber Sohn, from "The
+                        Magic Flute"
+                        Timna Brauer / Tim Allhoff <br>
+                        8. Johann Strauss || (1825 - 1899)
+                        Tritsch-Tratsch-Polka, Op. 214 (3'00)
+                        Timna Brauer <br>
+                        9. Wolfgang Amadeus Mozart (1756 - 1791)
+                        III. Presto, Sinfonia concertante for violin & viola, K.V. 364 (6'30)
+                        Yuuki Wong - violin, Tomasz Wabnic - viola <br>
+                        10. Johann Strauss || (1825-1899)
+                        Mein Herr Marquis, from "Die Fledermaus"
+                        Timna Brauer <br>
+                        11. Johann Strauss (1827 - 1870)
+                        Ohne Sorgen (Without a care!), op 271 (2'30) <br>
+                        12. Tim Allhoff solo piano + MCO <br>
+                        13. Johann Strauss || (1825 - 1899)
+                        Stürmisch in Lieb' und Tanz, op.393 (2'30) <br>
+                        14. Wolfgang Amadeus Mozart (1756-1791)
+                        Pa-pa-pa, from "The Magic Flute" Timna Brauer / Tim Allhoff <br>
+                        15. Johann Strauss || (1825 - 1899)
+                        The Blue Danube Waltz, op. 314 (9'30)
+                        Timna Brauer / Tim Allhoff <br>
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li>
+                            <a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a>
+                        </li>
+                        <li>Timna Brauer, Vocals</li>
+                        <li>Niklas Liepe, Violin</li>
+                        <li>Julia Sturzlbaum, Sopran</li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="600"
+                        height="500"
+                        src="https://www.youtube.com/embed/QV20W-L4voI?si=-JgQ8QQOnu0eBxSG"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
             </div>
             <div class="share-buttons">
                 <!-- Facebook Share Button -->
-                <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink" target="_blank" class="btn btn-primary">Share on Facebook</a>
-                
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://m0hamedm0.github.io/morphing/index.html#video-carousel"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
                 <!-- Twitter Share Button -->
-                <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney" target="_blank" class="btn btn-info">Share on Twitter</a>
+                <a
+                        href="https://twitter.com/intent/tweet?url=https://m0hamedm0.github.io/morphing/index.html#video-carousel&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
             </div>
         </div>
 
-    <!-- Slide 3 (repeat the structure for Slide 3) -->
-    <div class="carousel-item">
-        <div class="top-container">
-            <img src="https://i.imgur.com/TqikQ81.jpg" alt="Your Image Description" id="image3">
-            <p>Welcome to "Harmonic Fusion: A Symphonic Journey", an innovative project aimed at pushing the boundaries of classical music while celebrating its timeless beauty. In this collaborative endeavor, we bring together talented musicians from diverse backgrounds to create a harmonious fusion of cultures, genres, and artistic expressions through orchestral music.</p>
-            <!-- Your existing top container content -->
-        </div>
-    
-        <div class="bottom-container">
-            <div class="text-content">
-            <p>Step into the world of "Harmonic Fusion," where classical traditions meet contemporary innovation in a mesmerizing symphonic journey. In our latest video, we invite you to witness the unveiling of a musical tapestry woven from diverse cultural threads, showcasing the collaborative spirit and boundless creativity of our orchestra.</p>
-            
-            <!-- Place the Featured Artists list here -->
-            <p class="featured-artists-title">Featured Artists:</p>
-            <ul class="artist-list">
-                <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
-                <li><a href="musician2.html">Arvo Pärt, composer</a></li>
-                <li><a href="Yuuki.html">Nikita Pavliuc, software developer</a></li>
-                <li><a href="Nikita_Kuts.html">Samuel Brunner, software architect</a></li>
 
-            </ul>
+
+        <!-- Slide 2 (repeat the structure for Slide 2) -->
+        <div class="carousel-item project2">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/MEcCNCN.jpg" alt="Bild: Morphing celebrates its success on tour in Brazil" class="swiper-imagetop-brazil">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/YiIFwZv.jpg" alt="Bild: Tomasz Wabnic" class="swiper-imagetop-brazil">
+                        </div>
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <p>
+                    <span class="highlight">MORPHING CELEBRATES ITS SUCCESS ON TOUR IN BRAZIL</span><br><br>
+                    The Morphing Chamber Orchestra has landed back in Europe after a successful 4-city Brazilian tour
+                    with pianist Álvaro Siviero, where they performed Viennese classics by Mozart, Kreisler and Strauss
+                    and Chopin’s Concerto no. 1. The tour was the result of a long-standing collaboration between Mr. Siviero
+                    and MCO artistic director Tomasz Wabnic and they are already preparing for upcoming projects! Up next is a
+                    concert at the Manggha Japanese Museum of Art and Technology in Krakow, Poland on the 18th September.
+                    Mr. Wabnic looks forward to bringing Chopin back to his homeland and reciprocating the same friendship and
+                    hospitality to Mr. Siviero in Europe!
+                </p>
+                <!-- Your existing top container content -->
             </div>
-    
-            <!-- Your video content -->
-            <iframe width="560" height="415" src="https://www.youtube.com/embed/JxdB_6AKd1k?si=TYq9EpVw_nlWlc0B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li>
+                            <a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a>
+                        </li>
+                        <li>
+
+                        </li>
+                        <li>
+                            <a href="Yuuki.html">Yuuki Wong, musician</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="560"
+                        height="415"
+                        src=""
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
             </div>
             <div class="share-buttons">
                 <!-- Facebook Share Button -->
-                <a href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink" target="_blank" class="btn btn-primary">Share on Facebook</a>
-                
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
                 <!-- Twitter Share Button -->
-                <a href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney" target="_blank" class="btn btn-info">Share on Twitter</a>
+                <a
+                        href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
             </div>
         </div>
-        
-  </div>
 
-  <!-- Carousel controls -->
-  <a class="carousel-control-prev" href="#video-carousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#video-carousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+        <!-- Slide 3 (repeat the structure for Slide 3) -->
+        <div class="carousel-item project3">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/mAaAsNL.jpg" alt="Image Description 1" class="swiper-imagetop">
+                        </div>
+                        <!-- Slide 2 -->
+
+                        <!-- Add more slides as needed -->
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <p>
+                    <span class="highlight">CLASSIQUE "IN BLUE"</span><br><br>
+                    14th November 2023, 20:00
+                    Cathédrale St. Louis, Les Invalides Paris <br> <br>
+
+                    Makoto Ozone & Franco Avitabile, pianos <br>
+                    Morphing Chamber Orchestra <br>
+                    Tomasz Wabnic, artistic director & viola <br>
+                    Yuuki Wong, violin <br>
+                </p>
+                <!-- Your existing top container content -->
+            </div>
+
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li>
+                            <a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a>
+                        </li>
+                        <li><a href="Yuuki.html">Yuuki Wong, composer</a></li>
+                        <li>Makoto Ozone, artist</li>
+                        <li>Franco Avitabile, musician</li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="560"
+                        height="415"
+                        src=""
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
+            </div>
+            <div class="share-buttons">
+                <!-- Facebook Share Button -->
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
+                <!-- Twitter Share Button -->
+                <a
+                        href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <div class="carousel-item project4">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/hsF2CHV.png" alt="Bild - MYSTICAL MORPHING WITH ANDREAS SCHOLL" class="swiper-imagetop">
+                        </div>
+                        <!-- Slide 2 -->
+                        <!-- Add more slides as needed -->
+                        <!-- Add more slides as needed -->
+
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+
+                <p>
+                    <span class="highlight">MYSTICAL MORPHING with Andreas Scholl <br> Bach / Pärt</span><br><br>
+                    Der international gefeierte Countertenor Andreas Scholl und das gefragte Wiener Ensemble Morphing Chamber Orchestra
+                    präsentieren kommenden Herbst ein Programm für unsere Zeit: <br> <br> das Konzert mystical morphing am 4. Oktober 2023 vereint den
+                    barocken Meister J.S.Bach mit der zeitgenössischen Ikone Arvo Pärt und lässt das Publikum in die Musik der Stille eintauchen.
+                    Ein Moment der Ruhe in herausfordernden Zeiten. Das aktuelle Album Stabat Mater, das die im Programm gespielten Werke von Arvo Pärt
+                    in dieser Besetzung zum Inhalt hat, wurde in gleich 4 Kategorien für den ECHO Klassik Preis und den Edison Classic Award nominiert.
+                    Das MCO, Solist Andreas Scholl, die Aufnahme selbst und künstlerischer Leiter Tomasz Wabnic in seiner Rolle als primusinter pares,
+                    als Dirigent aus dem Ensemble heraus, wurden mit Nominierungen geehrt. <br> <br>
+                    Ein Abend mit einem Sänger von Weltformat: Auftritte bei den Salzburger Festspielen, an der New Yorker MET und bei dem Londoner
+                    Klassikspektakel Last Night of the Proms haben Andreas Scholl als Countertenor ein Alleinstellungsmerkmal gegeben. Seine bemerkenswerte
+                    Stimme ist auf einer Vielzahl an Aufnahmen dokumentiert- besondere Beachtung fand Antonio Vivaldis Cum Dederit, das im James Bond Film
+                    Spectre erklingt. Mit Österreich verbindet Andreas Scholl unter anderem eine Professur für Barockgesang am Salzburger Mozarteum.
+                    Mystical Morphing feiert den barocken Meister Johann Sebastian Bach. Der deutsche Komponist ist sowohl für seine virtuosen
+                    Tastenwerke und harmonischen Kunstwerke als auch für seine tief empfundene Spiritualität bekannt. Seine Musik harmoniert und kontrastiert
+                    gleichermaßen in diesem Programm mit der des zeitgenössischen Meisters Pärt, der das Streben nach Spiritualität mit ihm teilt. Neben ausgewählten
+                    Arien und Kantaten von J.S.Bach („Ach bleibe doch, mein liebstes Leben“, „Aus tiefer Not schrei ich zu dir“, Schlummert ein ihr matten Augen“),
+                    stilgerecht und emotional vorgetragen von Countertenor Andreas Scholl, gibt es auch ein neues Arrangement der Orgelsonate Nr.4 von Tomasz Wabnic zu
+                    entdecken- und nicht zuletzt die majestätische Air zu genießen. Das MCO präsentiert Bach in kammermusikalischer Eintracht, teils in kleineren, teils in größeren Besetzungen.
+                </p>
+                <!-- Your existing top container content -->
+            </div>
+
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+                        Das MCO und Tomasz Wabnic haben zur Musik von Arvo Pärt eine langjährige Beziehung aufgebaut, die durch eine direkte Zusammenarbeit mit dem Meister selbst bereichert wurde. Auf dem Programm findet sich unter anderem das Vater Unser, das in Österreich uraufgeführt wurde. Das Programm im Detail:  <br> <br>
+
+                        1. PÄRT - Es sang von langen Jahren
+                        2. BACH - Orgelsonate Nr. 4 BWV 582: II. Andante (arr. Tomasz Wabnic Streichtrio)
+                        3. BACH - Ach bleibe doch, mein liebstes Leben BWV 11
+                        4. PÄRT - Summa
+                        5. PÄRT - My Heart’s in the Highlands
+                        6. BACH - Air  <br> <br>
+
+
+                        7. PÄRT - Vater Unser
+                        8. BACH - Aus tiefer Not schrei ich zu Dir BWV 687 (arr. Tomasz Wabnic Streichquintett)
+                        9. BACH - Schlummert ein Ihr Matten Augen BWV 82
+                        10. PÄRT - Fratres
+                        11. PÄRT - Wallfahrtslied  <br> <br>
+
+
+                        4th October 2023, 8pm
+                        Minoritenkirche Vienna
+                        Minoritenplatz 2A, 1010 Vienna
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li>
+                            <a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a>
+                        </li>
+                        <li>Arvo Pärt, composer</a></li>
+                        <li>Andreas Scholl, singer</a></li>
+                        <li>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="560"
+                        height="415"
+                        src="https://www.youtube.com/embed/gwnIl-Vo9lk?si=3yS28rMpBl5gyu83"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
+            </div>
+            <div class="share-buttons">
+                <!-- Facebook Share Button -->
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
+                <!-- Twitter Share Button -->
+                <a
+                        href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
+            </div>
+        </div>
+
+
+
+
+        <div class="carousel-item project5">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/QHBkoBR.jpg" alt="Bild - MORPHING FOR HUMANITY FOR THE MIDDLE EAST" class="swiper-imagetop">
+                        </div>
+                        <!-- Slide 2 -->
+
+                        <!-- Add more slides as needed -->
+
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <p>
+                    <span class="highlight">MORPHING FOR HUMANITY FOR THE MIDDLE EAST</span><br><br>
+                    Musik ist die einzige universelle Sprache, die imstande ist, Gegensätze zu überwinden!
+                    »Für uns Musikerinnen und Musiker ist es nicht nur ein Privileg, sondern auch eine Verantwortung, nicht müde zu werden, die Botschaft des Friedens, der Solidarität und des Brückenbauens zu verbreiten«, so der künstlerische Leiter des Morphing Chamber Orchestra, Tomasz Wabnic.
+                    Das Orchester möchte mit dem Charity-Konzert für mehr Menschlichkeit seine Solidarität mit den von Terror und Krieg betroffenen Opfern in Israel und Palästina bekunden.
+                    Morphing for Humanity, Veränderung hin zu mehr Menschlichkeit ist Aufruf und Programmtitel zugleich.
+                    Die Solistenbesetzung wurde auf Wunsch von Timna Brauer durch den palästinensischen Musiker Marwan Abado ergänzt.
+                    Alle Erlöse gehen nach Abdeckung der Kosten an das Rote Kreuz für die Soforthilfe vor Ort.
+                    Wir freuen uns auf Ihren geschätzten Besuch! <br> <br>
+                    Besonderen Dank an unsere Partner:
+                    David Lansky
+                    Lansky, Ganzger, Goeth + Partner <br><br>
+
+                    16th November 2023 / 7.30pm
+                    Wiener Konzerthaus Mozart-Saal Vienna
+
+
+                    Timna Brauer, Gesang
+                    Marwan Abado, Ud, Gesang
+                    Makoto Ozone, Klavier
+                    Ory Schneor, Flöte
+                    Morphing Chamber Orchestra
+                    Tomasz Wabnic, Viola, Künstlerische Leitung
+                </p>
+                <!-- Your existing top container content -->
+            </div>
+
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+                        PROGRAMM <br> <br>
+
+                        Wolfgang Amadeus Mozart
+                        Divertimento B-Dur K 125b (2. Satz: Allegro di molto) (1772) <br><br>
+
+                        JÜDISCH JEMENITISCHER PSALM
+                        Ani tzame »Verlangen« (17. Jhdt)
+                        Text: Shalom Shabazi
+                        Musik: Traditionell Jemenitisch <br><br>
+
+                        HEBRÄISCHE LITURGIE ZUM SHABAT
+                        Shalom aleichem »Friede sei über Euch«
+                        Text: Anonymer Kabbalist aus Safed, 16. Jhdt
+                        Musik: Israel & Samuel Goldfarb 1918
+                        Orchesterbearbeitung: Maria Salamon, basierend auf einem Arrangement von Elias Meiri<br><br>
+
+                        JIDDISCHES GHETTOLIED
+                        Gehat hob ikh a heym »Ich hatte ein Zuhause« (1941)
+                        Text: Mordechai Gebirtig
+                        Musik: Emil Gorovets
+                        Orchesterbearbeitung: Michael Salamon, basierend auf einem Arrangement von Elias Meiri<br><br>
+
+                        ARABISCHES LIED
+                        Mat´r »Regen« 2002
+                        Text & Musik: Marwan Abado <br><br>
+
+                        ISRAELISCHES LIED
+                        Erev shel shoshanim »Nacht der Rosen« (1957)
+                        Text: Moshe Dor
+                        Musik: Josef Hadar
+                        Bearbeitung: Tomasz Wabnic<br><br>
+
+                        MARWAN ABADO
+                        Path of love (2016)
+                        Für Oud und Orchester<br><br>
+
+                        Wolfgang Amadeus Mozart
+                        Andante C-Dur K 285e für Flöte (1780)<br><br>
+
+                        George Gershwin
+                        Rhapsody in Blue (1924) Fassung für Klavier und Orchester
+                        Bearbeitung: Tomasz Wabnic<br><br>
+
+                        JIDDISCHES GHETTOLIED
+                        Mir lebn ejbig »Wir leben ewig« (1942)
+                        Text & Musik: Leyb Rozenthal
+                        Bearbeitung: Maria Salamon<br><br>
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
+                        <li>Timna Brauer, Gesang</li>
+                        <li>Marwan Abado, Oud & Gesang</li>
+                        <li>Makoto Ozone, Klavier</li>
+                        <li>Ory Schneor, Flöte</li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="560"
+                        height="415"
+                        src="https://www.youtube.com/embed/8Eh0YNbzqZc?si=mBfcKEED-9DSnRQI"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
+            </div>
+            <div class="share-buttons">
+                <!-- Facebook Share Button -->
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
+                <!-- Twitter Share Button -->
+                <a
+                        href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
+            </div>
+        </div>
+
+
+        <div class="carousel-item project6">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/fesIQhk.jpg" alt="Bild - Davos" class="swiper-imagetop">
+                        </div>
+                        <!-- Slide 2 -->
+
+                        <!-- Add more slides as needed -->
+
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <p>
+                    <span class="highlight">Opening Concert at World Economic Forum, Davos</span><br><br>
+                    The Annual Meeting's opening concert, entitled "I Sea You", is a powerful cultural statement
+                    of unity and collaboration, and a call to action to world leaders and policy-makers to implement
+                    the appropriate and required agreements to protect and preserve the coral reefs of the Northern Red Sea.
+                    Performed by the Morphing Chamber Orchestra, featuring world-renowned oud virtuoso Joseph Tawadros and percussionist
+                    James Tawadros, "I Sea You" also features exclusive performances by internationally acclaimed award- winning artists
+                    including soprano Fatma Said, pianist, composer and arranger Tim Allhoff, virtuoso Farah Siraj, guitarist,
+                    composer and producer Andreas Arnold and singer, songwriter Achinoam Nini (Noa), who is joined by her longstanding
+                    musical collaborator Gil Dor. The concert includes a specially created immersive backdrop featuring footage of the Red
+                    Sea corals, filmed by environmentalist and deep-sea diver Nouf Alosaimi, as well as imagery provided by Coral Morphologic.
+                </p>
+                <!-- Your existing top container content -->
+            </div>
+
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
+                        <li><a href="Yuuki.html">Yuuki Wong, violin</a></li>
+                        <li><a href="alice.html">Alison Lie, violin</a></li>
+                        <li><a href="Nikita_Kuts.html">Nikita Kuts, violin</a></li>
+                        <li><a href="Josefina.html">Josefina, violin</a></li>
+                        <li>Joseph Tawadros , Oud</li>
+                        <li>Tim Allhof, Klavier</li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="560"
+                        height="415"
+                        src="https://www.youtube.com/embed/_nDDnMYyWeM?si=gRdoI5B0KxMr__kL"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
+            </div>
+            <div class="share-buttons">
+                <!-- Facebook Share Button -->
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
+                <!-- Twitter Share Button -->
+                <a
+                        href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
+            </div>
+        </div>
+
+
+        <div class="carousel-item project7">
+            <div class="top-container">
+                <div class="swiper-container image-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1 -->
+                        <div class="swiper-slide">
+                            <img src="https://i.imgur.com/CnI5673.png" alt="Bild - Japan" class="swiper-imagetop">
+                        </div>
+                        <!-- Slide 2 -->
+
+                        <!-- Add more slides as needed -->
+
+                    </div>
+                    <!-- Add Pagination -->
+                </div>
+                <p>
+                    <span class="highlight">MORPHING CHAMBER ORCHESTRA at Tokyo Opera City</span><br><br>
+                    Seven concerts at Tokyo Opera City with art. dir. Tomasz Wabnitz in December 2022
+                </p>
+                <!-- Your existing top container content -->
+            </div>
+
+            <div class="bottom-container">
+                <div class="text-content">
+                    <p>
+
+                    </p>
+
+                    <!-- Place the Featured Artists list here -->
+                    <p class="featured-artists-title">Featured Artists:</p>
+                    <ul class="artist-list">
+                        <li><a href="Tomasz_Musician.html">Tomasz Wabnic, artistic director</a></li>
+                        <li><a href="Yuuki.html">Yuuki Wong, violin</a></li>
+                        <li><a href="alice.html">Alison Lie, violin</a></li>
+                        <li><a href="Nikita_Kuts.html">Nikita Kuts, violin</a></li>
+                        <li><a href="Josefina.html">Josefina, violin</a></li>
+                        <li><a href="Zhangir.html.html">Zhangir, violin</a></li>
+                        <li>Tim Allhof, Klavier</li>
+                    </ul>
+                </div>
+
+                <!-- Your video content -->
+                <iframe
+                        width="560"
+                        height="415"
+                        src=""
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen
+                ></iframe>
+            </div>
+            <div class="share-buttons">
+                <!-- Facebook Share Button -->
+                <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=YourProjectLink"
+                        target="_blank"
+                        class="btn btn-primary"
+                >Share on Facebook</a
+                >
+
+                <!-- Twitter Share Button -->
+                <a
+                        href="https://twitter.com/intent/tweet?url=YourProjectLink&text=Check%20out%20this%20project!&hashtags=HarmonicFusion,SymphonicJourney"
+                        target="_blank"
+                        class="btn btn-info"
+                >Share on Twitter</a
+                >
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-- Carousel controls -->
+    <a
+            class="carousel-control-prev"
+            href="#video-carousel"
+            role="button"
+            data-slide="prev"
+    >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a
+            class="carousel-control-next"
+            href="#video-carousel"
+            role="button"
+            data-slide="next"
+    >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+
+    <ol class="carousel-indicators">
+        <li data-target="#video-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#video-carousel" data-slide-to="1"></li>
+        <li data-target="#video-carousel" data-slide-to="2"></li>
+        <li data-target="#video-carousel" data-slide-to="3"></li>
+        <li data-target="#video-carousel" data-slide-to="4"></li>
+        <li data-target="#video-carousel" data-slide-to="5"></li>
+        <li data-target="#video-carousel" data-slide-to="6"></li>
+        <li data-target="#video-carousel" data-slide-to="7"></li>
+        <!-- Add more list items here for additional slides -->
+    </ol>
+</section>
+
+<section id="images" class="image-gallery">
+    <h2 class="custombold-text" style="margin-bottom: 20px">Images</h2>
+    <div class="rowim">
+        <div class="image-container">
+            <img src="https://i.imgur.com/HnS0y3t.jpeg" alt="Image description 1" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+        <div class="image-container">
+            <img src="https://i.imgur.com/T1WZWbE.jpeg" alt="Image description 2" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+    </div>
+    <div class="rowim">
+        <div class="image-container">
+            <img src="https://i.imgur.com/Qtcrabw.jpeg" alt="Image description 3" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+        <div class="image-container">
+            <img src="https://i.imgur.com/H0fHiiQ.jpeg" alt="Image description 4" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+    </div>
+    <div class="rowim">
+        <div class="image-container">
+            <img src="https://i.imgur.com/xJnazpI.jpeg" alt="Image description 5" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+        <div class="image-container">
+            <img src="https://i.imgur.com/Bv70GGY.jpeg" alt="Image description 6" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+    </div>
+    <div class="rowim">
+        <div class="image-container">
+            <img src="https://i.imgur.com/jf5Xzv6.jpeg" alt="Image description 7" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+        <div class="image-container">
+            <img src="https://i.imgur.com/eRDJi8r.jpeg" alt="Image description 8" class="image-in-gallery" />
+            <i class="fas fa-times close-button"></i>
+        </div>
+    </div>
+
+    <div>
+        <a href="Images.html" class="gallery-button">See Full Gallery</a>
+    </div>
 </section>
 
 
@@ -282,180 +992,169 @@
 
 
 
-
-
-
-
-
-
-<section id="images" class="image-gallery">
-    <h2 class="custombold-text" style="margin-bottom: 20px;">Images</h2>
-    <div class="rowim">
-      <img src="https://i.imgur.com/HnS0y3t.jpeg" alt="Image description 1">
-      <img src="https://i.imgur.com/T1WZWbE.jpeg" alt="Image description 1">
-    </div>
-    <div class="rowim">
-        <img src="https://i.imgur.com/Qtcrabw.jpeg" alt="Image description 1">
-        <img src="https://i.imgur.com/H0fHiiQ.jpeg" alt="Image description 1">
-    </div>
-    <div class="rowim">
-        <img src="https://i.imgur.com/xJnazpI.jpeg" alt="Image description 1">
-        <img src="https://i.imgur.com/Bv70GGY.jpeg" alt="Image description 1">
-
-  
-      </div>
-      <div class="rowim">
-          <img src="https://i.imgur.com/jf5Xzv6.jpeg" alt="Image description 1">
-          <img src="https://i.imgur.com/eRDJi8r.jpeg" alt="Image description 1">
-
-      </div>
-  </section>
-
-  
-
-
-
-
-
-
-  <section class="video-gallery">
-    <h2 class="custombold-text" style="margin-bottom: 30px;">Videos</h2>
+<section id="videos" class="video-gallery">
+    <h2 class="custombold-text" style="margin-bottom: 30px">Videos</h2>
     <div class="rowvid">
-      <!-- First row of videos -->
-      
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/_lEWpjTfhCE?si=mFl_V6FtZhKE2JMD&amp;start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/4gS-aTq7olc?si=uZ5YhRVgb0U24FPO&amp;start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- First row of videos -->
+
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/_lEWpjTfhCE?si=mFl_V6FtZhKE2JMD&amp;start=120"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+        ></iframe>
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/4gS-aTq7olc?si=uZ5YhRVgb0U24FPO&amp;start=120"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+        ></iframe>
     </div>
 
-      <div class="rowvid">
-      <!-- Second row of videos -->
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/wiKb0qNSX1U?si=WuQVe84O5ke-2m5x&amp;start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/F2D2YAKMRPA?si=ps6QTSGPQSSNYx_t&amp;start=120" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="rowvid">
+        <!-- Second row of videos -->
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/wiKb0qNSX1U?si=WuQVe84O5ke-2m5x&amp;start=120"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+        ></iframe>
+        <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/F2D2YAKMRPA?si=ps6QTSGPQSSNYx_t&amp;start=120"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+        ></iframe>
     </div>
-  </section>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</section>
 
 <!--verschiedene Sections...scrollbar-->
 
 <!--verschiedene Sections...scrollbar-->
-
 
 <section id="orchestra" class="orchestra-section">
-
     <div class="orchestra-left">
-      <h2 class="customgrotesk-text">Our Orchestra</h2>
-      <blockquote class="quote-block">
-        <p>"Vienna Morphing Orchestra is <br />
-            a small orchestra with a big spirit. <br />
-          They were great to work with."</p>
-        <footer class="font-roboto custom-colorg">Bobby McFerrin</footer>
-      </blockquote>
+        <h2 class="custombold-text">Our Orchestra</h2>
+        <blockquote class="quote-block">
+            <p>
+                "Vienna Morphing Orchestra is <br />
+                a small orchestra with a big spirit. <br />
+                They were great to work with."
+            </p>
+            <footer class="customreg-text custom-colorg">Bobby McFerrin</footer>
+        </blockquote>
 
-      <blockquote class="quote-block" style="padding-top: 10vh;">
-        <p>„Arvo Pärt very much appreciated both your <br />
-            interpretation and the presentation of his <br />
-            Oeuvre – „Vater unser“. He sends his <br />
-            congratulations. ...your musicians rendered <br />
-            the spirit of the work wonderfully. Arvo Pärt <br />
-            sends his thanks for your engagement!“
-          </p>
-        <footer class="font-roboto custom-colorg">Jane Doe</footer>
-      </blockquote>
-  
-      <blockquote class="quote-block" style="padding-top: 10vh;">
-          <br />
-          <br />
-        <p>„Music is like a language: if you have <br />
-            enough love for music, you can play <br />
-            anything. Then style or genre is just a <br />
-            matter of dialect."
-                  </p>
-  
-        <footer class="font-roboto custom-colorg">        ARTISTIC DIRECTOR <br>
-          TOMASZ WABNIC</footer>
-      </blockquote>
-    </div>
-  
-  
-  
-  
-  
-  <div class="orchestra-right">
-    <h2>WHO WE ARE</h2>
-    <p>Founded in 2006 by artistic director Tomasz Wabnic- violinist, violist, as well as arranger- Morphing Chamber Orchestra has stayed true to the philosophy of ensemble playing. Its players are young, diverse, and award-winning artists from around the world, who all came to Vienna to perfect their musical skills. Their alert playing and outstanding qualities are paired with an acute sense of style which enables them to excel at a range of genres.<br><br>
-  
-  
-      The Metropolitan Opera, Tokyo Opera City Concert Hall, music labels Aparté & Sony Classical and the World Economic Forum: these are just a few of the important institutions that put their trust in the MCO.
-      Whether it's a concert, a recording or a major ceremony, the MCO is a first-class chamber music partner for any occasion. Opera stars Aleksandra Kurzak, Roberto Alagna and Andreas Scholl, American jazz icon Bobby McFerrin and composer Arvo Pärt have also opted for the cosmopolitan Vienna-based ensemble.
-      </p>
-  
-        <h2>ACHIEVEMENTS</h2>
-        <p >The ensemble’s artistic achievements have been recognized by no less than four nominations for the OPUS Klassik Award 2023 with the album Stabat Mater, featuring works by Arvo Pärt.
-          Nominations have been announced in the categories of “orchestra of the year” & “opera recording of the year”, furthermore Tomasz Wabnic has been nominated for “conductor of the year” and Andreas Scholl as “vocalist of the year”.
-          </p>
-  
-  
-  
-        <h2>RELEASES</h2>
-        <p>Tomasz Wabnic and the MCO have their finger on the pulse with their latest releases. 2019 saw the launch of their debut album with Sony: "Desire”, featuring the stratospheric voice of Polish soprano Aleksandra Kurzak, which received critical acclaim and was named "Best Foreign Album" at the Fryderyk Awards in Poland in 2021. Kurzak's next album, "Mozart Concertante", features an unusual mix of arias as well as Mozart's Sinfonia Concertante with soloists Tomasz Wabnic and Yuuki Wong - an example of the MCO style of soloist-led music-making. "Stabat Mater" is dedicated to the works of the famous contemporary composer Arvo Pärt and impresses with singers Aleksandra Kurzak, Roberto Alagna and countertenor Andreas Scholl. "De Profundis" is a spiritual journey through the works of Bach and Schönberg.
-          Further albums with Aleksandra Kurzak, Roberto Alagna as well as Barno Ismatullaeva and Kévin Amiel are in the making.
-          </p>
-  
-  
-            <h2>RECORDINGS</h2>
-            <p>MCO has made recordings for various television stations (PBS TV, ORF, TVP Kultura, ARTE TV, MEZZO TV) and radio stations (OE1, radio klassik Stephansdom, Radio Classique France and Polish Radio 2).
-              Morphing Chamber Orchestra is a partner of the Parisian label Aparté (Artistic Director: Nicolas Bartholomeé).
-              </p>
-  
-    </div>
-  </section>
+        <blockquote class="quote-block" style="padding-top: 10vh">
+            <p>
+                <br><br><br>
+                <br><br><br>
+                „Arvo Pärt very much appreciated both your <br />
+                interpretation and the presentation of his <br />
+                Oeuvre – „Vater unser“. He sends his <br />
+                congratulations. ...your musicians rendered <br />
+                the spirit of the work wonderfully. Arvo Pärt <br />
+                sends his thanks for your engagement!“
+            </p>
+            <footer class="customreg-text custom-colorg">Jane Doe</footer>
+        </blockquote>
 
+        <blockquote class="quote-block" style="padding-top: 10vh">
+            <p>
+                „Music is like a language: if you have <br />
+                enough love for music, you can play <br />
+                anything. Then style or genre is just a <br />
+                matter of dialect."
+            </p>
+
+            <footer class="customreg-text custom-colorg">
+                ARTISTIC DIRECTOR <br />
+                TOMASZ WABNIC
+            </footer>
+        </blockquote>
+    </div>
+
+    <div class="orchestra-right">
+        <h2 class="custombold-text">WHO WE ARE</h2>
+        <p>
+            Founded in 2006 by artistic director Tomasz Wabnic- violinist,
+            violist, as well as arranger- Morphing Chamber Orchestra has stayed
+            true to the philosophy of ensemble playing. Its players are young,
+            diverse, and award-winning artists from around the world, who all came
+            to Vienna to perfect their musical skills. Their alert playing and
+            outstanding qualities are paired with an acute sense of style which
+            enables them to excel at a range of genres.<br /><br />
+
+            The Metropolitan Opera, Tokyo Opera City Concert Hall, music labels
+            Aparté & Sony Classical and the World Economic Forum: these are just a
+            few of the important institutions that put their trust in the MCO.
+            Whether it's a concert, a recording or a major ceremony, the MCO is a
+            first-class chamber music partner for any occasion. Opera stars
+            Aleksandra Kurzak, Roberto Alagna and Andreas Scholl, American jazz
+            icon Bobby McFerrin and composer Arvo Pärt have also opted for the
+            cosmopolitan Vienna-based ensemble.
+        </p>
+
+        <h2 class="custombold-text">ACHIEVEMENTS</h2>
+        <p>
+            The ensemble’s artistic achievements have been recognized by no less
+            than four nominations for the OPUS Klassik Award 2023 with the album
+            Stabat Mater, featuring works by Arvo Pärt. Nominations have been
+            announced in the categories of “orchestra of the year” & “opera
+            recording of the year”, furthermore Tomasz Wabnic has been nominated
+            for “conductor of the year” and Andreas Scholl as “vocalist of the
+            year”.
+        </p>
+
+        <h2 class="custombold-text">RELEASES</h2>
+        <p>
+            Tomasz Wabnic and the MCO have their finger on the pulse with their
+            latest releases. 2019 saw the launch of their debut album with Sony:
+            "Desire”, featuring the stratospheric voice of Polish soprano
+            Aleksandra Kurzak, which received critical acclaim and was named "Best
+            Foreign Album" at the Fryderyk Awards in Poland in 2021. Kurzak's next
+            album, "Mozart Concertante", features an unusual mix of arias as well
+            as Mozart's Sinfonia Concertante with soloists Tomasz Wabnic and Yuuki
+            Wong - an example of the MCO style of soloist-led music-making.
+            "Stabat Mater" is dedicated to the works of the famous contemporary
+            composer Arvo Pärt and impresses with singers Aleksandra Kurzak,
+            Roberto Alagna and countertenor Andreas Scholl. "De Profundis" is a
+            spiritual journey through the works of Bach and Schönberg. Further
+            albums with Aleksandra Kurzak, Roberto Alagna as well as Barno
+            Ismatullaeva and Kévin Amiel are in the making.
+        </p>
+
+        <h2 class="custombold-text">RECORDINGS</h2>
+        <p>
+            MCO has made recordings for various television stations (PBS TV, ORF,
+            TVP Kultura, ARTE TV, MEZZO TV) and radio stations (OE1, radio klassik
+            Stephansdom, Radio Classique France and Polish Radio 2). Morphing
+            Chamber Orchestra is a partner of the Parisian label Aparté (Artistic
+            Director: Nicolas Bartholomeé).
+        </p>
+    </div>
+</section>
 
 <p class="download-description text-center">
     Download our full description:
-    <a href="https://drive.google.com/file/d/1R4C7-GuXv7HukZush4LbHkIdZBvV8Gfr/view?usp=sharing" target="_blank" class="pdf-download-link">here</a>
-  </p>
-
-
-
-
-
+    <a
+            href="https://drive.google.com/file/d/1R4C7-GuXv7HukZush4LbHkIdZBvV8Gfr/view?usp=sharing"
+            target="_blank"
+            class="pdf-download-link"
+    >here</a
+    >
+</p>
 
 <section id="biography">
     <div class="biography-container">
@@ -464,58 +1163,82 @@
             <div>
                 <h2 class="custombold-text">Tomasz Wabnic</h2>
                 <h3 class="custombold-text">Artistic Director</h3>
-                <p class="customreg-text">
-                    "Music is Art and Art is Music."
-                </p>
+                <p class="customreg-text">"Music is Art and Art is Music."</p>
             </div>
         </div>
         <div class="biography-text">
             <h2 class="custombold-text">Tomasz Wabnic</h2>
             <p>
-                Tomasz Wabnic is the founder and artistic director of the Morphing Chamber Orchestra and violist of the
-                Morphing String Quartet in Vienna and of the Huberman String Trio. Leading peer musicians and audiences
-                around the world are amazed by the bold energy and inventive drive of this multi-faceted artist.
-                The 2020/21 season sees Tomasz Wabnic invited to perform in more than a hundred of the world's leading
-                venues, from New York's Carnegie Hall and Teatro alla Scala to the Golden Hall of the Vienna Musikverein.<br><br> During
-                the summer of 2020 he performed, together with Roberto Alagna and Alexandra Kurzak, in the Metropolitan
-                Opera Stars Live in Concert series. Recent appearances by Tomasz Wabnic also include performances at the
-                Amsterdam Concertgebouw, Moscow's Philharmonic Hall, the Tchaikovsky Hall of the Moscow Conservatory,
-                the legendary Teatro Amazonas in Manaus, Brazil, and the amazing Tokyo Opera City Concert Hall.
-                Founded by Tomas Wabnic in Vienna in 2006, the Morphing Chamber Orchestra has quickly established
-                itself as one of the most sought-after soloist ensembles at international level.<br><br> The orchestra, composed of fixed
-                members all of whom are award-winning soloists from fifteen countries, has its resident series at the famous
-                Eroica Hall of Vienna's Lobkowitz Palace has recorded widely for SONY Classical, BMG Classics, and Universal
-                Music. Following his concept of a congenial combination of musical styles and art forms in an unusually intense
-                rehearsal process, Tomasz Wabnic established close musical partnerships with other extraordinary artists as
-                diverse as star soprano Alexandra Kurzak, US vocal artist Bobby McFerrin, counter-tenor legend Andreas Scholl,
-                Canadian jazz singer Sarah Reid, the Egyptian-Australian oud virtuoso Joseph Tawadros and major composers
-                such as Arvo Pärt and Krzysztof Penderecki.
+                Tomasz Wabnic is the founder and artistic director of the Morphing
+                Chamber Orchestra and violist of the Morphing String Quartet in
+                Vienna and of the Huberman String Trio. Leading peer musicians and
+                audiences around the world are amazed by the bold energy and
+                inventive drive of this multi-faceted artist. The 2020/21 season
+                sees Tomasz Wabnic invited to perform in more than a hundred of the
+                world's leading venues, from New York's Carnegie Hall and Teatro
+                alla Scala to the Golden Hall of the Vienna Musikverein.<br /><br />
+                During the summer of 2020 he performed, together with Roberto Alagna
+                and Alexandra Kurzak, in the Metropolitan Opera Stars Live in
+                Concert series. Recent appearances by Tomasz Wabnic also include
+                performances at the Amsterdam Concertgebouw, Moscow's Philharmonic
+                Hall, the Tchaikovsky Hall of the Moscow Conservatory, the legendary
+                Teatro Amazonas in Manaus, Brazil, and the amazing Tokyo Opera City
+                Concert Hall. Founded by Tomas Wabnic in Vienna in 2006, the
+                Morphing Chamber Orchestra has quickly established itself as one of
+                the most sought-after soloist ensembles at international level.<br /><br />
+                The orchestra, composed of fixed members all of whom are
+                award-winning soloists from fifteen countries, has its resident
+                series at the famous Eroica Hall of Vienna's Lobkowitz Palace has
+                recorded widely for SONY Classical, BMG Classics, and Universal
+                Music. Following his concept of a congenial combination of musical
+                styles and art forms in an unusually intense rehearsal process,
+                Tomasz Wabnic established close musical partnerships with other
+                extraordinary artists as diverse as star soprano Alexandra Kurzak,
+                US vocal artist Bobby McFerrin, counter-tenor legend Andreas Scholl,
+                Canadian jazz singer Sarah Reid, the Egyptian-Australian oud
+                virtuoso Joseph Tawadros and major composers such as Arvo Pärt and
+                Krzysztof Penderecki.
             </p>
-            <a href="javascript:void(0);" class="read-more1" onclick="toggleReadMore()">read more</a>
+            <a
+                    href="javascript:void(0);"
+                    class="read-more1"
+                    onclick="toggleReadMore()"
+            >read more</a
+            >
             <div id="more-text">
                 <p>
-                    Tomasz Wabnic is also the founder of Capella Czestochoviensis and served as its artistic director from 2006
-                    to 2012. Now the artistic director of Capella Claromontana since 2012, he leads another world-class, Early Music
-                    ensemble dedicated at unearthing lost music especially of the Polish Baroque era. Mr. Wabnic produced world-
-                    premiere recordings of several works by Daubeck and Gotschalk. The previously lost gems rediscovered by
-                    Tomasz Wabnic at the music archives of the Częstochowa monastery of Mons Clara include several works by
-                    W.A. Mozart and Joseph Haydn.
-                    In 2013 Tomasz Wabnic, together with brothers Sándor and Ádám Jávorkai, founded the Huberman String
-                    Trio. 
-                    <br><br>The Trio presented its critically acclaimed recording of J.S. Bach's Goldberg Variations (arr. Dmitri
-                    Sitkovetsky) in 2016. Recent appearances of Mr. Wabnic with the Huberman Trio included performances at the
-                    Rheingau Musik Festival and at NOSPR Hall in Katowice.
-                    Born in Wrocław, Poland, into a family of musicians, Tomasz Wabnic received his education as a violinist
-                    and a violist at the conservatories and universities of Bydgoszcz and Poznan in the violin class of the
-                    internationally famed violinist Jadwiga Kaliszewska as well as at Vienna's Musik und Kunst Privatuniversität as a
-                    member of the highly regarded viola class of Herwig Zelle and of the chamber music masterclass of the Altenberg
-                    Trio Wien. He graduated with honours. <br><br>
-                    Numerous awards and honours were bestowed on Tomasz Wabnic as a soloist and chamber musician. With
-                    his Fidelio Quartet, he was a finalist in the 2001 International Chamber Music Competition in Melbourne.
-                    Morphing: the combination of several works of music and other art forms through seamless tranisition, is a
-                    concept which fascinated Tomasz Wabnic since his infant days: In his parents' living room, he used to play two
-                    or three records and the radio all at the same time, with the idea of creating a new sound. Today he lives with
-                    his family in Vienna.
+                    Tomasz Wabnic is also the founder of Capella Czestochoviensis and
+                    served as its artistic director from 2006 to 2012. Now the
+                    artistic director of Capella Claromontana since 2012, he leads
+                    another world-class, Early Music ensemble dedicated at unearthing
+                    lost music especially of the Polish Baroque era. Mr. Wabnic
+                    produced world- premiere recordings of several works by Daubeck
+                    and Gotschalk. The previously lost gems rediscovered by Tomasz
+                    Wabnic at the music archives of the Częstochowa monastery of Mons
+                    Clara include several works by W.A. Mozart and Joseph Haydn. In
+                    2013 Tomasz Wabnic, together with brothers Sándor and Ádám
+                    Jávorkai, founded the Huberman String Trio.
+                    <br /><br />The Trio presented its critically acclaimed recording
+                    of J.S. Bach's Goldberg Variations (arr. Dmitri Sitkovetsky) in
+                    2016. Recent appearances of Mr. Wabnic with the Huberman Trio
+                    included performances at the Rheingau Musik Festival and at NOSPR
+                    Hall in Katowice. Born in Wrocław, Poland, into a family of
+                    musicians, Tomasz Wabnic received his education as a violinist and
+                    a violist at the conservatories and universities of Bydgoszcz and
+                    Poznan in the violin class of the internationally famed violinist
+                    Jadwiga Kaliszewska as well as at Vienna's Musik und Kunst
+                    Privatuniversität as a member of the highly regarded viola class
+                    of Herwig Zelle and of the chamber music masterclass of the
+                    Altenberg Trio Wien. He graduated with honours. <br /><br />
+                    Numerous awards and honours were bestowed on Tomasz Wabnic as a
+                    soloist and chamber musician. With his Fidelio Quartet, he was a
+                    finalist in the 2001 International Chamber Music Competition in
+                    Melbourne. Morphing: the combination of several works of music and
+                    other art forms through seamless tranisition, is a concept which
+                    fascinated Tomasz Wabnic since his infant days: In his parents'
+                    living room, he used to play two or three records and the radio
+                    all at the same time, with the idea of creating a new sound. Today
+                    he lives with his family in Vienna.
                     <!-- Weiterführende Informationen hier -->
                 </p>
                 <!-- Weitere <p> Tags für den restlichen Text -->
@@ -524,145 +1247,286 @@
     </div>
 </section>
 
-
-
-
-
 <section id="discography">
     <h2 class="custombold-text">Discography</h2>
-  
-  <div class="discography-section">
-    <!-- Entry 1 -->
-      <div class="discography-entry">
-          <div class="album-image">
-              <!-- Image for album -->
-              <img src="https://i.imgur.com/Z1BPyn7.jpg" alt="Album Name" class="image">
-              <div class="overlay-text">Enjoy The Silence</div> <!-- Overlay text -->
-          </div>
-          <div class="album-info">
-              <!-- Text description -->
-              <p>Tim Allhoff & Morphing Chamber Orchestra
-              </p>
-          </div>
-          <div class="album-links">
-              <!-- iTunes and Spotify links -->
-              <a href="https://music.apple.com/us/album/silence-is-something-you-can-actually-hear/1686882128" target="_blank" class="itunes-link">Apple Music</a>
-              <a href="https://open.spotify.com/album/6TU8GCDEvZzciExmRRE6YD" target="_blank" class="spotify-link">Spotify</a> <br>
-              <br>
-              <a href="https://music.amazon.de/albums/B0C4G1M84Q" target="_blank" class="amazon-link">&nbsp &nbsp Amazon &nbsp &nbsp</a>
-              <a href="https://www.deezer.com/us/album/438170977" target="_blank" class="deezer-link">Deezer</a>
-          </div>
-      </div>
 
-      <hr class="separator">
+    <div class="discography-section">
+        <!-- Entry 1 -->
+        <div class="discography-entry">
+            <div class="album-image">
+                <!-- Image for album -->
+                <img
+                        src="https://i.imgur.com/Z1BPyn7.jpg"
+                        alt="Enjoy The Silence"
+                        class="image"
+                />
+                <div class="overlay-text">Enjoy The Silence</div>
+                <!-- Overlay text -->
+            </div>
+            <div class="album-info">
+                <!-- Text description -->
+                <p>Tim Allhoff & Morphing Chamber Orchestra</p>
+            </div>
+            <div class="album-links">
+                <!-- iTunes and Spotify links -->
+                <a
+                        href="https://music.apple.com/us/album/silence-is-something-you-can-actually-hear/1686882128"
+                        target="_blank"
+                        class="itunes-link"
+                >Apple Music</a
+                >
+                <a
+                        href="https://open.spotify.com/album/6TU8GCDEvZzciExmRRE6YD"
+                        target="_blank"
+                        class="spotify-link"
+                >Spotify</a
+                >
+                <br />
+                <br />
+                <a
+                        href="https://music.amazon.de/albums/B0C4G1M84Q"
+                        target="_blank"
+                        class="amazon-link"
+                >&nbsp &nbsp Amazon &nbsp &nbsp</a
+                >
+                <a
+                        href="https://www.deezer.com/us/album/438170977"
+                        target="_blank"
+                        class="deezer-link"
+                >Deezer</a
+                >
+            </div>
+        </div>
 
-    <div class="discography-entry">
-    <div class="album-image">
-        <!-- Image for album -->
-        <img src="https://i.imgur.com/baN3lgm.jpeg" alt="Album Name" class="image">
-        <div class="overlay-text">Arvo Pärt</div> <!-- Overlay text -->
-    </div>
-    <div class="album-info">
-        <!-- Text description -->
-        <p>Morphing Chamber Orchestra, Aleksandra Kurzak, Andreas Scholl, Roberto Alagna & Tomasz Wabnic
-        </p>
-    </div>
-    <div class="album-links">
-        <!-- iTunes and Spotify links -->
-        <a href="https://music.apple.com/us/album/arvo-p%C3%A4rt-stabat-mater-other-works/1636869129" target="_blank" class="itunes-link">Apple Music</a>
-        <a href="https://open.spotify.com/album/1kLg0Lb8E1P6lhNBzYYhDn" target="_blank" class="spotify-link">Spotify</a> <br>
-        <br>
-        <a href="https://music.amazon.de/albums/B0B7XW96XD" target="_blank" class="amazon-link">&nbsp &nbsp Amazon &nbsp &nbsp</a>
-        <a href="https://www.deezer.com/us/album/340285897" target="_blank" class="deezer-link">Deezer</a>
-    </div>
-  </div>
-  
-  
-    <hr class="separator">
-  
-  
-    <div class="discography-entry">
-      <div class="album-image">
-          <!-- Image for album -->
-          <img src="https://i.imgur.com/pblTZL2.jpeg" alt="Album Name" class="image">
-          <div class="overlay-text">Mozart Concertante</div> <!-- Overlay text -->
-      </div>
-      <div class="album-info">
-          <!-- Text description -->
-          <p>Aleksandra Kurzak, Yuuki Wong, Tomasz Wabnic, Morphing Chamber Orchestra</p>
-      </div>
-      <div class="album-links">
-          <!-- iTunes and Spotify links -->
-          <a href="https://music.apple.com/us/album/mozart-concertante/1585857586" target="_blank" class="itunes-link">Apple Music</a>
-          <a href="https://open.spotify.com/album/3Tf3ODPQZ59VyNaiftNQg6" target="_blank" class="spotify-link">Spotify</a> <br>
-          <br>
-          <a href="https://music.amazon.de/albums/B09G8L25M2" target="_blank" class="amazon-link">&nbsp &nbsp Amazon &nbsp &nbsp</a>
-          <a href="https://www.deezer.com/us/album/258789332" target="_blank" class="deezer-link">Deezer</a>
-      </div>
-    </div>
-  
-  <hr class="separator">
-  
-  
-  <div class="discography-entry">
-    <div class="album-image">
-        <!-- Image for album -->
-        <img src="https://i.imgur.com/JpzJyyK.jpeg" alt="Album Name" class="image">
-        <div class="overlay-text">Cellopera (Deluxe Edition)</div> <!-- Overlay text -->
-    </div>
-    <div class="album-info">
-        <!-- Text description -->
-        <p>Ophélie Gaillard, Morphing Chamber Orchestra, Frédéric Chaslin</p>
-    </div>
-    <div class="album-links">
-        <!-- iTunes and Spotify links -->
-        <a href="https://music.apple.com/us/album/cellopera-deluxe-edition/1611153741" target="_blank" class="itunes-link">Apple Music</a>
-        <a href="https://open.spotify.com/album/1Dlh0VppQJPDECDmK18SM9" target="_blank" class="spotify-link">Spotify</a> <br>
-        <br>
-        <a href="https://music.amazon.de/albums/B09T5LPNCL" target="_blank" class="amazon-link">&nbsp &nbsp Amazon &nbsp &nbsp</a>
-        <a href="https://www.deezer.com/us/album/297570762" target="_blank" class="deezer-link">Deezer</a>
-    </div>
-  </div>
-    <!-- Repeat for more entries -->
-    <!-- Entry 2 -->
-    <!-- ... -->
-      <hr class="separator">
-  
-  
-      <div class="discography-entry">
-          <div class="album-image">
-              <!-- Image for album -->
-              <img src="https://i.imgur.com/wYP556r.jpeg" alt="Album Name" class="image">
-              <div class="overlay-text">Desire</div> <!-- Overlay text -->
-          </div>
-          <div class="album-info">
-              <!-- Text description -->
-              <p>Aleksandra Kurzak, Frédéric Chaslin, Morphing Chamber Orchestra</p>
-          </div>
-          <div class="album-links">
-              <!-- iTunes and Spotify links -->
-              <a href="https://music.apple.com/us/album/desire/1496581935" target="_blank" class="itunes-link">Apple Music</a>
-              <a href="https://open.spotify.com/album/05CdAKDmexoT6Jibn0aHZS" target="_blank" class="spotify-link">Spotify</a> <br>
-              <br>
-              <a href="https://music.amazon.de/albums/B0B7XW96XD" target="_blank" class="amazon-link">&nbsp &nbsp Amazon &nbsp &nbsp</a>
-              <a href="https://www.deezer.com/us/album/340285897" target="_blank" class="deezer-link">Deezer</a>
-          </div>
-      </div>
-  
-  </div>
-  </section>
+        <hr class="separator" />
+
+        <div class="discography-entry">
+            <div class="album-image">
+                <!-- Image for album -->
+                <img
+                        src="https://i.imgur.com/baN3lgm.jpeg"
+                        alt="Arvo Pärt"
+                        class="image"
+                />
+                <div class="overlay-text">Arvo Pärt</div>
+                <!-- Overlay text -->
+            </div>
+
+            <div class="small-image-container">
+                <img src="https://i.imgur.com/zIlBs9v.png" height="70" width="75" alt="Kleines Bild" class="small-image"/>
+            </div>
 
 
+            <div class="album-info">
+                <!-- Text description -->
+                <p>
+                    Morphing Chamber Orchestra, Aleksandra Kurzak, Andreas Scholl,
+                    Roberto Alagna & Tomasz Wabnic
+                </p>
+            </div>
+            <div class="album-links">
+                <!-- iTunes and Spotify links -->
+                <a
+                        href="https://music.apple.com/us/album/arvo-p%C3%A4rt-stabat-mater-other-works/1636869129"
+                        target="_blank"
+                        class="itunes-link"
+                >Apple Music</a
+                >
+                <a
+                        href="https://open.spotify.com/album/1kLg0Lb8E1P6lhNBzYYhDn"
+                        target="_blank"
+                        class="spotify-link"
+                >Spotify</a
+                >
+                <br />
+                <br />
+                <a
+                        href="https://music.amazon.de/albums/B0B7XW96XD"
+                        target="_blank"
+                        class="amazon-link"
+                >&nbsp &nbsp Amazon &nbsp &nbsp</a
+                >
+                <a
+                        href="https://www.deezer.com/us/album/340285897"
+                        target="_blank"
+                        class="deezer-link"
+                >Deezer</a
+                >
+            </div>
+        </div>
 
+        <hr class="separator" />
+
+        <div class="discography-entry">
+            <div class="album-image">
+                <!-- Image for album -->
+                <img
+                        src="https://i.imgur.com/pblTZL2.jpeg"
+                        alt="Album Name"
+                        class="image"
+                />
+                <div class="overlay-text">Mozart Concertante</div>
+                <!-- Overlay text -->
+            </div>
+
+            <div class="small-image-container">
+                <img src="https://i.imgur.com/zIlBs9v.png" height="70" width="75" alt="Kleines Bild" class="small-image"/>
+            </div>
+
+            <div class="album-info">
+                <!-- Text description -->
+                <p>
+                    Aleksandra Kurzak, Yuuki Wong, Tomasz Wabnic, Morphing Chamber
+                    Orchestra
+                </p>
+            </div>
+            <div class="album-links">
+                <!-- iTunes and Spotify links -->
+                <a
+                        href="https://music.apple.com/us/album/mozart-concertante/1585857586"
+                        target="_blank"
+                        class="itunes-link"
+                >Apple Music</a
+                >
+                <a
+                        href="https://open.spotify.com/album/3Tf3ODPQZ59VyNaiftNQg6"
+                        target="_blank"
+                        class="spotify-link"
+                >Spotify</a
+                >
+                <br />
+                <br />
+                <a
+                        href="https://music.amazon.de/albums/B09G8L25M2"
+                        target="_blank"
+                        class="amazon-link"
+                >&nbsp &nbsp Amazon &nbsp &nbsp</a
+                >
+                <a
+                        href="https://www.deezer.com/us/album/258789332"
+                        target="_blank"
+                        class="deezer-link"
+                >Deezer</a
+                >
+            </div>
+        </div>
+
+        <hr class="separator" />
+
+        <div class="discography-entry">
+            <div class="album-image">
+                <!-- Image for album -->
+                <img
+                        src="https://i.imgur.com/JpzJyyK.jpeg"
+                        alt="Album Name"
+                        class="image"
+                />
+                <div class="overlay-text">Cellopera (Deluxe Edition)</div>
+                <!-- Overlay text -->
+            </div>
+
+            <div class="small-image-container">
+                <img src="https://i.imgur.com/zIlBs9v.png" height="70" width="75" alt="Kleines Bild" class="small-image"/>
+            </div>
+
+            <div class="album-info">
+                <!-- Text description -->
+                <p>
+                    Ophélie Gaillard, Morphing Chamber Orchestra, Frédéric Chaslin
+                </p>
+            </div>
+            <div class="album-links">
+                <!-- iTunes and Spotify links -->
+                <a
+                        href="https://music.apple.com/us/album/cellopera-deluxe-edition/1611153741"
+                        target="_blank"
+                        class="itunes-link"
+                >Apple Music</a
+                >
+                <a
+                        href="https://open.spotify.com/album/1Dlh0VppQJPDECDmK18SM9"
+                        target="_blank"
+                        class="spotify-link"
+                >Spotify</a
+                >
+                <br />
+                <br />
+                <a
+                        href="https://music.amazon.de/albums/B09T5LPNCL"
+                        target="_blank"
+                        class="amazon-link"
+                >&nbsp &nbsp Amazon &nbsp &nbsp</a
+                >
+                <a
+                        href="https://www.deezer.com/us/album/297570762"
+                        target="_blank"
+                        class="deezer-link"
+                >Deezer</a
+                >
+            </div>
+        </div>
+        <!-- Repeat for more entries -->
+        <!-- Entry 2 -->
+        <!-- ... -->
+        <hr class="separator" />
+
+        <div class="discography-entry">
+            <div class="album-image">
+                <!-- Image for album -->
+                <img
+                        src="https://i.imgur.com/wYP556r.jpeg"
+                        alt="Album Name"
+                        class="image"
+                />
+                <div class="overlay-text">Desire</div>
+                <!-- Overlay text -->
+            </div>
+            <div class="album-info">
+                <!-- Text description -->
+                <p>
+                    Aleksandra Kurzak, Frédéric Chaslin, Morphing Chamber Orchestra
+                </p>
+            </div>
+            <div class="album-links">
+                <!-- iTunes and Spotify links -->
+                <a
+                        href="https://music.apple.com/us/album/desire/1496581935"
+                        target="_blank"
+                        class="itunes-link"
+                >Apple Music</a
+                >
+                <a
+                        href="https://open.spotify.com/album/05CdAKDmexoT6Jibn0aHZS"
+                        target="_blank"
+                        class="spotify-link"
+                >Spotify</a
+                >
+                <br />
+                <br />
+                <a
+                        href="https://music.amazon.de/albums/B0B7XW96XD"
+                        target="_blank"
+                        class="amazon-link"
+                >&nbsp &nbsp Amazon &nbsp &nbsp</a
+                >
+                <a
+                        href="https://www.deezer.com/us/album/340285897"
+                        target="_blank"
+                        class="deezer-link"
+                >Deezer</a
+                >
+            </div>
+        </div>
+    </div>
+</section>
 
 <section id="concertsandtickets" class="calendar">
-
     <h2 class="custombold-text">Concerts & Tickets</h2>
     <div class="calendar-box">
         <div class="month customreg-text">
             <div class="month-header">
                 <span class="prev-month">&lt;</span>
-                <h3 class="month-name"></h3>
+                <h3 class="month-name customreg-text"></h3>
                 <span class="next-month">&gt;</span>
             </div>
             <div class="days"></div>
@@ -672,416 +1536,548 @@
 
 
 
-<!-- OUR TEAM  -->
-  <section id="team">
-    <h2 class="custombold">Our Team</h2>
-  <div class="swiper-container">
-    <div class="swiper-wrapper">
 
-      <div class="swiper-slide">
-        <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 1" style="width: 600px; height: 400px;">
-        <div class="slide-description">
-        <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
-        </div>
-        </div>      
-        
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 2" style="width: 600px; height: 400px;">
-          <div class="slide-description">
-            <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
 
-          </div>
-          </div>    
-      
-          <div class="swiper-slide">
-            <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 1" style="width: 600px; height: 400px;">
-            <div class="slide-description">
-              <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
 
+
+
+<section id="team">
+    <h2 class="custombold-text">Our Team</h2>
+    <div class="people-container">
+        <!-- Person 1 -->
+        <div class="person">
+            <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+            <div class="info-box">
+                <a href="Tomasz_Musician.html">
+                    <p class="name">Tomasz Wabnic</p>
+                </a>
+                <p class="role">- Artistic Director</p>
             </div>
-            </div>      
-            
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 2" style="width: 600px; height: 400px;">
-              <div class="slide-description">
-                <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
+        </div>
+        <!-- Person 2 -->
+        <div class="person">
+            <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+            <div class="info-box">
+                <a href="Yuuki.html">
+                    <p class="name">Yuuki Wong</p>
+                </a>
+                <p class="role">- Lead Violinist</p>
+            </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="person">
+            <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+            <div class="info-box">
+                <a href="Nichita_Team.html">
+                    <p class="name">Nikita Pavliuc</p>
+                </a>
+                <p class="role">- Project Assistant</p>
+            </div>
+        </div>
+        <!-- More persons as needed... -->
+        <div class="person">
+            <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+            <div class="info-box">
+                <a href="Tomasz_Musician.html">
+                    <p class="name">Tomasz Wabnic</p>
+                </a>
+                <p class="role">- Artistic Director</p>
+            </div>
+        </div>
+        <!-- Person 2 -->
+        <div class="person">
+            <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+            <div class="info-box">
+                <a href="Yuuki.html">
+                    <p class="name">Yuuki Wong</p>
+                </a>
+                <p class="role">- Lead Violinist</p>
+            </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="person">
+            <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+            <div class="info-box">
+                <a href="Nichita_Team.html">
+                    <p class="name">Nikita Pavliuc</p>
+                </a>
+                <p class="role">- Project Assistant</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-              </div>
-              </div>  
 
-              <div class="swiper-slide">
-                <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 1" style="width: 600px; height: 400px;">
-                <div class="slide-description">
-                  <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
 
-                </div>
-                </div>      
-                
-                <div class="swiper-slide">
-                  <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 2" style="width: 600px; height: 400px;">
-                  <div class="slide-description">
-                    <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
 
-                  </div>
-                  </div>  
 
-                  <div class="swiper-slide">
-                    <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 1" style="width: 600px; height: 400px;">
-                    <div class="slide-description">
-                      <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
 
-                    </div>
-                    </div>      
-                    
-                    <div class="swiper-slide">
-                      <img src="https://i.imgur.com/lH7Djnt.png" alt="Image 2" style="width: 600px; height: 400px;">
-                      <div class="slide-description">
-                        <p>  <a href="Nichita_Team.html">Nichita Pavliuc</a> </p>
 
-                      </div>
-                      </div>  
-    
-    <div class="swiper-scrollbar"></div>
-  </div>
-  </section>
+
 
 
 <section id="musicians">
-  <h2 class="custombold">Our Musicians</h2>
-<div class="swiper-container">
-  <div class="swiper-wrapper">
-      <!-- Slides -->
-  <div class="swiper-slide">
-  <img src="https://i.imgur.com/giLMGR1.jpg" alt="Image 1" style="width: 600px; height: 400px;">
-  <div class="slide-description">
-    <p>Tomasz</p>
-    <a href="Tomasz_Musician.html">Find out more</a>
-  </div>
-  </div>      
-  
-  <div class="swiper-slide">
-    <img src="https://i.imgur.com/5mFPCu3.png" alt="Image 2" style="width: 600px; height: 400px;">
-    <div class="slide-description">
-      <p>Alice</p>
-      <a href="musician2.html">Find out more</a>
-    </div>
-    </div>    
-
-    <div class="swiper-slide">
-      <img src="https://i.imgur.com/I413PGC.png" alt="Image 3" style="width: 600px; height: 400px;">
-      <div class="slide-description">
-        <p>Yuuki</p>
-        <a href="Yuuki.html">Find out more</a>
-      </div>
-      </div>  
-
-      <div class="swiper-slide">
-        <img src="https://i.imgur.com/2DI6S2A.png" alt="Image 4" style="width: 600px; height: 400px;">
-        <div class="slide-description">
-          <p>Nikita</p>
-          <a href="Nikita_Kuts.html">Find out more</a>
-        </div>
-        </div>  
-
-
-        <div class="swiper-slide">
-          <img src="https://i.imgur.com/smBLAom.png" alt="Image 5" style="width: 600px; height: 400px;">
-          <div class="slide-description">
-            <p>Josefina</p>
-            <a href="Josefina.html">Find out more</a>
-          </div>
-          </div>  
-    
-          <div class="swiper-slide">
-            <img src="https://i.imgur.com/2kBqHId.png" alt="Image 6" style="width: 600px; height: 400px;">
-            <div class="slide-description">
-              <p>Zhangir</p>
-              <a href="Zhangir.html">Find out more</a>
+    <h2 class="custombold-text">Our Musicians</h2>
+    <div class="people-container">
+        <!-- Person 1 -->
+        <div class="person">
+            <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+            <div class="info-box">
+                <a href="Tomasz_Musician.html">
+                    <p class="name">Tomasz Wabnic</p>
+                </a>
+                <p class="role">- Artistic Director</p>
             </div>
-            </div>  
+        </div>
+        <!-- Person 2 -->
+        <div class="person">
+            <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+            <div class="info-box">
+                <a href="Yuuki.html">
+                    <p class="name">Yuuki Wong</p>
+                </a>
+                <p class="role">- Lead Violinist</p>
+            </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="person">
+            <img src="https://i.imgur.com/yUTn79n.png" alt="Person 3">
+            <div class="info-box">
+                <a href="alice.html">
+                    <p class="name">Alison Lie</p>
+                </a>
+                <p class="role">- Musician</p>
+            </div>
+        </div>
+        <!-- More persons as needed... -->
+        <div class="person">
+            <img src="https://i.imgur.com/11ujJI4.png" alt="Person 1">
+            <div class="info-box">
+                <a href="Nikita_Kuts.html">
+                    <p class="name">Nikita Kuts</p>
+                </a>
+                <p class="role">- Musician</p>
+            </div>
+        </div>
+        <!-- Person 2 -->
+        <div class="person">
+            <img src="https://i.imgur.com/TMx5xSy.png" alt="Person 2">
+            <div class="info-box">
+                <a href="Josefina.html">
+                    <p class="name">Josefina</p>
+                </a>
+                <p class="role">- Musician</p>
+            </div>
+        </div>
+        <!-- Person 3 -->
+        <div class="person">
+            <img src="https://i.imgur.com/6zRcFz2.png" alt="Person 3">
+            <div class="info-box">
+                <a href="Zhangir.html">
+                    <p class="name">Zhangir</p>
+                </a>
+                <p class="role">- Musician</p>
+            </div>
+        </div>
 
-
-            <div class="swiper-slide">
-              <img src="https://i.imgur.com/3jXSDnr.png" alt="Image 7" style="width: 600px; height: 400px;">
-              <div class="slide-description">
-                <p>Anna</p>
-                <a href="Anna.html">Find out more</a>
-              </div>
-              </div>  
-        
-             
-
-
-      <!-- Add more slides as needed -->
-  </div>
-  <!-- If you need pagination -->
-
-  <!-- If you need navigation buttons -->
-
-
-  <!-- If you need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div>
+        <div class="person">
+            <img src="https://i.imgur.com/Bc9ICV4.png" alt="Person 3">
+            <div class="info-box">
+                <a href="Anna.html">
+                    <p class="name">Anna</p>
+                </a>
+                <p class="role">- Musician</p>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 
 
-
-
-<section id="support" class="">
+<!-- <section id="support" class="">
   <h2 class="custombold-text custom-color">Support Us</h2>
-  <p class="customreg-text custom-colorp">Thank you for supporting Morphing.</p>
+  <p class="customreg-text custom-colorp">
+    Thank you for supporting Morphing.
+  </p>
 
-  <!-- PayPal Donation Button -->
+   PayPal Donation Button
   <div>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-          <input type="hidden" name="cmd" value="_donations">
-          <input type="hidden" name="business" value="bianczji@gmail.com">
-          <input type="hidden" name="currency_code" value="EUR">
-          <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"  name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button">
-          <img alt="" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-      </form>
+    <form
+      action="https://www.paypal.com/cgi-bin/webscr"
+      method="post"
+      target="_blank"
+    >
+      <input type="hidden" name="cmd" value="_donations" />
+      <input type="hidden" name="business" value="bianczji@gmail.com" />
+      <input type="hidden" name="currency_code" value="EUR" />
+      <input
+        type="image"
+        src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+        name="submit"
+        title="PayPal - The safer, easier way to pay online!"
+        alt="Donate with PayPal button"
+      />
+      <img
+        alt=""
+        src="https://www.paypal.com/en_US/i/scr/pixel.gif"
+        width="1"
+        height="1"
+      />
+    </form>
   </div>
 
-  <!-- Donation Additional Information -->
+   Donation Additional Information
   <div class="donation-info">
-      <p>Your contributions help us continue our valuable work. Every donation, big or small, makes a significant impact. Thank you for your support!</p>
+    <p>
+      Your contributions help us continue our valuable work. Every donation,
+      big or small, makes a significant impact. Thank you for your support!
+    </p>
   </div>
-</section>
+</section> -->
 
 <section id="news" class="news-section">
-  <div class="container">
-      <div class="card-n">
-          <div class="row no-gutters align-items-center">
-              <!-- News Column -->
-              <div class="col-md-12">
-                  <div class="card-body">
-                      <h2 class="card-title custombold-text">Latest News & Updates!</h2>
-                      <div class="news-container">
-                          <!-- News Item 1 -->
-                          <div class="news-item">
-                              <h2 class="news-title">Morphing celebrates its success on tour in Brazil</h2>
-                              <img src="https://i.imgur.com/9kc19vi.jpeg" alt="News visual" class="news-image">
-                              <p class="news-desc customreg-text">
-                                  The Morphing Chamber Orchestra has landed back in Europe after a successful 4-city Brazilian tour with pianist Álvaro Siviero, where they performed Viennese classics by Mozart, Kreisler and Strauss and Chopin’s Concerto no. 1. The tour was the result of a long-standing collaboration between Mr. Siviero and MCO artistic director Tomasz Wabnic and they are already preparing for upcoming projects! Up next is a concert at the Manggha Japanese Museum of Art and Technology in Krakow, Poland on the 18th September. Mr. Wabnic looks forward to bringing Chopin back to his homeland and reciprocating the same friendship and hospitality to Mr. Siviero in Europe!
-                              </p>
-                          </div>
-                          <!-- News Item 2 -->
-                          <div class="news-item">
-                              <h2 class="news-title">CLASSIQUE "IN BLUE"</h2>
-                              <img src="https://i.imgur.com/eKqarcx.jpeg" alt="News visual" class="news-image">
-                              <p class="news-desc customreg-text">
-                                  14th November 2023, 20:00
-                                  Cathédrale St. Louis, Les Invalides Paris
+    <div class="container">
+        <div class="card-n">
+            <div class="row no-gutters align-items-center">
+                <!-- News Column -->
+                <div class="col-md-12">
+                    <div class="card-body">
+                        <h2 class="card-title custombold-text">
+                            Latest News & Updates!
+                        </h2>
+                        <div class="news-container">
+                            <!-- News Item 1 -->
+                            <div class="news-item">
+                                <h2 class="news-title custombold-text">
+                                    Morphing celebrates its success on tour in Brazil
+                                </h2>
+                                <img
+                                        src="https://i.imgur.com/9kc19vi.jpeg"
+                                        alt="News visual"
+                                        class="news-image"
+                                />
+                                <p class="news-desc customreg-text">
+                                    The Morphing Chamber Orchestra has landed back in Europe
+                                    after a successful 4-city Brazilian tour with pianist
+                                    Álvaro Siviero, where they performed Viennese classics by
+                                    Mozart, Kreisler and Strauss and Chopin’s Concerto no. 1.
+                                    The tour was the result of a long-standing collaboration
+                                    between Mr. Siviero and MCO artistic director Tomasz
+                                    Wabnic and they are already preparing for upcoming
+                                    projects! Up next is a concert at the Manggha Japanese
+                                    Museum of Art and Technology in Krakow, Poland on the 18th
+                                    September. Mr. Wabnic looks forward to bringing Chopin
+                                    back to his homeland and reciprocating the same friendship
+                                    and hospitality to Mr. Siviero in Europe!
+                                </p>
+                            </div>
+                            <!-- News Item 2 -->
+                            <div class="news-item">
+                                <h2 class="news-title custombold-text">CLASSIQUE "IN BLUE"</h2>
+                                <img
+                                        src="https://i.imgur.com/eKqarcx.jpeg"
+                                        alt="News visual"
+                                        class="news-image"
+                                />
+                                <p class="news-desc customreg-text">
+                                    14th November 2023, 20:00 Cathédrale St. Louis, Les
+                                    Invalides Paris Makoto Ozone & Franco Avitabile, pianos
+                                    Morphing Chamber Orchestra Tomasz Wabnic, artistic
+                                    director & viola Yuuki Wong, violin
+                                </p>
+                            </div>
+                            <!-- News Item 3 -->
+                            <div class="news-item">
+                                <h2 class="news-title custombold-text">
+                                    MYSTICAL MORPHING WITH ANDREAS SCHOLL BACH / PÄRT
+                                </h2>
+                                <img
+                                        src="https://i.imgur.com/hsF2CHV.png"
+                                        alt="News visual"
+                                        class="news-image"
+                                />
+                                <p class="news-desc customreg-text">
+                                    4th October 2023, 8pm Minoritenkirche Vienna
+                                    Minoritenplatz 2A, 1010 Vienna
+                                </p>
+                            </div>
+                            <!-- News Item 4 -->
+                            <div class="news-item">
+                                <h2 class="news-title custombold-text">
+                                    THE MORPHING CHAMBER ORCHESTRA HAS BEEN NOMINATED IN 4 CATEGORIES FOR ITS ALBUM ARVO PÄRT „STABAT MATER" / ÀPARTE!
+                                </h2>
+                                <img
+                                        src="https://i.imgur.com/SQET80Z.jpg"
+                                        alt="News Arvo"
+                                        class="news-image-arvo"
+                                />
+                                <p class="news-desc customreg-text">
+                                    Orchestra of the Year <br>
+                                    Opera Recording of the Year [Aleksandra Kurzak, Andreas Scholl & Roberto Alagna] <br>
+                                    Conductor of the Year [Tomasz Wabnic] <br>
+                                    Vocalist of the Year [Andreas Scholl]
+                                </p>
+                            </div>
+                            <!-- News Item 5 -->
+                            <div class="news-item">
+                                <h2 class="news-title custombold-text">CD-Release 'Stabat Mater' / 28.10.2022</h2>
+                                <img
+                                        src="https://i.imgur.com/baN3lgm.jpg"
+                                        alt="Arvo Pärt"
+                                        class="news-image"
+                                />
+                                <p class="news-desc customreg-text">
+                                    Label www.aparte.com Paris
+                                    Ton Master: Nicolas Bartholomee <br><br>
 
-                                  Makoto Ozone & Franco Avitabile, pianos
-                                  Morphing Chamber Orchestra
-                                  Tomasz Wabnic, artistic director & viola
-                                  Yuuki Wong, violin
-                              </p>
-                          </div>
-                          <!-- News Item 3 -->
-                          <div class="news-item">
-                              <h2 class="news-title">MYSTICAL MORPHING
-                                  WITH ANDREAS SCHOLL
-                                  BACH / PÄRT
-                              </h2>
-                              <img src="https://i.imgur.com/hsF2CHV.png" alt="News visual" class="news-image">
-                              <p class="news-desc customreg-text">
-                                  4th October 2023, 8pm
-                                  Minoritenkirche Vienna
-                                  Minoritenplatz 2A, 1010 Vienna
-                              </p>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+                                    Producer: Aparte and Morphing <br><br>
+
+                                    Solists: <br>
+                                    Aleksandra Kurzak – Sopran<br>
+                                    Andreas Scholl – Countertenor<br>
+                                    Roberto Alagna – Tenor<br>
+                                    Tomasz Wabnic – Viola, Artistic Director<br>
+                                    Christian Erny – Dirigent (Stabat Mater, Wallfahrtslied)
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
-
-
 <div class="fixed-music-player">
-  <audio id="musicPlayer" preload="auto"></audio>
-  <div class="player-controls">
-      <button onclick="prevSong()"><i class="fas fa-backward"></i></button>
-      <button id="playPauseButton" onclick="togglePlayPause()"><i class="fas fa-play"></i></button>
-      <button onclick="nextSong()"><i class="fas fa-forward"></i></button>
-      <div class="track-info">
-          <span id="songTitle"></span> - <span id="artistName"></span>
-      </div>
-  </div>
+    <audio id="musicPlayer" preload="auto"></audio>
+    <div class="player-controls">
+        <button onclick="prevSong()"><i class="fas fa-backward"></i></button>
+        <button id="playPauseButton" onclick="togglePlayPause()">
+            <i class="fas fa-play"></i>
+        </button>
+        <button onclick="nextSong()"><i class="fas fa-forward"></i></button>
+        <div class="track-info">
+            <span id="songTitle"></span> - <span id="artistName"></span>
+        </div>
+    </div>
 </div>
 
-
-
-
-
-
-
 <script>
-  var songs = ["https://audio.jukehost.co.uk/utBtC6wJMz2K4qrQ1bIqffG5ZuCg90ZG", "https://mozdzer.com/wp-content/uploads/2014/11/Tactics.mp3", "https://mozdzer.com/wp-content/uploads/2014/11/Spider-Web.mp3"];
-  var songTitles = ["Fratres", "Tactics", "Spider Web"];
-  var artistNames = ["Johnny", "Tommy", "Bobby"];
-  var songIndex = 0;
-  
-  function loadSong(index) {
-      document.getElementById('musicPlayer').src = songs[index];
-      document.getElementById('songTitle').innerText = songTitles[index];
-      document.getElementById('artistName').innerText = artistNames[index];
-      document.getElementById('musicPlayer').play();
-  }
-  
-  function prevSong() {
-      songIndex = (songIndex - 1 + songs.length) % songs.length; // Loop back to the last song
-      loadSong(songIndex);
-  }
-  
-  function nextSong() {
-      songIndex = (songIndex + 1) % songs.length; // Loop to the first song
-      loadSong(songIndex);
-  }
-  
-  function togglePlayPause() {
-      const player = document.getElementById('musicPlayer');
-      const playPauseButton = document.getElementById('playPauseButton');
-      const icon = playPauseButton.querySelector('i'); // Get the icon element inside the button
-  
-      if (player.paused) {
-          player.play();
-          icon.classList.remove('fa-play');
-          icon.classList.add('fa-pause');
-      } else {
-          player.pause();
-          icon.classList.remove('fa-pause');
-          icon.classList.add('fa-play');
-      }
-  }
-  
-  
-  // Initialize the player with the first track
-  window.onload = function() {
-      loadSong(songIndex);
-  };
-  
-  </script>
+    var songs = [
+        "https://audio.jukehost.co.uk/utBtC6wJMz2K4qrQ1bIqffG5ZuCg90ZG",
+        "https://audio.jukehost.co.uk/GcZ8vEY5YrPQdHSKqDtXTGteiZXfJHUW",
+        "https://audio.jukehost.co.uk/UrmOVAHGZbD8FSbwN4dcF7ANgvOCW1a4",
+    ];
+    var songTitles = ["Fratres", "Invierno Porteño", "F. Cilea - Ecco"];
+    var artistNames = ["Arvo Pärt", "Astor Piazzolla", "Aleksandra Kurzak"];
+    var songIndex = 0;
+
+    function loadSong(index) {
+        var player = document.getElementById("musicPlayer");
+        var wasPlaying = !player.paused; // Check if the player was playing before loading the new song
+
+        player.src = songs[index];
+        document.getElementById("songTitle").innerText = songTitles[index];
+        document.getElementById("artistName").innerText = artistNames[index];
+
+        if (wasPlaying) {
+            player.play(); // Play the new song if the previous song was playing
+        }
+    }
 
 
+    function prevSong() {
+        songIndex = (songIndex - 1 + songs.length) % songs.length; // Loop back to the last song
+        loadSong(songIndex);
+    }
 
+    function nextSong() {
+        songIndex = (songIndex + 1) % songs.length; // Loop to the first song
+        loadSong(songIndex);
+    }
+
+    function togglePlayPause() {
+        const player = document.getElementById("musicPlayer");
+        const playPauseButton = document.getElementById("playPauseButton");
+        const icon = playPauseButton.querySelector("i"); // Get the icon element inside the button
+
+        if (player.paused) {
+            player.play().then(() => {
+                icon.classList.remove("fa-play");
+                icon.classList.add("fa-pause");
+            }).catch(error => {
+                console.error("Error attempting to play the audio: ", error);
+            });
+        } else {
+            player.pause();
+            icon.classList.remove("fa-pause");
+            icon.classList.add("fa-play");
+        }
+    }
+
+
+    // Initialize the player with the first track
+    window.onload = function () {
+        loadSong(songIndex);
+    };
+</script>
 
 <section id="bottom-section">
-    <img id="bottom-image" src="https://i.imgur.com/AtT9WIo.png" alt="Descriptive Alt Text" style="opacity: 0; transition: opacity 2s;">
+    <img
+            id="bottom-image"
+            src=""
+            alt="Descriptive Alt Text"
+            style="opacity: 0; transition: opacity 2s"
+    />
 </section>
 
 <footer class="footer-distributed" id="contact-footer">
-  <div class="footer-left">
-    <img src="https://www.morphingmusic.com/wp-content/uploads/2020/10/M_Logo.png" class="footer-logo">
-    <p class="footer-links">
-          <a href="#">Home</a>
-          ·
-          <a href="imprint.html">Imprint</a>
-          ·
-          <a href="privacy-policy.html">Privacy Policy</a>
-          ·
-          <a href="#" id="open_preferences_center">Update Cookie Preferences</a>
-      </p>
-      <p class="footer-company-name">Morphing Chamber Orchestra © 2024</p>
-  </div>
+    <div class="footer-left">
+        <img
+                src="https://www.morphingmusic.com/wp-content/uploads/2020/10/M_Logo.png"
+                class="footer-logo"
+        />
+        <p class="footer-links">
+            <a href="#">Home</a>
+            ·
+            <a href="imprint.html">Imprint</a>
+            ·
+            <a href="privacy-policy.html">Privacy Policy</a>
+            ·
+            <a href="#" id="open_preferences_center">Update Cookie Preferences</a>
+        </p>
+        <p class="footer-company-name">Morphing Chamber Orchestra © 2024</p>
+    </div>
 
-  <div class="footer-center">
-      <div>
-          <i class="fa fa-map-marker"></i>
-          <p><span>Maxingstraße 22/24</span>1130 Wien</p>
-      </div>
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <p><span>Maxingstraße 22/24</span>1130 Wien</p>
+        </div>
 
-      <div>
-          <i class="fa fa-phone"></i>
-          <p>+43 676 4233024</p>
-      </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <p>+43 676 4233024</p>
+        </div>
 
-      <div>
-          <i class="fa fa-envelope"></i>
-          <p><a href="mailto:institute@morphingmusic.com">institute@morphingmusic.com</a></p>
-      </div>
-  </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p>
+                <a href="mailto:institute@morphingmusic.com"
+                >institute@morphingmusic.com</a
+                >
+            </p>
+        </div>
+    </div>
 
-  <div class="footer-right">
-      <p class="footer-company-about">
-          <span>‚Morphing'</span>
-          the core of the ensemble's name stands for its philosophy to be in the
-state of constant evolution, metamorphoses and modifications, leading to groundbreaking new musical interpretations while at the same time striving for excellence in
-performance
-      </p>
-      <div class="footer-icons">
-          <a href="https://www.facebook.com/morphingmusic/"><i class="fa fa-facebook"></i></a>
-          <a href="https://www.instagram.com/morphingmusic/"><i class="fa fa-instagram"></i></a>
-          <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA"><i class="fa fa-spotify"></i></a>
-          <a href="https://music.apple.com/us/artist/morphing-chamber-orchestra/434036476"><i class="fa fa-apple"></i></a>
-      </div>
-  </div>
+    <div class="footer-right">
+        <p class="footer-company-about">
+            <span>‚Morphing'</span>
+            the core of the ensemble's name stands for its philosophy to be in the
+            state of constant evolution, metamorphoses and modifications, leading
+            to groundbreaking new musical interpretations while at the same time
+            striving for excellence in performance
+        </p>
+        <div class="footer-icons">
+            <a href="https://www.facebook.com/morphingmusic/"
+            ><i class="fa fa-facebook"></i
+            ></a>
+            <a href="https://www.instagram.com/morphingmusic/"
+            ><i class="fa fa-instagram"></i
+            ></a>
+            <a
+                    href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA"
+            ><i class="fa fa-spotify"></i
+            ></a>
+            <a
+                    href="https://music.apple.com/us/artist/morphing-chamber-orchestra/434036476"
+            ><i class="fa fa-apple"></i
+            ></a>
+        </div>
+    </div>
 </footer>
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
 <script>
-var swiper = new Swiper('.swiper-container', {
-  slidesPerView: 3,
-  spaceBetween: 30,
-  loop: true,
+    var swiper = new Swiper(".swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
 
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: false, // Set to false so it's always visible
-    draggable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 20
-    },
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20
-    },
-    960: {
-      slidesPerView: 3,
-      spaceBetween: 30
-    }
-  }
-});
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        scrollbar: {
+            el: ".swiper-scrollbar",
+            hide: false, // Set to false so it's always visible
+            draggable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
+
+    var imageSwiper = new Swiper(".image-swiper", {
+        slidesPerView: 1,
+        spaceBetween: 10, // Adjusted for better spacing
+        loop: true,
+        autoHeight: true, // Adjusts height dynamically
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        // Additional configuration as needed
+    });
+
+    var teamSwiper = new Swiper(".team-swiper-container", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        navigation: {
+            nextEl: ".team-swiper-button-next",
+            prevEl: ".team-swiper-button-prev",
+        },
+        scrollbar: {
+            el: ".team-swiper-scrollbar",
+            hide: false,
+            draggable: true,
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            640: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            960: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+            },
+        },
+    });
 
 </script>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <script src="redirect-script.js"></script>
-
-
-
 </body>
 </html>
+
+
