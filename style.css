@@ -2023,6 +2023,29 @@ button {
   width: 90%; /* Adjust the width as needed */
   margin: 10px; /* Adjust or add margin as needed */
   flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Dünner Rahmen */
+  transition: all 0.3s ease;
+}
+
+.swiper-imagetop-johann:hover {
+  border-color: #fff; /* Rahmenfarbe beim Mouseover */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); /* Schatten beim Mouseover */
+}
+
+.swiper-imagetop-johann::after {
+  content: "Click me";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0.5;
+  font-size: 12px;
+  color: #fff;
+  pointer-events: auto; /* Verhindert Klick auf den Text */
+}
+
+.swiper-imagetop-johann:hover::after {
+  opacity: 1; /* Zeigt Text beim Mouseover */
+  visibility: visible;
 }
 
 .swiper-imagetop-brazil {
