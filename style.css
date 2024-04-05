@@ -2480,11 +2480,15 @@ button {
 }
 
 
-
 .image-container {
   position: relative; /* Make the position of the close button relative to this container */
   display: flex; /* Keep images inline and allow for the relative position */
   justify-content: center; /* Center images horizontally */  
+}
+
+.image-container:hover .image-in-gallery {
+  transform: scale(1.1); /* Zoom in slightly on hover */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);  /* Add a subtle glow effect */
 }
 
 .gallery-button{
