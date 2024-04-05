@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,22 +13,64 @@
         }
         .container {
             background-color: #FFFFF4;
-            border-radius: 20px;
+            border-radius: 40px;
             padding: 20px;
         }
-        .btn-secondary {
+
+        .return-btn-container-Strauss {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .return-btn-Strauss {
+            display: inline-block;
+            background: url('https://i.imgur.com/0He3WGF.png') no-repeat center center; /* Füge den Pfad zu deinem Logo hinzu */
+            background-size: cover; /* Stellt sicher, dass das Logo den Button-Bereich abdeckt */
+            color: white; /* Farbe des Pfeils */
+            text-decoration: none;
+            font-size: 24px; /* Größe des Pfeils */
+            padding: 10px 15px; /* Abmessungen des Buttons */
+            border-radius: 50%; /* Kreisförmige Form */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Schatten für Tiefe */
+            transition: all 0.3s ease; /* Übergangseffekt */
+        }
+
+        .return-btn-Strauss:hover {
+            background-color: #ddd;
             color: black;
+            transform: translateY(-2px) scale(1.05);
         }
 
         .btn-primary {
             background-color: white;
             color: black;
         }
+
+        @media screen and (max-width: 768px) {
+            .return-btn-container-Strauss {
+                top: 10px;
+                left: 10px;
+            }
+            .return-btn-Strauss {
+                font-size: 20px;
+                padding: 8px 12px; /* Smaller button for mobile devices */
+            }
+            .container {
+                margin-top: 40px;
+                padding: 15px;  /* Reduce padding */
+                max-width: 90%; /* Limit max width to 90% of screen size */
+                margin: 40px auto; /* Center the container horizontally */
+            }
+            }
     </style>
 </head>
 <body>
 
-<a href="index.html" class="btn btn-secondary">Zurück zur Webseite</a>
+<div class="return-btn-container-Strauss">
+    <a href="index.html" class="return-btn-Strauss">&#x2190;</a>
+</div>
 
 <div class="container">
     <h1>MORPHING x JOHANN STRAUSS The 200th anniversary in 2025</h1>
@@ -38,7 +81,7 @@
 
     <!-- PDF anzeigen -->
     <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="Strauss_Julia.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
     </div>
 
     <!-- Download-Link -->
@@ -47,7 +90,7 @@
     <p>Dieses Dokument enthält detaillierte Informationen über Timna Brauer</p>
 
     <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
     </div>
 
     <!-- Download-Link -->
@@ -57,7 +100,7 @@
 
     <!-- PDF anzeigen -->
     <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
     </div>
 
     <!-- Download-Link -->
@@ -67,7 +110,7 @@
 
     <!-- PDF anzeigen -->
     <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
     </div>
 
     <!-- Download-Link -->
@@ -77,17 +120,17 @@
 
     <!-- PDF anzeigen -->
     <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
     </div>
 
     <!-- Download-Link -->
-    <a href="Strauss.html" download="Strauss.pdf" class="btn btn-primary">PDF herunterladen</a>
+    <a href="Strauss_Timna.html" download="Strauss.pdf" class="btn btn-primary">PDF herunterladen</a>
 
     <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
 
     <!-- PDF anzeigen -->
     <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
     </div>
 
     <!-- Download-Link -->
