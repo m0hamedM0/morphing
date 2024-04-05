@@ -79,7 +79,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const monthNameElement = document.querySelector(".month-name");
     const prevMonthElement = document.querySelector(".prev-month");
     const nextMonthElement = document.querySelector(".next-month");
-  
+
+    const concerts = [
+      { date: 22, month: 3, year: 2024, url: "https://konzerthaus.at/konzert/eventid/61188" }, // April 22
+      { date: 19, month: 4, year: 2024, url: "https://konzerthaus.at/konzert/eventid/61188" }  // Mai 19
+    ];
+
     const months = [
       "January",
       "February",
@@ -97,41 +102,54 @@ document.addEventListener("DOMContentLoaded", function () {
   
     let currentDisplayedMonth = currentMonth;
     let currentDisplayedYear = currentYear;
-  
+
     function renderCalendar(month, year) {
       daysContainer.innerHTML = "";
       monthNameElement.textContent = months[month] + " " + year;
-  
+
       const firstDayOfMonth = new Date(year, month, 1);
       const lastDayOfMonth = new Date(year, month + 1, 0);
       const daysInMonth = lastDayOfMonth.getDate();
-  
+
+      // Wochentage (optional)
+      const weekdays = [];
+      weekdays.forEach((weekday) => {
+        const dayElement = document.createElement("div");
+        dayElement.classList.add("day", "weekday");
+        dayElement.textContent = weekday;
+        daysContainer.appendChild(dayElement);
+      });
+
       for (let i = 1; i <= daysInMonth; i++) {
         const dayElement = document.createElement("div");
         dayElement.textContent = i;
         dayElement.classList.add("day");
-  
+
         if (
-          i === currentDate.getDate() &&
-          month === currentMonth &&
-          year === currentYear
+            i === currentDate.getDate() &&
+            month === currentMonth &&
+            year === currentYear
         ) {
           dayElement.classList.add("current-day");
         }
-  
-        if (i === 15 && month === currentMonth) {
-          dayElement.classList.add("concert-day");
-          dayElement.setAttribute("data-url", "https://www.morphingmusic.com/t");
-          dayElement.addEventListener("click", function () {
-            const url = this.getAttribute("data-url");
-            window.open(url, "_blank");
-          });
+
+        // Konzert-Tage dynamisch hinzufügen
+        for (const concert of concerts) {
+          if (concert.month === month && concert.year === year && concert.date === i) {
+            dayElement.classList.add("concert-day");
+            dayElement.setAttribute("data-url", concert.url);
+            dayElement.addEventListener("click", function () {
+              const url = this.getAttribute("data-url");
+              window.open(url, "_blank");
+            });
+          }
         }
-  
+
         daysContainer.appendChild(dayElement);
       }
     }
-  
+
+
     renderCalendar(currentMonth, currentYear);
   
     prevMonthElement.addEventListener("click", function () {
