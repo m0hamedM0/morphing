@@ -3033,3 +3033,98 @@ button {
 }
 
 /* Further responsive adjustments if needed... */
+
+
+
+
+
+
+
+
+
+
+/* Previous CSS from the foundation example */
+
+.team-section {
+  padding: 50px 0; /* Adjust padding */
+  text-align: center;
+}
+
+.team-container {
+  overflow-x: auto; /* Enable horizontal scrolling */
+  max-width: 100%; /* Adjust the max-width */
+  white-space: normal; /* Remove nowrap if previously set */
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Keep items in a single row */
+  justify-content: start;
+}
+
+.team-member {
+  display: inline-block;
+  flex: 1 0 auto;
+  margin: 20px;
+  width: 400px; /* Adjust as needed */
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  vertical-align: top;
+}
+
+.member-image img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.member-info {
+  padding: 15px;
+}
+
+.member-name {
+  color: black;
+  margin-bottom: 5px;
+  font-family: "MyCustomFontBold", sans-serif; /* Fallback to sans-serif */
+}
+
+.member-title {
+  color: #666;
+  font-size: 0.9em;
+}
+
+.member-links {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.member-image:hover .member-links {
+  opacity: 1;
+}
+
+.social-link {
+  display: inline-block;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+
+  .team-member, .member-image img {
+      width: 250px; /* Adjust as needed */
+      height: auto; /* Adjust image height proportionally */
+  }
+
+  .member-name{
+    font-size: 20px;
+  }
+}

@@ -497,3 +497,11 @@ $('#video-carousel').on('slide.bs.carousel', adjustCarouselHeight);
 
 // Also run this function when the page loads
 window.onload = adjustCarouselHeight;
+
+
+
+
+
+
+
+
