@@ -19,6 +19,29 @@ html {
 
 /* Existing styles... */
 
+.video-background-header {
+  position: relative; /* Make the video container relative for absolute positioning */
+}
+
+#microphone-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the icon is on top of the video */
+}
+
+#microphone-icon img {
+  width: 80px; /* Adjust the size as needed */
+  height: 80px;
+}
+
+#microphone-icon img.playing {
+  width: 60px; /* Adjust the size as needed */
+  height: 80px;
+}
+
+
 /* Media query for devices with max-width of 991px */
 @media (max-width: 991px) {
   .video-background-header video {
