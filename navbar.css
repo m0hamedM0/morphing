@@ -1,0 +1,327 @@
+@font-face {
+    font-family: "MyCustomFontBold";
+    src: url("fonts/Verlag-Bold.otf") format("opentype");
+  }
+
+  @font-face {
+    font-family: "MyCustomFontRegular";
+    src: url("fonts/Verlag-Book.otf") format("opentype");
+  }
+
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: linear-gradient(to bottom, black, transparent);
+    color: white;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+
+/* Target dropdown items */
+.navbar .dropdown .dropdown-content li a {
+    font-family: 'MyCustomFontRegular', sans-serif; /* Replace 'YourFontFamily' with your desired font */
+    /* Additional styling options */
+    font-size: 16px; /* Example: Set font size */
+    color: #fff; /* Example: Set font color */
+    /* Add more styling properties as needed */
+}
+
+/* Set a specific width for all dropdown list items */
+.navbar .dropdown .dropdown-content li {
+    width: 100%; /* Adjust this value as needed */
+    color: black;
+}
+
+/* Change background color of dropdown items */
+.navbar .dropdown .dropdown-content {
+    background-color: black; /* Sets the background color to black */
+    color: white; /* Optional: change the text color to white for better readability */
+}
+
+/* Change hover color of dropdown items to goldenrod */
+.navbar .dropdown .dropdown-content li a:hover {
+    background-color: goldenrod; /* Sets the hover background color to goldenrod */
+    color: white; /* Optional: change the text color for better visibility */
+}
+
+
+#languageSwitcher {
+    position: fixed; /* Or 'absolute', depending on your layout needs */
+    top: 4%; /* Adjust as needed */
+    left: 1%;
+    transform: translateY(-50%);
+    color: white; /* Make text color white */
+    z-index: 9999;
+}
+
+#languageSwitcher .div-change-language {
+    display: flex; /* Use flexbox for horizontal layout */
+    align-items: center; /* Align items vertically */
+}
+
+#languageSwitcher .nav-item,
+#languageSwitcher .nav-separator {
+    margin-right: 5px; /* Adjust space between items */
+    margin-left: 5px;
+}
+
+#languageSwitcher .nav-link {
+    color: white; /* Explicitly set color for links */
+    text-decoration: none; /* Remove underline by default */
+    font-family: "MyCustomFontBold";
+}
+
+
+
+.brand-logo {
+    position: fixed;
+    left: 50%; /* Center the logo in the navbar */
+    top: 5px; /* Adjust the top position as needed */
+    transform: translateX(-50%); /* Adjust horizontally to truly center */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.brand-logo img {
+    display: block;
+    height: auto; 
+    width: 450px; /* Adjust as needed */
+}
+
+.navbar-links.active {
+    display: flex;
+    flex-direction: column; /* Keep items stacked vertically */
+    background: linear-gradient(to bottom, #000, transparent); /* Linear gradient from black at the top to white at the bottom for the expanded menu */
+    position: absolute; /* Position it on top of other content */
+    top: 0; /* Align the background to the top of the screen */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 500; /* Above the navbar */
+    padding-top: 50px; /* Pushes the navbar items down */
+}
+
+
+.navbar-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-links li {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-links a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    z-index: 1005 !important;
+    margin-right: 2vw;
+    margin-top: 1vh;
+    font-family: "MyCustomFontBold";
+}
+
+.navbar-links a:hover {
+    background-color: #555;
+}
+
+.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.brand-title {
+    font-size: 1.5em;
+    padding: 15px 20px;
+}
+
+.toggle-button {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1010;
+}
+
+/* Default state - hamburger menu */
+.toggle-button .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 10px;
+    transition: transform 0.2s ease;
+}
+
+.toggle-button.is-active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 4px); /* Adjust translate values as needed */
+}
+
+.toggle-button.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.toggle-button.is-active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(9px, -10px); /* Adjust translate values as needed */
+}
+
+.toggle-button .bar {
+    transition: transform 0.5s ease; /* Increase time to slow down the animation */
+}
+
+
+
+
+.social-icons-vertical {
+    position: fixed; /* Fixed position */
+    left: 0; /* Align to the left side */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust centering */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    align-items: center;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.social-icons-vertical .nav-link {
+    display: block;
+    margin: 10px 0;
+    color: #333;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition for transform and color */
+    color: white; /* Set color to white */
+}
+
+.social-icons-vertical .nav-link:hover {
+    color: goldenrod; /* Change color to white */
+    transform: scale(1.1); /* Scale up the icon slightly */
+}
+
+
+@media (max-width: 800px) {
+
+    .toggle-button {
+        display: flex;
+        margin-top: 1vh;
+    }
+
+    .brand-logo img {
+        width: 250px; /* Larger width for desktop, adjust as needed */
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-links a {
+        padding: 15px; /* Increased padding */
+        font-size: 18px; /* Adjusted font size */
+        line-height: 1.5; /* Adjusted line height for better readability */
+    }
+
+    /* Adjust the height of navbar items if necessary */
+    .navbar-links li {
+        min-height: 50px; /* Example: setting a minimum height */
+    }
+
+
+    .navbar-links.active {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+/* This is an example of a media query that hides the toggle button on screens wider than 800px */
+
+
+/* This media query targets screens with a maximum width of 800px
+   and an aspect-ratio that indicates landscape orientation */
+@media (max-width: 1100px) and (orientation: landscape) {
+    .toggle-button {
+        display: flex; /* Show the toggle button */
+        /* Other styling here */
+    }
+    
+    .navbar-links {
+        display: none; /* Start with the navbar links hidden */
+    }
+    
+
+}
+
+
+@media (max-width: 768px) {
+    .header {
+        position: relative; /* Ensures absolute positioning is relative to the header */
+    }
+
+    .social-icons-vertical {
+        position: absolute;
+        left: 10px; /* Adjust as needed */
+        top: 90%; /* Adjust as needed */
+        transform: none; /* Resets any previously applied transform */
+        font-size: 16px; /* Reducing the font-size to make icons smaller */
+        flex-direction: row;
+    }
+
+    .social-icons-vertical .nav-link {
+        font-size: 18px;
+        color: white; /* Set color to white */
+    }
+
+    .social-icons-vertical .nav-link:hover {
+        font-size: 18px;
+        color: goldenrod; /* Set color to white */
+    }
+
+    #languageSwitcher {
+        position: absolute; /* Fixed position with respect to the viewport */
+        left: 80vw; /* Position it on the right */
+        top: 94%; /* Align vertically to the middle */
+        transform: translateY(-98%); /* Adjust vertical alignment */
+        z-index: 2000; /* High z-index to ensure it's above other elements */
+    }
+
+    #languageSwitcher .div-change-language {
+        flex-direction: row; /* Place languages in a row */
+    }
+
+    #languageSwitcher .nav-item,
+    #languageSwitcher .nav-separator {
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
+        padding-top: 0; /* Reset top padding */
+    }
+}
+
+
+
+
+

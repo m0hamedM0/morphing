@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Morphing</title>
@@ -22,188 +22,110 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="navbar.css" /> <!-- Navbar CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> <!-- Swiper CSS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-</head>
+  </head>
 
-<body class="font-roboto custom-colorp bg-darkbrown text-black">
-<style>
+  <style>
     @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
-</style>
+  </style>
+
+<div class="menu-overlay"></div>
 
 
+  <nav class="navbar">
 
 
-<nav
-        class="navbar sticky-top navbar-expand-lg navbar-dark"
-        style="background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);">
-    <div class="navbar-container">
-        <div class="navbar-left"> <!-- Sprachumschalter und soziale Links -->
-            <ul id="languageSwitcher" class="navbar-nav">
-                <div class="row div-change-language">
-                    <li class="nav-item lang-switch">
-                        <a href="index.html" class="nav-link customreg-text ">En</a>
-                    </li>
-                    <li class="nav-separator"
-                        style="margin-right: 5px; margin-left: 5px;">/</li>
-                    </li>
-                    <li class="nav-item lang-switch">
-                        <a href="indexgerman.html" class="nav-link customreg-text current-language">De</a>
-                    </li>
-                </div>
-                <div class="row social-icons-vertical">
-                    <a href="https://www.instagram.com/morphingmusic" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/morphingmusic/" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a>
-                    <a href="https://www.youtube.com/@morphingchamberorchestra" target="_blank" class="nav-link"><i class="fa fa-youtube"></i></a>
-                    <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-spotify"></i></a>
-                    <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-apple"></i></a>
-                </div>
+    <div class="brand-logo">
+      <img src="https://i.imgur.com/HvkRXDW.png" alt="Brand Logo">
+    </div>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+        <ul>
+          <li class="dropdown">
+            <a href="#">Our Orchestra</a>
+            <ul class="dropdown-content">
+                <li><a href="#biography">Tomasz Wabnic</a></li>
+                <li><a href="#our-team">Our Team</a></li>
+                <li><a href="#our-musicians">Our Musicians</a></li>
             </ul>
-        </div>
-
-
-
-        <div class="navbar-center">
-            <a href="#home" class="navbar-center-logo">
-                <img
-                        src="https://i.imgur.com/HvkRXDW.png"
-                        alt="Morphing Music Institute"
-                />
-            </a>
-        </div>
-        <div class="navbar-right">
-            <ul class="navbar-nav">
-                <div class="collapse navbar-collapse" id="navbarContent">
-                    <div class="nav-item dropdown">
-                        <button
-                                class="btnMenu customreg-text nav-link dropdown-toggle"
-                                id="orchestraDropdown"
-                                type="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="true"
-                        >
-                            Our Orchestra
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="orchestraDropdown">
-                            <a class="dropdown-item customreg-text" href="#orchestra"
-                            >Our Orchestra</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#biography"
-                            >Tomasz Wabnic</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#team"
-                            >Our Team</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#musicians"
-                            >Our Musicians</a
-                            >
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <button
-                                class="btnMenu customreg-text nav-link dropdown-toggle"
-                                id="concertsDropdown"
-                                type="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="true"
-                        >
-                            Concerts
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="concertsDropdown">
-                            <a
-                                    class="dropdown-item customreg-text"
-                                    href="#concertsandtickets"
-                            >Concerts</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#video-carousel"
-                            >Projects</a
-                            >
-                            <a
-                                    class="dropdown-item customreg-text"
-                                    href="#concertsandtickets"
-                            >Calendar</a
-                            >
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <button
-                                class="btnMenu customreg-text nav-link dropdown-toggle"
-                                id="mediaDropdown"
-                                type="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="true"
-                        >
-                            Media
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="mediaDropdown">
-                            <a class="dropdown-item customreg-text" href="#images"
-                            >Images</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#videos"
-                            >Videos</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#discography"
-                            >Discography</a
-                            >
-
-                            <!-- Add more dropdown items here if needed -->
-                        </div>
-                    </div>
-                    <div class="nav-item dropdown">
-                        <button
-                                class="btnMenu customreg-text nav-link dropdown-toggle"
-                                id="supportDropdown"
-                                type="button"
-                                data-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="true"
-                        >
-                            Support Us
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="supportDropdown">
-                            <a class="dropdown-item customreg-text" href="#support"
-                            >Support Us</a
-                            >
-                            <a class="dropdown-item customreg-text" href="#news">News</a>
-                            <a class="dropdown-item customreg-text" href="#contact-footer"
-                            >Contact Us</a
-                            >
-
-                            <!-- Add more dropdown items here if needed -->
-                        </div>
-                    </div>
-                    <!-- Add your social media links here -->
-                </div>
-            </ul>
-        </div>
+        </li>
+            <li class="dropdown">
+                <a href="#">Concerts</a>
+                <ul class="dropdown-content">
+                    <li><a href="#video-carousel">Projects</a></li>
+                    <li><a href="#concertsandtickets">Calendar</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#">Media</a>
+              <ul class="dropdown-content">
+                  <li><a href="#images">Images</a></li>
+                  <li><a href="#videos">Videos</a></li>
+                  <li><a href="#discography">Discography</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Support Us</a>
+            <ul class="dropdown-content">
+                <li><a href="#news">News</a></li>
+                <li><a href="#footer">Contact Us</a></li>
+              </ul>
+        </li>
+        </ul>
     </div>
 
-    <button
-            class="navbar-toggler fixed-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarContent"
-            aria-controls="navbarContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-    >
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
 </nav>
 
-<header class="text-center p-12 text-black video-background-header">
+
+
+
+
+
+
+
+  <!-- Video im Hintergrund -->
+  <header class="text-center p-12 text-black video-background-header">
     <video autoplay muted playsinline loop id="myVideo">
-        <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4" />
-        Your browser does not support HTML5 video.
+      <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4"/>
+      Your browser does not support HTML5 video.
     </video>
-    <section id="home" class="home"></section>
-</header>
+    <section id="home" class="home">
+      <ul id="languageSwitcher" class="navbar-nav">
+        <div class="row div-change-language">
+            <li class="nav-item lang-switch">
+                <a href="index.html" class="nav-link customreg-text current-language">En</a>
+            </li>
+            <li class="nav-separator"
+                style="margin-right: 5px; margin-left: 5px;">/</li>
+            <li class="nav-item lang-switch">
+                <a href="indexgerman.html" class="nav-link customreg-text">De</a>
+            </li>
+        </div>
+    </ul>
+    </section>
+    <div class="row social-icons-vertical">
+      <a href="https://www.instagram.com/morphingmusic" target="_blank" class="nav-link"><i class="fa fa-instagram"></i></a>
+      <a href="https://www.facebook.com/morphingmusic/" target="_blank" class="nav-link"><i class="fa fa-facebook"></i></a>
+      <a href="https://www.youtube.com/@morphingchamberorchestra" target="_blank" class="nav-link"><i class="fa fa-youtube"></i></a>
+      <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-spotify"></i></a>
+      <a href="https://open.spotify.com/intl-de/artist/3NJaau60IyYeDGWI0cxI0W?si=OZs-N19pSiysS4uY6BDriA" target="_blank" class="nav-link"><i class="fa fa-apple"></i></a>
+    </div>
+
+
+  </header>
+
+  <body class="font-roboto custom-colorp bg-darkbrown text-black">
+
 
 
 

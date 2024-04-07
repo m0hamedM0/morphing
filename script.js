@@ -505,3 +505,41 @@ window.onload = adjustCarouselHeight;
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButton = document.getElementsByClassName('toggle-button')[0];
+  const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+
+  toggleButton.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var currentPage = window.location.href;
+  
+  var enLink = document.querySelector('.nav-link[href="index.html"]');
+  var deLink = document.querySelector('.nav-link[href="indexgerman.html"]');
+  
+  // Remove underline from both links initially
+  enLink.style.textDecoration = 'none';
+  deLink.style.textDecoration = 'none';
+
+  if (currentPage.endsWith('index.html') || currentPage.endsWith('/')) { // Assuming index.html is your default
+    enLink.style.textDecoration = 'underline';
+  } else if (currentPage.endsWith('indexgerman.html')) {
+    deLink.style.textDecoration = 'underline';
+  }
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  var toggleButton = document.querySelector('.toggle-button');
+  toggleButton.addEventListener('click', function() {
+      this.classList.toggle('is-active');
+  });
+});
+

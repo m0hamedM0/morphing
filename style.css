@@ -35,17 +35,7 @@ html {
 /* Continue with the rest of your CSS */
 
 
-@media (max-width: 768px) {
-  .social-icons-vertical a {
-    display: none;
-  }
-}
 
-@media (max-width: 991px) {
-  .social-icons-vertical {
-    display: none !important;
-  }
-}
 
 .footer-logo {
   width: 472px;
@@ -88,9 +78,6 @@ html {
   width: 40%;
 }
 
-.dropdown-menu.show {
-  background-color: transparent;
-}
 
 /* The company logo */
 
@@ -231,7 +218,6 @@ html {
     font-size: 14px; /* Kleinere Schriftgröße für den gesamten Text */
   }
 
-  .navbar,
   .footer {
     flex-direction: column; /* Stapelt Navbar- und Footer-Elemente vertikal */
   }
@@ -287,9 +273,7 @@ html {
   font-family: "MyCustomFontBold", sans-serif; /* Fallback to sans-serif */
 }
 
-.dropdown-menu {
-  font-family: "MyCustomFontRegular", sans-serif;
-}
+
 
 .custombold-textprojects {
   font-family: "MyCustomFontBold", sans-serif;
@@ -645,75 +629,7 @@ section:not(#home)::before {
   transition: all 1s;
 }
 
-/*.sticky-navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-    color: #D4AF37; 
-    z-index: 1000;
-    width: 100%;
-}
-*/
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.navbar-center-logo {
-  position: absolute;
-  left: 50%;
-
-  transform: translateX(-50%);
-  width: 600px;
-  height: 28px;
-}
-
-.navbar-center-logo img {
-  width: 600px; /* Equivalent to the inline width */
-  height: auto; /* Equivalent to the inline height */
-  margin-top: -2rem;
-}
-
-@media (max-width: 768px) {
-  .navbar-toggler {
-    position: absolute;
-    right: 10px; /* or adjust as per requirement */
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: inline-block;
-  }
-
-  .navbar-center-logo {
-    position: relative;
-    left: initial;
-    transform: none;
-    margin: 0 auto; /* This will center the logo when the menu is collapsed */
-  }
-
-  .navbar-center-logo img {
-    width: 300px; /* Equivalent to the inline width */
-    height: auto; /* Equivalent to the inline height */
-    margin-top: 0;
-  }
-}
-
-nav ul li a {
-  font-family: "Montserrat", sans-serif;
-}
 
 header {
   display: flex;
@@ -915,135 +831,6 @@ header {
 
 /* Ensure the images cover their slide */
 
-.navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.navbar-left,
-.navbar-center,
-.navbar-right {
-  display: flex;
-  align-items: center;
-}
-
-/* Adjust spacing and other styles as needed */
-.navbar-left ul,
-.navbar-right ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  list-style-type: none;
-}
-
-.navbar-nav .nav-item {
-  margin-left: 4px; /* Adjust spacing between navbar items */
-}
-
-.navbar-nav .nav-item.lang-switch {
-  margin-left: -15px; /* Reduced margin */
-  margin-right: -15px; /* Reduced margin */
-}
-
-.nav-item.social-icon {
-  margin-left: 25px; /* Increase spacing to the left of the Instagram icon */
-}
-
-.social-icons-vertical {
-  position: fixed;
-  left: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0;
-  margin-top: 2rem;
-  padding: 0;
-}
-
-.div-change-language {
-  display: flex;
-  margin: 0;
-}
-
-.social-icons-vertical .social-link {
-  display: block;
-  margin: 5px 0; /* Adjust margin as needed */
-  color: #fff; /* Or any color of your choice */
-  font-size: 24px; /* Adjust size as needed */
-}
-
-.social-icons-vertical .social-link:hover {
-  color: #ccc; /* Hover color */
-}
-
-.dropdown:hover .dropdown-menu {
-  display: block;
-  background-color: rgba(0, 0, 0, 0.5); /* Adjust the color as needed */
-  /* Remove the opacity property to keep text fully opaque */
-}
-
-.dropdown-item {
-  padding: 10px;
-  color: #fff; /* Or any other color, to ensure it's fully opaque */
-  /* Add more styling for your dropdown items here */
-}
-
-.navbar-center-logo {
-  margin: 0 auto; /* Center the logo */
-}
-
-/* Additional responsive adjustments as needed */
-@media (max-width: 768px) {
-  .navbar-container {
-    flex-direction: column;
-  }
-  .navbar-center-logo {
-    order: -1; /* Move logo to the top on smaller screens */
-  }
-}
-
-
-
-/* Existing styles... */
-
-@media (max-width: 1380px) {
-  .navbar-container {
-      /* Adjust the container if needed, e.g., flex-direction: column; */
-  }
-
-
-
-  .navbar-center-logo img {
-      width: 400px !important; /* Adjust the logo size for tablet/small desktop screens */
-      height: auto;
-      margin-top: -2vh;
-
-  }
-
-  .navbar-nav .nav-item, 
-  .nav-item.social-icon, 
-  .div-change-language {
-      /* Adjust margins and paddings to better fit the screen size */
-      margin-left: 2px; /* Example: smaller left margin */
-      margin-right: 2px; /* Example: smaller right margin */
-  }
-
-
-  /* Any additional styling adjustments for tablet/small desktop screens */
-}
-
-@media (max-width: 1050px) {
-
-  .navbar-center-logo img {
-      width: 350px !important; /* Adjust the logo size for tablet/small desktop screens */
-      height: auto;
-      margin-top: -1.5vh;
-
-  }
-}
-
 .album-image {
   position: relative; /* Add position relative here */
   margin-right: 20px;
@@ -1182,41 +969,7 @@ header {
 
 /*carousel*/
 
-/* Default state of the navbar links */
-.navbar-brand img {
-  display: block; /* Ensures the image is not inline */
-  max-height: 50px; /* Adjust as needed */
-  width: auto; /* Adjust as needed */
-  margin-right: 15px; /* Space between logo and nav items */
-}
 
-.navbar-toggler {
-  border: none;
-  outline: none;
-}
-
-/* Styles for the collapsed menu */
-
-.navbar-nav .nav-link {
-  color: #d4af37; /* Gold color */
-  transition: transform 0.3s ease, color 0.3s ease; /* Smooth transition */
-  white-space: nowrap; /* Prevent text from wrapping */
-}
-
-/* Hover state of the navbar links */
-.navbar-nav .nav-link:hover {
-  transform: scale(1.1); /* Slightly larger on hover */
-  color: white !important; /* White color on hover, use !important to override */
-}
-
-/* Active state of the navbar links specifically for mobile devices */
-@media (max-width: 768px) {
-  /* Adjust breakpoint as needed */
-  .navbar-nav .nav-link:active {
-    color: white !important; /* White color on active (click), use !important to override */
-    margin-top: 1rem !important;
-  }
-}
 
 @font-face {
   font-family: "Bergamasco";
@@ -2105,149 +1858,7 @@ button {
   min-width: 320px;
 }
 
-@media (max-width: 991px) {
-  /* Adjust this value based on where you want the mobile styling to start */
-  .navbar-container {
-    flex-direction: column;
-    align-items: center;
-  }
 
-  .navbar-left,
-  .navbar-center,
-  .navbar-right {
-    width: 100%;
-    justify-content: center;
-  }
-
-  .navbar-center-logo {
-    order: -1; /* Move logo to the top */
-  }
-
-  .navbar-center-logo img {
-    width: 300px; /* Equivalent to the inline width */
-    height: auto; /* Equivalent to the inline height */
-    margin-top: 0;
-  }
-
-  .navbar-toggler {
-    display: block; /* Show the toggle button */
-    margin-top: 10px;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: inline-block;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .nav-item {
-    width: 100%; /* Make nav items full width */
-    text-align: center; /* Center the text */
-  }
-
-  .dropdown-menu {
-    position: static; /* Disable absolute positioning */
-    float: none; /* Remove float */
-    width: auto; /* Set width to auto */
-  }
-
-  .navbar-toggler.collapsed .navbar-collapse {
-    display: none;
-  }
-
-  .navbar-collapse {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .navbar-toggler:not(.collapsed) .navbar-collapse {
-    display: flex;
-  }
-
-  .nav-separator {
-    display: none; /* Hide separators on mobile */
-  }
-
-  .nav-item.social-icon {
-    display: none; /* This hides the social links */
-  }
-
-  .nav-item.lang-switch {
-    display: none; /* This hides the social links */
-  }
-
-  .navbar-center {
-    width: 236px;
-    height: 14px;
-  }
-}
-
-/* Adjustments for very small screens */
-@media (max-width: 575px) {
-  .navbar-nav .nav-item {
-    padding: 5px 0; /* Reduce padding for nav items */
-  }
-}
-
-@media (max-width: 768px) {
-  .navbar-right .navbar-nav {
-    flex-direction: column; /* Stack the items vertically */
-    width: 100%; /* Full width */
-    margin-top: 1rem;
-  }
-  #navbarContent {
-    background-color: black;
-  }
-
-  .navbar-right .nav-item {
-    width: 100%; /* Full width for each nav item */
-    text-align: center; /* Center the text */
-  }
-
-  .navbar-right {
-    width: 100%; /* Full width for dropdown menus */
-  }
-
-  .dropdown-menu-mobile-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .dropdown-item {
-    width: auto;
-  }
-
-  /* Ensure the dropdown menus are visible when navbar is toggled in mobile view */
-  .navbar-toggler.collapsed + .collapse .dropdown-menu {
-    display: none;
-  }
-
-  .navbar-toggler:not(.collapsed) + .collapse .dropdown-menu {
-    display: flex;
-  }
-}
-
-@media (max-width: 991px) {
-  /* Adjust for mobile screens */
-  .fixed-toggler {
-    position: fixed;
-    top: 0; /* Adjust the value as needed */
-    right: 10px; /* Adjust the value as needed */
-    z-index: 1020; /* To ensure it's above other elements */
-  }
-}
-
-@media (max-width: 991px) {
-  .navbar-toggler-icon {
-    transform: scale(0.8); /* Adjust the scale value as needed */
-  }
-}
 
 
 
@@ -2843,7 +2454,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 14px;
+  font-size: 20px;
   z-index: 1000;
 }
 
@@ -3067,7 +2678,7 @@ button {
   flex: 1 0 auto;
   margin: 20px;
   width: 400px; /* Adjust as needed */
-  background-color: #fff;
+  background-color: #121212;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   vertical-align: top;
@@ -3085,13 +2696,13 @@ button {
 }
 
 .member-name {
-  color: black;
+  color: goldenrod;
   margin-bottom: 5px;
   font-family: "MyCustomFontBold", sans-serif; /* Fallback to sans-serif */
 }
 
 .member-title {
-  color: #666;
+  color: #f0f0f0;
   font-size: 0.9em;
 }
 
@@ -3110,12 +2721,7 @@ button {
   opacity: 1;
 }
 
-.social-link {
-  display: inline-block;
-  margin: 0 10px;
-  color: #fff;
-  font-size: 18px;
-}
+
 
 @media (max-width: 768px) {
 
@@ -3128,3 +2734,16 @@ button {
     font-size: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
