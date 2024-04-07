@@ -41,7 +41,9 @@
 
 
     <div class="brand-logo">
-      <img src="https://i.imgur.com/HvkRXDW.png" alt="Brand Logo">
+      <a href="#home">
+        <img src="https://i.imgur.com/HvkRXDW.png" alt="Brand Logo">
+      </a>
     </div>
       <a href="#" class="toggle-button">
         <span class="bar"></span>
@@ -53,6 +55,7 @@
           <li class="dropdown">
             <a href="#">Our Orchestra</a>
             <ul class="dropdown-content">
+                <li><a href="#orchestra">Our Orchestra</a></li>
                 <li><a href="#biography">Tomasz Wabnic</a></li>
                 <li><a href="#our-team">Our Team</a></li>
                 <li><a href="#our-musicians">Our Musicians</a></li>
@@ -77,7 +80,7 @@
             <a href="#">Support Us</a>
             <ul class="dropdown-content">
                 <li><a href="#news">News</a></li>
-                <li><a href="#footer">Contact Us</a></li>
+                <li><a href="#contact-footer">Contact Us</a></li>
               </ul>
         </li>
         </ul>
@@ -99,6 +102,10 @@
       <source src="https://i.imgur.com/CFDDcLq.mp4" type="video/mp4"/>
       Your browser does not support HTML5 video.
     </video>
+    <div id="microphone-icon">
+      <img src="https://i.imgur.com/yneNikh.png" alt="Microphone" class="playing" style="display: none;">
+      <img src="https://i.imgur.com/1yuZ73d.png" alt="Muted" class="muted">
+    </div>
     <section id="home" class="home">
       <ul id="languageSwitcher" class="navbar-nav">
         <div class="row div-change-language">
@@ -135,7 +142,7 @@
 
 
     <!-- Hier fängt der erste Abschnitt (Section) an - "Projects"  -->
-    <section id="video-carousel" class="carousel slide" data-ride="carousel" data-interval="15000">
+    <section id="video-carousel" class="carousel slide" data-ride="carousel" data-interval="25000">
       <h2 class="custombold-textprojects">Projects</h2>
 
       <div class="carousel-inner">
@@ -160,7 +167,7 @@
 
             <p>
               <span class="highlight">MORPHING x JOHANN STRAUSS <br> The 200th anniversary in 2025</span><br><br>
-              Based in Vienna, the heart of the former Danube Monarchy, the cosmopolitan VIENNA MORPHING ORCHESTRA* is more
+              Based in Vienna, the heart of the former Danube Monarchy, the cosmopolitan VIENNA MORPHING ORCHESTRA is more
               than familiar with the works of the Strauss dynasty. The 200th anniversary of Johann Strauss's son is the occasion
               for a wonderful musical celebration! From gallops to polkas to the most famous waltzes, nothing is missing.
               Brahms was already enchanted by Strauss: "He is the only one I envy - he is dripping with music, he always comes up
@@ -177,44 +184,44 @@
           <div class="bottom-container">
             <div class="text-content">
               <p>
-                PROGRAM: <br>
-                1. Wolfgang Amadeus Mozart (1756 - 1791)
-                Overture "Le Nozze di Figaro", K.V. 492 (4'40) <br>
-                2. Johann Strauss || (1825 - 1899)
-                Emperor Waltz, op. 437 (12'00) <br>
-                3. Johann Strauss || (1825-1899)
-                Brüderlein und Schwesterlein, from "Die Fledermaus" Timna Brauer / Tim Allhoff <br>
-                4. Johann Strauss | (1804 - 1849)
-                Sighing Galop, op. 9 (2'30) <br>
-                5. Tim Allhoff solo piano + MCO <br>
-                6. Johann Strauss || (1825 - 1899)
-                Bandit's Galop, op.378 (3'00) <br>
-                7. W.A. Mozart (1756-1791)
-                Oh zittre nicht, mein lieber Sohn, from "The
-                Magic Flute"
-                Timna Brauer / Tim Allhoff <br>
-                8. Johann Strauss || (1825 - 1899)
-                Tritsch-Tratsch-Polka, Op. 214 (3'00)
-                Timna Brauer <br>
-                9. Wolfgang Amadeus Mozart (1756 - 1791)
-                III. Presto, Sinfonia concertante for violin & viola, K.V. 364 (6'30)
-                Yuuki Wong - violin, Tomasz Wabnic - viola <br>
-                10. Johann Strauss || (1825-1899)
-                Mein Herr Marquis, from "Die Fledermaus"
-                Timna Brauer <br>
-                11. Johann Strauss (1827 - 1870)
-                Ohne Sorgen (Without a care!), op 271 (2'30) <br>
-                12. Tim Allhoff solo piano + MCO <br>
-                13. Johann Strauss || (1825 - 1899)
-                Stürmisch in Lieb' und Tanz, op.393 (2'30) <br>
-                14. Wolfgang Amadeus Mozart (1756-1791)
-                Pa-pa-pa, from "The Magic Flute" Timna Brauer / Tim Allhoff <br>
-                15. Johann Strauss || (1825 - 1899)
-                The Blue Danube Waltz, op. 314 (9'30)
-                Timna Brauer / Tim Allhoff <br>
-              </p>
+                <!-- PROGRAM: <br>
+                 1. Wolfgang Amadeus Mozart (1756 - 1791)
+                 Overture "Le Nozze di Figaro", K.V. 492 (4'40) <br>
+                 2. Johann Strauss || (1825 - 1899)
+                 Emperor Waltz, op. 437 (12'00) <br>
+                 3. Johann Strauss || (1825-1899)
+                 Brüderlein und Schwesterlein, from "Die Fledermaus" Timna Brauer / Tim Allhoff <br>
+                 4. Johann Strauss | (1804 - 1849)
+                 Sighing Galop, op. 9 (2'30) <br>
+                 5. Tim Allhoff solo piano + MCO <br>
+                 6. Johann Strauss || (1825 - 1899)
+                 Bandit's Galop, op.378 (3'00) <br>
+                 7. W.A. Mozart (1756-1791)
+                 Oh zittre nicht, mein lieber Sohn, from "The
+                 Magic Flute"
+                 Timna Brauer / Tim Allhoff <br>
+                 8. Johann Strauss || (1825 - 1899)
+                 Tritsch-Tratsch-Polka, Op. 214 (3'00)
+                 Timna Brauer <br>
+                 9. Wolfgang Amadeus Mozart (1756 - 1791)
+                 III. Presto, Sinfonia concertante for violin & viola, K.V. 364 (6'30)
+                 Yuuki Wong - violin, Tomasz Wabnic - viola <br>
+                 10. Johann Strauss || (1825-1899)
+                 Mein Herr Marquis, from "Die Fledermaus"
+                 Timna Brauer <br>
+                 11. Johann Strauss (1827 - 1870)
+                 Ohne Sorgen (Without a care!), op 271 (2'30) <br>
+                 12. Tim Allhoff solo piano + MCO <br>
+                 13. Johann Strauss || (1825 - 1899)
+                 Stürmisch in Lieb' und Tanz, op.393 (2'30) <br>
+                 14. Wolfgang Amadeus Mozart (1756-1791)
+                 Pa-pa-pa, from "The Magic Flute" Timna Brauer / Tim Allhoff <br>
+                 15. Johann Strauss || (1825 - 1899)
+                 The Blue Danube Waltz, op. 314 (9'30)
+                 Timna Brauer / Tim Allhoff <br> -->
+               </p>
 
-              <!-- Featured Artists list -->
+               <!-- Featured Artists list -->
               <p class="featured-artists-title">Featured Artists:</p>
               <ul class="artist-list">
                 <li>
@@ -227,20 +234,20 @@
               </ul>
             </div>
 
-            <!-- Project video content -->
+            <!-- Project video content https://www.youtube.com/embed/QV20W-L4voI?si=-JgQ8QQOnu0eBxSG -->
             <iframe
               width="600"
               height="500"
-              src="https://www.youtube.com/embed/QV20W-L4voI?si=-JgQ8QQOnu0eBxSG"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <div class="share-buttons">
+            src=""
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="share-buttons">
 
-            <!-- Facebook Share Button -->
+          <!-- Facebook Share Button -->
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://m0hamedm0.github.io/morphing/index.html#video-carousel"
               target="_blank"
               class="btn btn-primary"
@@ -1459,51 +1466,96 @@
 
 
 
-    <section id="team">
-      <h2 class="custombold-text">Our Team</h2>
-      <div class="people-container">
-        <!-- Person 1 -->
-        <div class="person">
-            <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
-            <div class="info-box">
-            <a href="Tomasz_Musician.html">
-              <p class="name">Tomasz Wabnic</p>
-            </a>
-            <p class="role">- Artistic Director</p>
-            </div>
+    <!-- <section id="team">
+    <h2 class="custombold-text">Our Team</h2>
+    <div class="people-container"> -->
+    <!-- Person 1 -->
+    <!--<div class="person">
+       <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+       <div class="info-box">
+       <a href="Tomasz_Musician.html">
+         <p class="name">Tomasz Wabnic</p>
+       </a>
+       <p class="role">- Artistic Director</p>
+       </div>
+   </div> -->
+    <!-- Person 2 -->
+    <!-- <div class="person">
+        <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+        <div class="info-box">
+        <a href="Yuuki.html">
+          <p class="name">Yuuki Wong</p>
+        </a>
+        <p class="role">- Lead Violinist</p>
         </div>
-        <!-- Person 2 -->
-        <div class="person">
-            <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
-            <div class="info-box">
-            <a href="Yuuki.html">
-              <p class="name">Yuuki Wong</p>
-            </a>
-            <p class="role">- Lead Violinist</p>
-            </div>
+    </div> -->
+    <!-- Person 3 -->
+    <!-- <div class="person">
+        <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+        <div class="info-box">
+        <a href="Nichita_Team.html">
+          <p class="name">Nikita Pavliuc</p>
+        </a>
+        <p class="role">- Project Assistant</p>
         </div>
-        <!-- Person 3 -->
-        <div class="person">
-            <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
-            <div class="info-box">
-            <a href="Nichita_Team.html">
-              <p class="name">Nikita Pavliuc</p>
-            </a>
-            <p class="role">- Project Assistant</p>
-            </div>
-        </div>
-        <!-- More persons as needed... -->
-        <div class="person">
-          <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
-          <div class="info-box">
-          <a href="Tomasz_Musician.html">
-            <p class="name">Tomasz Wabnic</p>
-          </a>
-          <p class="role">- Artistic Director</p>
-          </div>
+    </div> -->
+    <!-- More persons as needed... -->
+    <!-- <div class="person">
+      <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+      <div class="info-box">
+      <a href="Tomasz_Musician.html">
+        <p class="name">Tomasz Wabnic</p>
+      </a>
+      <p class="role">- Artistic Director</p>
       </div>
-      <!-- Person 2 -->
-      <div class="person">
+  </div> -->
+    <!-- Person 2 -->
+    <!-- <div class="person">
+       <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
+       <div class="info-box">
+       <a href="Yuuki.html">
+         <p class="name">Yuuki Wong</p>
+       </a>
+       <p class="role">- Lead Violinist</p>
+       </div>
+   </div> -->
+    <!-- Person 3 -->
+    <!-- <div class="person">
+        <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+        <div class="info-box">
+        <a href="Nichita_Team.html">
+          <p class="name">Nikita Pavliuc</p>
+        </a>
+        <p class="role">- Project Assistant</p>
+        </div>
+    </div>
+    </div>
+  </section> -->
+
+
+
+
+
+
+
+
+
+
+    <!-- <section id="musicians">
+     <h2 class="custombold-text">Our Musicians</h2>
+     <div class="people-container"> -->
+    <!-- Person 1 -->
+    <!--  <div class="person">
+        <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
+        <div class="info-box">
+        <a href="Tomasz_Musician.html">
+          <p class="name">Tomasz Wabnic</p>
+        </a>
+        <p class="role">- Artistic Director</p>
+        </div>
+    </div> -->
+    <!-- Person 2 -->
+    <!--  <div class="person">
           <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
           <div class="info-box">
           <a href="Yuuki.html">
@@ -1511,104 +1563,59 @@
           </a>
           <p class="role">- Lead Violinist</p>
           </div>
-      </div>
-      <!-- Person 3 -->
-      <div class="person">
-          <img src="https://i.imgur.com/8anyHVX.png" alt="Person 3">
+      </div> -->
+    <!-- Person 3 -->
+    <!--  <div class="person">
+          <img src="https://i.imgur.com/yUTn79n.png" alt="Person 3">
           <div class="info-box">
-          <a href="Nichita_Team.html">
-            <p class="name">Nikita Pavliuc</p>
-          </a>
-          <p class="role">- Project Assistant</p>
-          </div>
-      </div>
-      </div>
-    </section>
-
-    
-
-
-
-
-
-
-
-
-    <section id="musicians">
-      <h2 class="custombold-text">Our Musicians</h2>
-      <div class="people-container">
-        <!-- Person 1 -->
-        <div class="person">
-            <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Person 1">
-            <div class="info-box">
-            <a href="Tomasz_Musician.html">
-              <p class="name">Tomasz Wabnic</p>
-            </a>
-            <p class="role">- Artistic Director</p>
-            </div>
-        </div>
-        <!-- Person 2 -->
-        <div class="person">
-            <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Person 2">
-            <div class="info-box">
-            <a href="Yuuki.html">
-              <p class="name">Yuuki Wong</p>
-            </a>
-            <p class="role">- Lead Violinist</p>
-            </div>
-        </div>
-        <!-- Person 3 -->
-        <div class="person">
-            <img src="https://i.imgur.com/yUTn79n.png" alt="Person 3">
-            <div class="info-box">
-            <a href="alice.html">
-              <p class="name">Alison Lie</p>
-            </a>
-            <p class="role">- Musician</p>
-            </div>
-        </div>
-        <!-- More persons as needed... -->
-        <div class="person">
-          <img src="https://i.imgur.com/11ujJI4.png" alt="Person 1">
-          <div class="info-box">
-          <a href="Nikita_Kuts.html">
-            <p class="name">Nikita Kuts</p>
+          <a href="alice.html">
+            <p class="name">Alison Lie</p>
           </a>
           <p class="role">- Musician</p>
           </div>
-      </div>
-      <!-- Person 2 -->
-      <div class="person">
-          <img src="https://i.imgur.com/TMx5xSy.png" alt="Person 2">
-          <div class="info-box">
-          <a href="Josefina.html">
-            <p class="name">Josefina</p>
-          </a>
-          <p class="role">- Musician</p>
-          </div>
-      </div>
-      <!-- Person 3 -->
-      <div class="person">
-          <img src="https://i.imgur.com/6zRcFz2.png" alt="Person 3">
-          <div class="info-box">
-          <a href="Zhangir.html">
-            <p class="name">Zhangir</p>
-          </a>
-          <p class="role">- Musician</p>
-          </div>
-      </div>
-
-      <div class="person">
-        <img src="https://i.imgur.com/Bc9ICV4.png" alt="Person 3">
+      </div> -->
+    <!-- More persons as needed... -->
+    <!-- <div class="person">
+       <img src="https://i.imgur.com/11ujJI4.png" alt="Person 1">
+       <div class="info-box">
+       <a href="Nikita_Kuts.html">
+         <p class="name">Nikita Kuts</p>
+       </a>
+       <p class="role">- Musician</p>
+       </div>
+   </div> -->
+    <!-- Person 2 -->
+    <!-- <div class="person">
+        <img src="https://i.imgur.com/TMx5xSy.png" alt="Person 2">
         <div class="info-box">
-        <a href="Anna.html">
-          <p class="name">Anna</p>
+        <a href="Josefina.html">
+          <p class="name">Josefina</p>
         </a>
         <p class="role">- Musician</p>
         </div>
-    </div>
-      </div>
-    </section>
+    </div> -->
+    <!-- Person 3 -->
+    <!-- <div class="person">
+         <img src="https://i.imgur.com/6zRcFz2.png" alt="Person 3">
+         <div class="info-box">
+         <a href="Zhangir.html">
+           <p class="name">Zhangir</p>
+         </a>
+         <p class="role">- Musician</p>
+         </div>
+     </div>
+
+     <div class="person">
+       <img src="https://i.imgur.com/Bc9ICV4.png" alt="Person 3">
+       <div class="info-box">
+       <a href="Anna.html">
+         <p class="name">Anna</p>
+       </a>
+       <p class="role">- Musician</p>
+       </div>
+   </div>
+     </div>
+   </section> -->
 
 
 
@@ -1663,85 +1670,89 @@
           <div class="team-member" data-aos="fade-up">
               <div class="member-image">
                 <a href=#biography>
-                  <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Team Member 1">
+                  <img src="https://i.imgur.com/Fw0P7Vm.jpeg" alt="Image: Tomasz Wabnic">
                 </a>
               </div>
               <div class="member-info">
-                <a href="Tomasz_Musician.html">
-                  <h3 class="member-name">Tomasz Wabnic</h3>
+                <!-- <a href="Tomasz_Musician.html"> -->
+                   <h3 class="member-name">Tomasz Wabnic</h3>
+                 </a>
+                   <p class="member-title">Artistic Director</p>
+               </div>
+           </div>
+
+           <div class="team-member" data-aos="fade-up">
+               <div class="member-image">
+                   <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Team Member 2">
+
+               </div>
+               <div class="member-info">
+                 <!--  <a href="Yuuki.html"> -->
+                     <h3 class="member-name">Yuuki Wong</h3>
+                   </a>
+                     <p class="member-title">Concertmaster</p>
+                 </div>
+             </div>
+
+
+
+               <div class="team-member" data-aos="fade-up">
+                   <div class="member-image">
+                       <img src="https://i.imgur.com/yUTn79n.png" alt="Team Member 4">
+
+                   </div>
+                   <div class="member-info">
+                       <h3 class="member-name">Alison Lie</h3>
+                       <p class="member-title">Musician</p>
+                   </div>
+               </div>
+
+            <div class="team-member" data-aos="fade-up">
+              <div class="member-image">
+                <img src="https://i.imgur.com/8anyHVX.png" alt="Team Member 3">
+
+              </div>
+              <div class="member-info">
+                <!--  <a href="Nichita_Team.html"> -->
+                <h3 class="member-name">Nichita Pavliuc</h3>
                 </a>
-                  <p class="member-title">Artistic Director</p>
+                <p class="member-title">Web Developer</p>
               </div>
-          </div>
-  
-          <div class="team-member" data-aos="fade-up">
-              <div class="member-image">
-                  <img src="https://i.imgur.com/QiIPXMd.jpeg" alt="Team Member 2">
+            </div>
 
-              </div>
-              <div class="member-info">
-                <a href="Yuuki.html">
-                  <h3 class="member-name">Yuuki Wong</h3>
-                </a>
-                  <p class="member-title">Lead Violinist</p>
-              </div>
-          </div>
-  
-          <div class="team-member" data-aos="fade-up">
-              <div class="member-image">
-                  <img src="https://i.imgur.com/8anyHVX.png" alt="Team Member 3">
+               <div class="team-member" data-aos="fade-up">
+                   <div class="member-image">
+                       <img src="https://i.imgur.com/TMx5xSy.png" alt="Team Member 5">
 
-              </div>
-              <div class="member-info">
-                <a href="Nichita_Team.html">
-                  <h3 class="member-name">Nikita Pavliuc</h3>
-                </a>
-                  <p class="member-title">Project Assistant</p>
-              </div>
-          </div>
-  
-          <div class="team-member" data-aos="fade-up">
-              <div class="member-image">
-                  <img src="https://i.imgur.com/yUTn79n.png" alt="Team Member 4">
-
-              </div>
-              <div class="member-info">
-                  <h3 class="member-name">Alison Lie</h3>
-                  <p class="member-title">Musician</p>
-              </div>
-          </div>
-  
-          <div class="team-member" data-aos="fade-up">
-              <div class="member-image">
-                  <img src="https://i.imgur.com/TMx5xSy.png" alt="Team Member 5">
-
-              </div>
-              <div class="member-info">
-                  <h3 class="member-name">Josefina</h3>
-                  <p class="member-title">Musician</p>
-              </div>
-          </div>
-  
-          <div class="team-member" data-aos="fade-up">
-              <div class="member-image">
-                  <img src="https://i.imgur.com/6zRcFz2.png" alt="Team Member 6">
-
-              </div>
-              <div class="member-info">
-                  <h3 class="member-name">Zhangir</h3>
-                  <p class="member-title">Musician</p>
-              </div>
-          </div>
-      </div>
-      </div>
-      </div>
-  </section>
+                   </div>
+                   <div class="member-info">
+                       <h3 class="member-name">Josefina</h3>
+                       <p class="member-title">Musician</p>
+                   </div>
+               </div>
 
 
 
-    <section id="our-musicians" class="team-section">
-      <h2 class="custombold-text">Meet Our Musicians</h2>
-      <div class="team-container"> <!-- Added container for scrolling -->
+               <div class="team-member" data-aos="fade-up">
+                   <div class="member-image">
+                       <img src="https://i.imgur.com/6zRcFz2.png" alt="Team Member 6">
+
+                   </div>
+                   <div class="member-info">
+                       <h3 class="member-name">Zhangir</h3>
+                       <p class="member-title">Musician</p>
+                   </div>
+               </div>
+           </div>
+           </div>
+           </div>
+       </section>
+
+
+
+         <section id="our-musicians" class="team-section">
+           <h2 class="custombold-text">Meet Our Musicians</h2>
+           <div class="team-container"> <!-- Added container for scrolling -->
           <div class="team-grid">
           <div class="team-member" data-aos="fade-up">
               <div class="member-image">
@@ -1766,16 +1777,7 @@
               </div>
           </div>
   
-          <div class="team-member" data-aos="fade-up">
-              <div class="member-image">
-                  <img src="https://i.imgur.com/8anyHVX.png" alt="Team Member 3">
 
-              </div>
-              <div class="member-info">
-                  <h3 class="member-name">Nikita Pavliuc</h3>
-                  <p class="member-title">Project Assistant</p>
-              </div>
-          </div>
   
           <div class="team-member" data-aos="fade-up">
               <div class="member-image">
@@ -1787,6 +1789,7 @@
                   <p class="member-title">Musician</p>
               </div>
           </div>
+
   
           <div class="team-member" data-aos="fade-up">
               <div class="member-image">
@@ -1999,7 +2002,17 @@
     icon.classList.remove("fa-pause");
     icon.classList.add("fa-play");
   }
-}
+        const playingIcon = document.querySelector("#microphone-icon .playing");
+        const mutedIcon = document.querySelector("#microphone-icon .muted");
+
+        if (player.paused) {
+          playingIcon.style.display = "none";
+          mutedIcon.style.display = "block";
+        } else {
+          playingIcon.style.display = "block";
+          mutedIcon.style.display = "none";
+        }
+      }
 
 
       // Initialize the player with the first track
