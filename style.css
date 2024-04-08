@@ -1781,6 +1781,31 @@ button {
   color: goldenrod;
   font-family: "MyCustomFontBold";
   font-size: 1.5em;
+  word-spacing: normal;
+}
+
+@media (max-width: 768px) {
+  .highlight, .highlight4 {
+    color: goldenrod;
+    font-size: 0.8em; /* Kleinere Schriftgröße für Mobilgeräte */
+    line-height: 1.1; /* Angepasste Zeilenhöhe für bessere Lesbarkeit */
+    word-spacing: normal; /* Anpassung des Wortabstands, falls nötig */
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight, .highlight4 {
+    color: goldenrod;
+    font-size: 0.9em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
+    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
+    word-spacing: normal; /* Feinabstimmung des Wortabstands, falls nötig */
+  }
+  .highlight6 {
+    color: goldenrod;
+    font-size: 1.2em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
+    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
+    word-spacing: normal;
+  }
 }
 
 .top-container p {
