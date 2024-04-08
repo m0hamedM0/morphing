@@ -19,6 +19,29 @@ html {
 
 /* Existing styles... */
 
+.video-background-header {
+  position: relative; /* Make the video container relative for absolute positioning */
+}
+
+#microphone-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* Ensure the icon is on top of the video */
+}
+
+#microphone-icon img {
+  width: 80px; /* Adjust the size as needed */
+  height: 80px;
+}
+
+#microphone-icon img.playing {
+  width: 60px; /* Adjust the size as needed */
+  height: 80px;
+}
+
+
 /* Media query for devices with max-width of 991px */
 @media (max-width: 991px) {
   .video-background-header video {
@@ -982,6 +1005,8 @@ header {
   }
 }
 
+
+
 /*carousel*/
 
 
@@ -1751,6 +1776,31 @@ button {
   color: goldenrod;
   font-family: "MyCustomFontBold";
   font-size: 1.5em;
+  word-spacing: normal;
+}
+
+@media (max-width: 768px) {
+  .highlight, .highlight4 {
+    color: goldenrod;
+    font-size: 0.8em; /* Kleinere Schriftgröße für Mobilgeräte */
+    line-height: 1.1; /* Angepasste Zeilenhöhe für bessere Lesbarkeit */
+    word-spacing: normal; /* Anpassung des Wortabstands, falls nötig */
+  }
+}
+
+@media (max-width: 480px) {
+  .highlight, .highlight4 {
+    color: goldenrod;
+    font-size: 0.9em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
+    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
+    word-spacing: normal; /* Feinabstimmung des Wortabstands, falls nötig */
+  }
+  .highlight6 {
+    color: goldenrod;
+    font-size: 1.2em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
+    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
+    word-spacing: normal;
+  }
 }
 
 .top-container p {
@@ -2749,3 +2799,15 @@ button {
     font-size: 20px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
