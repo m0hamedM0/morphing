@@ -32,14 +32,27 @@ html {
 }
 
 #microphone-icon img {
-  width: 80px; /* Adjust the size as needed */
-  height: 80px;
+  width: 64px; /* Adjust the size as needed */
+  height: 64px;
 }
 
 #microphone-icon img.playing {
-  width: 60px; /* Adjust the size as needed */
-  height: 80px;
+  width: 64px; /* Adjust the size as needed */
+  height: 64px;
 }
+
+@media (max-width: 480px) {
+  #microphone-icon img {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+  }
+
+  #microphone-icon img.playing {
+    width: 50px; /* Adjust the size as needed */
+    height: 50px;
+  }
+}
+
 
 
 /* Media query for devices with max-width of 991px */
@@ -1780,26 +1793,28 @@ button {
 }
 
 @media (max-width: 768px) {
-  .highlight, .highlight4 {
+  .highlight {
     color: goldenrod;
     font-size: 0.8em; /* Kleinere Schriftgröße für Mobilgeräte */
     line-height: 1.1; /* Angepasste Zeilenhöhe für bessere Lesbarkeit */
     word-spacing: normal; /* Anpassung des Wortabstands, falls nötig */
+    font-weight: bold;
   }
 }
 
 @media (max-width: 480px) {
-  .highlight, .highlight4 {
+  .highlight {
     color: goldenrod;
     font-size: 0.9em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
     line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
     word-spacing: normal; /* Feinabstimmung des Wortabstands, falls nötig */
   }
-  .highlight6 {
-    color: goldenrod;
-    font-size: 1.2em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
-    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
-    word-spacing: normal;
+
+  p {
+    font-size: 1.1em; /* Verkleinern der Schriftgröße des normalen Textes */
+    line-height: 1.4; /* Anpassen der Zeilenhöhe für bessere Lesbarkeit */
+    word-spacing: normal; /* Zurücksetzen des Wortabstands */
+    text-align: justify; /* Verbessert die Textverteilung und reduziert große Lücken */
   }
 }
 
