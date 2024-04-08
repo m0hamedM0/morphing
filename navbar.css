@@ -326,3 +326,103 @@
 
 
 
+
+
+@media (max-width: 1100px) and (orientation: landscape) {
+
+    .toggle-button {
+        display: flex;
+        margin-top: 1vh;
+    }
+
+    .brand-logo img {
+        width: 250px; /* Larger width for desktop, adjust as needed */
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar-links a {
+        padding: 15px; /* Increased padding */
+        font-size: 18px; /* Adjusted font size */
+        line-height: 1.5; /* Adjusted line height for better readability */
+    }
+
+    /* Adjust the height of navbar items if necessary */
+    .navbar-links li {
+        min-height: 50px; /* Example: setting a minimum height */
+    }
+
+
+    .navbar-links.active {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+/* This is an example of a media query that hides the toggle button on screens wider than 800px */
+
+
+/* This media query targets screens with a maximum width of 800px
+   and an aspect-ratio that indicates landscape orientation */
+    .toggle-button {
+        display: flex; /* Show the toggle button */
+        /* Other styling here */
+    }
+    
+    .navbar-links {
+        display: none; /* Start with the navbar links hidden */
+    }
+    
+
+
+
+    .header {
+        position: relative; /* Ensures absolute positioning is relative to the header */
+    }
+
+    .social-icons-vertical {
+        position: absolute;
+        left: 10px; /* Adjust as needed */
+        top: 90%; /* Adjust as needed */
+        transform: none; /* Resets any previously applied transform */
+        font-size: 16px; /* Reducing the font-size to make icons smaller */
+        flex-direction: row;
+    }
+
+    .social-icons-vertical .nav-link {
+        font-size: 18px;
+        color: white; /* Set color to white */
+    }
+
+    .social-icons-vertical .nav-link:hover {
+        font-size: 18px;
+        color: goldenrod; /* Set color to white */
+    }
+
+    #languageSwitcher {
+        position: absolute; /* Fixed position with respect to the viewport */
+        left: 92vw; /* Position it on the right */
+        top: 99%; /* Align vertically to the middle */
+        transform: translateY(-99%); /* Adjust vertical alignment */
+        z-index: 2000; /* High z-index to ensure it's above other elements */
+    }
+
+    #languageSwitcher .div-change-language {
+        flex-direction: row; /* Place languages in a row */
+    }
+
+    #languageSwitcher .nav-item,
+    #languageSwitcher .nav-separator {
+        margin-right: 0; /* Remove right margin */
+        margin-left: 0; /* Remove left margin */
+        padding-top: 0; /* Reset top padding */
+    }
+}

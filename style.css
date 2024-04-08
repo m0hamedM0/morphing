@@ -934,6 +934,25 @@ header {
   text-align: center; /* Center text */
 }
 
+.album-links {
+  display: flex;
+  justify-content: space-between; /* This will position the two groups on either side */
+  width: 100%;
+}
+
+.link-group {
+  display: flex;
+  flex-direction: column; /* Stacks links vertically */
+  align-items: center; /* Center aligns the links in the group */
+  gap: 10px; /* Spacing between each link */
+}
+
+/* Optional: Centering the .album-links container if there is extra space */
+.album-links {
+  justify-content: center; /* Center the link groups in the parent container */
+}
+
+
 .album-links a {
   display: inline-block; /* Allows margin */
   margin: 0 10px; /* Space between links */
@@ -967,28 +986,31 @@ header {
 @media (max-width: 768px) {
   .discography-entry {
     flex-direction: column;
-    width: 90%; /* Full width on smaller screens */
-    margin-bottom: 30px; /* Less space between entries on small screens */
+    align-items: center; /* Center child items */
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .album-image {
+    margin-right: 0; /* Reset margin on smaller screens */
+    margin-bottom: 15px; /* Space between image and text */
+    align-self: center; /* Center the image container */
+  }
+
+  .album-image img {
+    width: 150px; /* Maintain a fixed width or percentage */
+    height: auto; /* Keep the aspect ratio of the image */
+    margin: 0 auto; /* Center the image horizontally */
   }
 
   .album-info,
   .album-links {
-    width: 100%; /* Full width on small screens */
+    width: 100%;
     text-align: center;
-    margin: 10px 0; /* Space between items when stacked */
-  }
-
-  .album-image img {
-    justify-content: center;
-    margin-bottom: 15px; /* Space between image and text on small screens */
-  }
-
-  .small-image-container {
-    display: flex;
-    justify-content: center;
-    margin: auto;
+    margin: 10px 0;
   }
 }
+
 
 /*carousel*/
 

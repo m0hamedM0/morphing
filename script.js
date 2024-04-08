@@ -543,3 +543,26 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  var languageSwitcher = document.getElementById('languageSwitcher');
+  var navbar = document.querySelector('.navbar'); // Adjust the selector as needed
+  var originalParent = languageSwitcher.parentElement;
+  var desktopBreakpoint = 768; // Adjust as per your breakpoint
+
+  function moveLanguageSwitcher() {
+      if (window.innerWidth >= desktopBreakpoint) {
+          // Move to navbar
+          navbar.appendChild(languageSwitcher);
+      } else {
+          // Move back to original location
+          originalParent.appendChild(languageSwitcher);
+      }
+  }
+
+  window.addEventListener('resize', moveLanguageSwitcher);
+  moveLanguageSwitcher(); // Initial check
+});
