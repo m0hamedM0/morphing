@@ -19,29 +19,6 @@ html {
 
 /* Existing styles... */
 
-.video-background-header {
-  position: relative; /* Make the video container relative for absolute positioning */
-}
-
-#microphone-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2; /* Ensure the icon is on top of the video */
-}
-
-#microphone-icon img {
-  width: 80px; /* Adjust the size as needed */
-  height: 80px;
-}
-
-#microphone-icon img.playing {
-  width: 60px; /* Adjust the size as needed */
-  height: 80px;
-}
-
-
 /* Media query for devices with max-width of 991px */
 @media (max-width: 991px) {
   .video-background-header video {
@@ -934,25 +911,6 @@ header {
   text-align: center; /* Center text */
 }
 
-.album-links {
-  display: flex;
-  justify-content: space-between; /* This will position the two groups on either side */
-  width: 100%;
-}
-
-.link-group {
-  display: flex;
-  flex-direction: column; /* Stacks links vertically */
-  align-items: center; /* Center aligns the links in the group */
-  gap: 10px; /* Spacing between each link */
-}
-
-/* Optional: Centering the .album-links container if there is extra space */
-.album-links {
-  justify-content: center; /* Center the link groups in the parent container */
-}
-
-
 .album-links a {
   display: inline-block; /* Allows margin */
   margin: 0 10px; /* Space between links */
@@ -991,6 +949,13 @@ header {
     margin-bottom: 30px;
   }
 
+  .album-info,
+  .album-links {
+    width: 100%; /* Full width on small screens */
+    text-align: center;
+    margin: 10px 0; /* Space between items when stacked */
+  }
+
   .album-image {
     margin-right: 0; /* Reset margin on smaller screens */
     margin-bottom: 15px; /* Space between image and text */
@@ -1009,8 +974,13 @@ header {
     text-align: center;
     margin: 10px 0;
   }
-}
 
+  .small-image-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+}
 
 /*carousel*/
 
@@ -1781,31 +1751,6 @@ button {
   color: goldenrod;
   font-family: "MyCustomFontBold";
   font-size: 1.5em;
-  word-spacing: normal;
-}
-
-@media (max-width: 768px) {
-  .highlight, .highlight4 {
-    color: goldenrod;
-    font-size: 0.8em; /* Kleinere Schriftgröße für Mobilgeräte */
-    line-height: 1.1; /* Angepasste Zeilenhöhe für bessere Lesbarkeit */
-    word-spacing: normal; /* Anpassung des Wortabstands, falls nötig */
-  }
-}
-
-@media (max-width: 480px) {
-  .highlight, .highlight4 {
-    color: goldenrod;
-    font-size: 0.9em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
-    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
-    word-spacing: normal; /* Feinabstimmung des Wortabstands, falls nötig */
-  }
-  .highlight6 {
-    color: goldenrod;
-    font-size: 1.2em; /* Noch kleinere Schriftgröße für sehr kleine Geräte */
-    line-height: 1; /* Weitere Anpassung der Zeilenhöhe */
-    word-spacing: normal;
-  }
 }
 
 .top-container p {
@@ -2804,16 +2749,3 @@ button {
     font-size: 20px;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
