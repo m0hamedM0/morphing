@@ -1911,7 +1911,7 @@ button {
   .top-container img,
   .top-container p,
   .bottom-container p {
-    width: 100%; /* Full width for a stacked layout on small screens */
+    width: 101%; /* Full width for a stacked layout on small screens */
     margin: 10px 0; /* Adjust margin for a stacked layout */
   }
 
