@@ -2422,6 +2422,7 @@ button {
   background-color: #000000; /* Twitter blue */
 }
 
+
 .news-section {
   position: relative;
   overflow: hidden;
@@ -2459,7 +2460,8 @@ button {
 }
 
 /* Responsive adjustments */
-@media (max-width: 767px) {
+@media (max-width: 767px) and (max-width: 480px) {
+
   .news-section {
     padding: 20px 10px; /* Reduce padding on smaller screens */
   }
@@ -2469,9 +2471,10 @@ button {
   }
 
   .news-container {
-    height: auto; /* Remove fixed height to allow content to expand */
-    padding-bottom: 1rem; /* Adds some padding at the bottom */
+    max-height: 80vh; /* Setzt die maximale Höhe des Containers auf 80% der Bildschirmhöhe */
+    overflow-y: auto;  /* Adds some padding at the bottom */
   }
+
 
   .news-item:not(:last-child) {
     margin-bottom: 30px; /* Reduce the spacing between news items */
@@ -2482,6 +2485,7 @@ button {
     margin-top: 1rem; /* Adjust top margin */
     margin-bottom: 0.5rem; /* Adjust bottom margin */
   }
+
 
   .news-container {
     padding-top: 3rem; /* Adjust space for the title */
@@ -2497,6 +2501,8 @@ button {
     padding: 0rem !important;
   }
 }
+
+
 
 #team {
   text-align: center; /* Centers the content of the section */
