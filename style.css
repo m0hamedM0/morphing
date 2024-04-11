@@ -209,7 +209,20 @@ html {
 @media (max-width: 880px) {
   .footer-distributed {
     font: bold 14px sans-serif;
+    text-align: center;
   }
+
+  .footer-distributed .footer-links {
+    color: #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-company-name {
+    text-align: center;
+  }
+
 
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
@@ -242,10 +255,12 @@ html {
 
   .footer-distributed .footer-center i {
     margin-bottom: 10px; /* Adds some space below the icon */
+    text-align: center;
   }
 
   .footer-distributed .footer-center p {
     margin: 0; /* Adjusts margin for the text */
+    text-align: center;
   }
 }
 
@@ -2818,6 +2833,13 @@ button {
   .member-name{
     font-size: 20px;
   }
+  .member-title {
+    color: #f0f0f0;
+    font-size: 0.9em;
+    display: block; /* Macht .member-title zu einem Blockelement */
+    text-align: center; /* Zentriert den Text innerhalb des Elements */
+  }
+
 }
 
 
