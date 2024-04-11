@@ -4,121 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Impressum - Morphing Institute Orchester</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'VerlagBold';
-            src: url('fonts/Verlag-Bold.otf') format('opentype');
-        }
-
         body, html {
+            height: 100%;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #161618; /* Dunkelgrau */
-            color: #ffffff; /* Schriftfarbe Weiß für den gesamten Text */
+            font-family: 'Montserrat', sans-serif;
+            background-color: #1a1a1a;
+            color: #1d2125;
+            display: flex;
+            flex-direction: column;
         }
 
-        .font-playfair-display-custom-color, .font-verlag-bold {
-            color: #ffffff; /* Schriftfarbe Weiß */
-        }
 
-        .font-playfair-display-custom-color {
-            font-family: 'Playfair Display', serif; /* Playfair Display als Schriftart */
-        }
+        @font-face {
+  font-family: 'MyCustomFontBold';
+  src: url('fonts/Verlag-Bold.otf') format('opentype');
+}
 
-        .font-verlag-bold {
-            font-family: 'VerlagBold', sans-serif; /* Verlag Bold als Schriftart */
-        }
+@font-face {
+  font-family: 'MyCustomFontRegular';
+  src: url('fonts/Verlag-Book.otf') format('opentype');
+}
 
         .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             padding: 20px;
-            max-width: 800px;
-            margin-left: 50px; /* Layout etwas weiter links */
-        }
+            max-width: 100%;
+            margin: 0 auto;
+            background-color: #1d1a1a;
+            width: 100vw; /* Stellt sicher, dass der Container die volle Breite einnimmt */
+            box-sizing: border-box; /* Stellt sicher, dass padding und border im width enthalten sind */
+            margin-bottom: vh;
 
-        a {
-            color: #ffffff; /* Links Gold */
-            text-decoration: none; /* Keine Unterstreichung */
-        }
-
-        a:hover {
-            text-decoration: underline; /* Unterstreichung beim Hover */
-        }
-
-        h1, h2 {
-            font-family: 'VerlagBold', sans-serif; /* Verwendet Verlag Bold für Überschriften */
-        }
-
-        p {
-            line-height: 1.78; /* Verbesserte Lesbarkeit durch größeren Zeilenabstand */
-            font-size: 20px; /* Setzt die Schriftgröße der Absätze */
-        }
-
-        .footer {
-            margin-top: 170px;
-            text-align: center;
-            font-size: 0.8em;
-            color: #ffffff; /* Schriftfarbe Weiß */
-        }
-
-
-        
-        
-    /* Media Queries für unterschiedliche Bildschirmgrößen */
-    @media (max-width: 900px) {
-        .container {
-            max-width: 90%; /* Ermöglicht eine bessere Anpassung an kleinere Bildschirme */
         }
 
         h1, h2, p {
-            font-size: 18px; /* Passt die Schriftgröße für kleinere Bildschirme an */
+            width: 100%;
+            max-width: 800px; /* Max Breite des Textes */
+            text-align: center; /* Zentriert den Text */
+            color: goldenrod;
         }
 
-        .footer {
-            margin-top: 100px; /* Verringert den Abstand nach oben auf kleineren Bildschirmen */
-        }
-    }
+        h1 {
+            font-weight: 700;
+            font-size: 2.7rem;
+            margin-bottom: 0.5em;
+            font-family: "MyCustomFontBold";
 
-    @media (max-width: 600px) {
-        h1, h2 {
-            font-size: 16px; /* Noch kleinere Schriftgröße für sehr kleine Bildschirme */
+        }
+
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 0.25em;
+            font-family: "MyCustomFontBold";
+
         }
 
         p {
-            font-size: 16px; /* Angepasste Schriftgröße für Paragrafen */
-            line-height: 1.5; /* Angepasster Zeilenabstand */
+            font-weight: 400;
+            line-height: 1.6;
+            font-size: 1.3rem;
+            margin-bottom: 1em;
+            color: #c7bfbf;
+            font-family: "MyCustomFontRegular";
+
+        }
+
+        a {
+            color: #8d99a5;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            color: #2773c4;
         }
 
         .footer {
-            margin-top: 50px;
+            font-size: 0.875rem;
+            text-align: center;
+            color: #b3abab;
+            padding: 20px;
+            width: 100%;
+            background-color: #0f1011;
         }
-    }
+       
+        /* Responsive Anpassungen */
+        @media (max-width: 768px) {
+            h1, h2 {
+                font-size: 1.2rem;
+            }
+            
+            p {
+                font-size: 0.9rem;
+            }
+        }
 
     </style>
-
-
-
-
 </head>
 <body>
 <div class="container">
     <h1>Impressum</h1>
     <h2>Morphing Institute Orchester</h2>
-    <p class="font-playfair-display-custom-color"><strong>Adresse:</strong> Maxingstraße 22/24, 1130 Wien, Österreich</p>
-    <p class="font-playfair-display-custom-color"><strong>Telefon:</strong> +43 ...</p>
-    <p class="font-playfair-display-custom-color"><strong>E-Mail:</strong> <a href="mailto:info@morphinginstituteorchester.at">info@morphinginstituteorchester.at</a></p>
-    <p class="font-playfair-display-custom-color"><strong>Geschäftsführung:</strong> Max Mustermann</p>
-    <p class="font-playfair-display-custom-color"><strong>Zuständiges Gericht:</strong> Handelsgericht Wien</p>
-    <p class="font-playfair-display-custom-color"><strong>Unternehmensregisternummer:</strong> ...</p>
-    <p class="font-playfair-display-custom-color"><strong>Aufsichtsbehörde:</strong> Magistratisches Bezirksamt des I. Bezirks</p>
-    <p class="font-playfair-display-custom-color"><strong>Umsatzsteuer-ID:</strong> ATU12345678</p>
-    <p class="font-playfair-display-custom-color"><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong> Max Mustermann, Adresse wie oben.</p>
-    <p class="font-playfair-display-custom-color"><strong>Website created by:</strong> Nichita Pavliuc, Mohamed Mosallem, Samuel Brunner</p>
-
-    <div class="footer">
-        ©️ Morphing Institute Orchester, 2024. Alle Rechte vorbehalten.
-    </div>
+    <p><strong>Adresse:</strong> Maxingstraße 22/24, 1130 Wien, Österreich</p>
+    <p><strong>Telefon:</strong> +43 666666666...</p>
+    <p><strong>E-Mail:</strong> <a href="mailto:info@morphinginstituteorchester.at">info@morphinginstituteorchester.at</a></p>
+    <p><strong>Geschäftsführung:</strong> Max Mustermann</p>
+    <p><strong>Zuständiges Gericht:</strong> Handelsgericht Wien</p>
+    <p><strong>Unternehmensregisternummer:</strong> ...</p>
+    <p><strong>Aufsichtsbehörde:</strong> Magistratisches Bezirksamt des I. Bezirks</p>
+    <p><strong>Umsatzsteuer-ID:</strong> ATU12345678</p>
+    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong> Max Mustermann, Adresse wie oben.</p>
+    <p><strong>Website created by:</strong> Nichita Pavliuc, Mohamed Mosallem, Samuel Brunner</p>
+</div>
+<div class="footer">
+    © Morphing Institute Orchester, 2024. Alle Rechte vorbehalten.
 </div>
 </body>
 </html>
