@@ -1819,7 +1819,6 @@ button {
 }
 
 .top-container p {
-  text-align: justify;
   width: 45%; /* Adjust the width as needed */
   margin: 10px; /* Adjust or add margin as needed */
   flex: 0 0 auto; /* Do not grow or shrink */
