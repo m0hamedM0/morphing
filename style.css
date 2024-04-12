@@ -32,24 +32,24 @@ html {
 }
 
 #microphone-icon img {
-  width: 64px; /* Adjust the size as needed */
-  height: 64px;
+  width: 91px; /* Adjust the size as needed */
+  height: 91px;
 }
 
 #microphone-icon img.playing {
-  width: 64px; /* Adjust the size as needed */
-  height: 64px;
+  width: 91px; /* Adjust the size as needed */
+  height: 91px;
 }
 
 @media (max-width: 480px) {
   #microphone-icon img {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px;
+    width: 75px; /* Adjust the size as needed */
+    height: 75px;
   }
 
   #microphone-icon img.playing {
-    width: 50px; /* Adjust the size as needed */
-    height: 50px;
+    width: 75px; /* Adjust the size as needed */
+    height: 75px;
   }
 }
 
