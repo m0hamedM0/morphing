@@ -1,20 +1,20 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strauss PDF</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
     <style>
         body {
             padding-top: 20px;
             background-color: #000000;
-        }
-        .container {
-            background-color: #FFFFF4;
-            border-radius: 40px;
-            padding: 20px;
+            height: 100vh; /* Vollbildhöhe */
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .return-btn-container-Strauss {
@@ -43,27 +43,123 @@
             transform: translateY(-2px) scale(1.05);
         }
 
+        .container {
+            background-color: #FFFFF4;
+            border-radius: 40px;
+            padding: 20px;
+            text-align: center;
+            width: calc(90% + 38px); /* Erhöht die Breite um ca. 2cm */
+            height: 800px; /* Passt die Höhe dynamisch an den Inhalt an, zusätzliche Höhe durch größere Frames */
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 20px 0; /* Gibt dem Container etwas mehr Platz oben und unten */
+            overflow-x: hidden; /* Verhindert horizontales Scrollen */
+        }
+        .pdf-container {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            flex-direction: row;
+            gap: 10px;
+            width: 100%;
+            overflow-y: auto; /* Aktiviert vertikales Scrollen */
+            max-height: 70vh; /* Begrenzt die Höhe des Containers */
+            height: 590px;
+        }
+        .pdf-frame {
+            flex: 0 0 auto;
+            width: calc(200px + 45px); /* Erhöht die Breite der Frames um ca. 2cm */
+            height: calc(400px + 45px); /* Erhöht die Höhe der Frames um ca. 2cm */
+            position: relative;
+            cursor: pointer;
+            margin: 10px; /* Etwas Abstand um die Frames herum, um Überschneidungen zu vermeiden */
+        }
+        .pdf-frame iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .pdf-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0); /* Transparent, fängt Klicks auf */
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2;
+        }
+        .overlay-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60%; /* Breite des Overlays anpassen */
+            height: 80%; /* Höhe des Overlays anpassen */
+        }
+        .overlay-content iframe {
+            width: 100%;
+            height: 100%;
+        }
+
         .btn-primary {
-            background-color: white;
-            color: black;
+            background-color: #f8f9fa; /* Light, neutral base */
+            background-image: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+            border-radius: 35px; /* Slightly rounded corners */
+            color: #333; /* Dark text for contrast */
+            font-size: 16px;
+            padding: 8px 15px;
+            text-decoration: none;
+            display: inline-flex; /* Treat button contents as inline elements */
+            align-items: center;
+            height: 10px;
+        }
+
+        /* Image Styling - Adjust if needed */
+        .btn-primary img {
+            margin-right: 10px; /* Space between image and text */
         }
 
         @media screen and (max-width: 768px) {
-            .return-btn-container-Strauss {
-                top: 10px;
-                left: 10px;
-            }
-            .return-btn-Strauss {
-                font-size: 20px;
-                padding: 8px 12px; /* Smaller button for mobile devices */
+
+            body {
+                padding-top: 50px;
             }
             .container {
-                margin-top: 40px;
-                padding: 15px;  /* Reduce padding */
-                max-width: 90%; /* Limit max width to 90% of screen size */
-                margin: 40px auto; /* Center the container horizontally */
+                width: 90%; /* Reduzieren Sie die Breite auf 90% des Viewports */
+                min-height: 80%; /* Minimale Höhe festlegen, um zu verhindern, dass der Button überdeckt wird */
+                max-height: 90%; /* Begrenzen Sie die maximale Höhe, um Überdeckungen zu vermeiden */
+                overflow-y: auto; /* Ermöglichen Sie vertikales Scrollen innerhalb des Containers, falls der Inhalt zu groß ist */
+                padding-top: 0; /* Fügen Sie oben einen Abstand hinzu, um sicherzustellen, dass der Button nicht überdeckt wird */
+                font-size: 12px;
+                height: 700px;
             }
+
+            .headline {
+                font-size: 16px;
             }
+
+            .pdf-container {
+                display: flex;
+                flex-direction: column; /* Anpassung für mobile Ansicht */
+                gap: 10px; /* Anpassung für mobile Ansicht */
+                padding: 0 10px;
+                flex-wrap: wrap;
+                height: 570px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -73,79 +169,119 @@
 </div>
 
 <div class="container">
-    <h1>MORPHING x JOHANN STRAUSS The 200th anniversary in 2025</h1>
-    <p>Hier finden Sie Details (Folders) zum Projekt "Strauss". :)</p>
+    <h1 class="headline">MORPHING x JOHANN STRAUSS <br> The 200th anniversary in 2025</h1>
+    <p>Hier finden Sie Details (Folders) zum Projekt "Strauss". </p>
 
-    <!-- Beschreibung oder weitere Informationen zum PDF -->
-    <p>Dieses Dokument enthält detaillierte Informationen über Julia Sturzlbaum</p>
 
-    <!-- PDF anzeigen -->
-    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss_Julia.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
+    <div class="pdf-container">
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Normal.html')">
+            <p>Main</p>
+            <iframe src="Strauss_Normal.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1HK6jQW8FEQ5EDORtnEpeO4INCv6NRKOu/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Julia.html')">
+            <p>Julia Sturzlbaum</p>
+            <iframe src="Strauss_Julia.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1KhKt7_LwzObYFB6Z9uhoXXq-nQduCVXf/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Timna.html')">
+            <p>Timna Brauer</p>
+            <iframe src="Strauss_Timna.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Timna.html')">
+            <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
+            <iframe src="Strauss_Timna.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Timna.html')">
+            <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
+            <iframe src="Strauss_Timna.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Timna.html')">
+            <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
+            <iframe src="Strauss_Timna.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+
+        <div class="pdf-frame" onclick="openOverlay('Strauss_Timna.html')">
+            <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
+            <iframe src="Strauss_Timna.html" allowfullscreen></iframe>
+            <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
+                <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
+                PDF herunterladen
+            </a>
+            <div class="pdf-overlay"></div>
+        </div>
+        <!-- Weitere PDF-Frames hier -->
     </div>
-
-    <!-- Download-Link -->
-    <a href="https://drive.google.com/file/d/1KhKt7_LwzObYFB6Z9uhoXXq-nQduCVXf/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
-
-    <p>Dieses Dokument enthält detaillierte Informationen über Timna Brauer</p>
-
-    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
-    </div>
-
-    <!-- Download-Link -->
-    <a href="https://drive.google.com/file/d/1wOkok3IAsNfnvXtPZu37HKNo7XMjFfmJ/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
-
-    <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
-
-    <!-- PDF anzeigen -->
-    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
-    </div>
-
-    <!-- Download-Link -->
-    <a href="https://drive.google.com/file/d/1aR7Xv5pX2HPw5B_6rXBJ3cAfd5IYfAgi/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">
-        <img src="Images/download_pdf.svg" alt="PDF-Symbol" width="35" height="35">
-        PDF herunterladen
-    </a>
-
-
-    <p>Dieses Dokument enthält detaillierte Informationen über Anna Voshege</p>
-
-    <!-- PDF anzeigen -->
-    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
-    </div>
-
-    <!-- Download-Link -->
-    <a href="https://drive.google.com/file/d/1MssSwTBglH6yP-GeDUUuibjKl1E7h55C/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
-
-    <p>Dieses Dokument enthält detaillierte Informationen über Anna Voshege</p>
-
-    <!-- PDF anzeigen -->
-    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
-    </div>
-
-    <!-- Download-Link -->
-    <a href="Strauss_Timna.html" download="Strauss.pdf" class="btn btn-primary">PDF herunterladen</a>
-
-    <p>Dieses Dokument enthält detaillierte Informationen über Niklas Liepe</p>
-
-    <!-- PDF anzeigen -->
-    <div class="embed-responsive mb-4" style="height: 1500px; position: relative;">
-        <iframe class="embed-responsive-item" src="Strauss_Timna.html" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen></iframe>
-    </div>
-
-    <!-- Download-Link -->
-    <a href="https://drive.google.com/file/d/1wOkok3IAsNfnvXtPZu37HKNo7XMjFfmJ/view?usp=sharing" download="Strauss.pdf" class="btn btn-primary" target="_blank">PDF herunterladen</a>
-
-    <!-- Zurück zur Webseite -->
-    <a href="index.html" class="btn btn-secondary">Zurück zur Webseite</a>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<div class="overlay" onclick="closeOverlay()">
+    <div class="overlay-content">
+        <iframe id="overlay-iframe" src="" allowfullscreen></iframe>
+    </div>
+</div>
+
+<!-- Entfernen Sie die alten Bootstrap 4 JS-Links und ersetzen Sie sie durch diesen: -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+
+<script>
+    function openOverlay(url) {
+        document.querySelector('.overlay').style.display = 'flex';
+        document.getElementById('overlay-iframe').src = url;
+        event.stopPropagation(); // Verhindert das Schließen beim ersten Klick
+    }
+
+    function closeOverlay() {
+        document.querySelector('.overlay').style.display = 'none';
+        document.getElementById('overlay-iframe').src = ''; // Entfernt die Quelle
+    }
+
+    document.querySelector('.overlay').addEventListener('click', function(event) {
+        if (event.target === this) {
+            closeOverlay();
+        }
+    });
+
+
+    window.addEventListener('load', function() {
+        checkScreenSize();
+    });
+    window.addEventListener('resize', checkScreenSize);
+</script>
 </body>
 </html>
