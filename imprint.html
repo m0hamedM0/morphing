@@ -34,15 +34,16 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 20px;
-            max-width: 100%;
+            padding: 40px; /* Increased padding */
+            max-width: 900px; /* More controlled max-width */
             margin: 0 auto;
             background-color: #1d1a1a;
-            width: 100vw; /* Stellt sicher, dass der Container die volle Breite einnimmt */
-            box-sizing: border-box; /* Stellt sicher, dass padding und border im width enthalten sind */
+            width: 100vw;
+            box-sizing: border-box;
             margin-bottom: vh;
-
         }
+
+
 
         h1, h2, p {
             width: 100%;
@@ -94,15 +95,25 @@
             width: 100%;
             background-color: #0f1011;
         }
-       
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         /* Responsive Anpassungen */
         @media (max-width: 768px) {
-            h1, h2 {
-                font-size: 1.2rem;
+            .container {
+                padding: 20px; /* Reduce padding for smaller screens */
             }
-            
+
+            h1, h2 {
+                font-size: 1.5rem;
+            }
+
             p {
-                font-size: 0.9rem;
+                font-size: 1rem;
             }
         }
 
@@ -111,16 +122,16 @@
 <body>
 <div class="container">
     <h1>Impressum</h1>
+    <img src="Images/fingerprints.svg" alt="Morphing Institute Orchester Logo" width="200" height="100">
     <h2>Morphing Institute Orchester</h2>
     <p><strong>Adresse:</strong> Maxingstraße 22/24, 1130 Wien, Österreich</p>
-    <p><strong>Telefon:</strong> +43 666666666...</p>
     <p><strong>E-Mail:</strong> <a href="mailto:info@morphinginstituteorchester.at">info@morphinginstituteorchester.at</a></p>
-    <p><strong>Geschäftsführung:</strong> Max Mustermann</p>
+    <p><strong>Geschäftsführung:</strong> Tomasz Wabnic</p>
     <p><strong>Zuständiges Gericht:</strong> Handelsgericht Wien</p>
     <p><strong>Unternehmensregisternummer:</strong> ...</p>
     <p><strong>Aufsichtsbehörde:</strong> Magistratisches Bezirksamt des I. Bezirks</p>
-    <p><strong>Umsatzsteuer-ID:</strong> ATU12345678</p>
-    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong> Max Mustermann, Adresse wie oben.</p>
+    <p><strong>Umsatzsteuer-ID:</strong> ...</p>
+    <p><strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</strong> Tomasz Wabnic, Adresse wie oben.</p>
     <p><strong>Website created by:</strong> Nichita Pavliuc, Mohamed Mosallem, Samuel Brunner</p>
 </div>
 <div class="footer">
