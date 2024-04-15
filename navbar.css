@@ -51,16 +51,19 @@
 #languageSwitcher {
     position: fixed; /* Or 'absolute', depending on your layout needs */
     top: 4%; /* Adjust as needed */
-    left: 1%;
+    left: 2%;
     transform: translateY(-50%);
     color: white; /* Make text color white */
     z-index: 9999;
 }
 
 #languageSwitcher .div-change-language {
-    display: flex; /* Use flexbox for horizontal layout */
-    align-items: center; /* Align items vertically */
+    display: flex;
+    align-items: center;
+    padding: 1px 2px; /* Adds padding around the links for better touch accessibility */
+    margin: 0 auto; /* Centers the switcher horizontally if the parent container allows it */
 }
+
 
 #languageSwitcher .nav-item,
 #languageSwitcher .nav-separator {
